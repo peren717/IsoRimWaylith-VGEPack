@@ -7,7 +7,8 @@
        gravjumper), the orb is IsoRim's bob part (its cooldown orb added by Patches/VGE_Models_B6a.xml with IsoRim Api 27).
        The oxygen reclaimer turns half round facing east or west, as VGE draws its E/W art. The industrial generator, the
        hulk engine, the amplifier and the scanner cluster stand taller than a storey (user decision: no floor over them).
-       Biotech / Ideology things are skipped quietly when the DLC is absent. The pilot bridge follows separately. -->
+       Biotech / Ideology things are skipped quietly when the DLC is absent. The pilot bridge (v3) is built at VGE's
+       drawn size, its screens placed cell by cell on VGE's north art. -->
 
   <IsoRim.ModelDef>
     <defName>R3D_VGE_IndustrialAstrofuelGenerator</defName>
@@ -149,6 +150,15 @@
     <thingDef>VGE_CompactBiosculpterPod</thingDef>
     <model>Models/vge_compact_biosculpter_pod.obj</model>
     <builtFor>(1, 3)</builtFor>
+    <surfaceHeight>0.30</surfaceHeight>   <!-- the couch under the lid: the occupant lies there, as IsoRim's vanilla pod -->
+    <glassModel>Models/vge_compact_biosculpter_pod_glass.obj</glassModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_PilotBridge</defName>
+    <thingDef>VGE_PilotBridge</thingDef>
+    <model>Models/vge_pilot_bridge.obj</model>
+    <builtFor>(5, 3)</builtFor>
   </IsoRim.ModelDef>
 
 </Defs>
