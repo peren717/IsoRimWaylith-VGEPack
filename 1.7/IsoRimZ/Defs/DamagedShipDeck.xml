@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- A ship upper deck hit by VGE artillery (VGE's own rule turns the deck into this, Patches/Decks.xml): as VGE's damaged
+       gravship substructure, on an upper floor. It counts as a deck (the pack registers it with ProjectZ), still carries what
+       stands on it and flies with the ship; another hit takes it away (VGE: DestroyableByArtillery). Repaired by building a
+       ship upper deck over it (VGE rebuilds the deck on its own when the colony has rebuilding on). Not buildable itself. -->
+  <TerrainDef>
+    <defName>VGEPack_DamagedShipDeck</defName>
+    <label>damaged ship upper deck</label>
+    <description>A warped and twisted section of a ship upper deck. The grav engine's levitation field still grips it, but its integrity is compromised: any further damage will cause it to collapse completely. Build a ship upper deck over it to repair it.</description>
+    <texturePath>Things/Terrain/Substructure/DamagedSubstructure</texturePath>
+    <fertility>0</fertility>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>399</renderPrecedence>
+    <constructEffect>ConstructMetal</constructEffect>
+    <isPaintable>true</isPaintable>
+    <isFoundation>true</isFoundation>
+    <preventCraters>true</preventCraters>
+    <layerable>true</layerable>
+    <affordances>
+      <li>Substructure</li>
+      <li>PZ_FloorSupport</li>
+    </affordances>
+    <filthAcceptanceMask>
+      <li>Unnatural</li>
+    </filthAcceptanceMask>
+    <statBases>
+      <Flammability>0</Flammability>
+      <CleaningTimeFactor>0.9</CleaningTimeFactor>
+    </statBases>
+    <terrainAffordanceNeeded>PZ_FloorSupport</terrainAffordanceNeeded>
+    <tags>
+      <li>Substructure</li>
+      <li>DestroyableByArtillery</li>
+    </tags>
+  </TerrainDef>
+</Defs>

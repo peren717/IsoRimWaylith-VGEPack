@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- VGE artillery damages a ship upper deck as it damages gravship substructure (VGE's own replacement rule). -->
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/TerrainDef[defName="PZ_ShipDeck"]</xpath>
+    <value>
+      <li Class="VanillaGravshipExpanded.DamagedTerrainReplacementExtension">
+        <damagedTerrain>VGEPack_DamagedShipDeck</damagedTerrain>
+      </li>
+    </value>
+  </Operation>
+</Patch>
