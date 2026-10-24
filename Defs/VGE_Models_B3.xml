@@ -37,7 +37,7 @@
         <li><x>205</x><y>151</y><width>102</width><height>37</height></li>
       </strips>
       <tile>(1.0, 0.36)</tile>
-      <brightness>1.6</brightness>
+      <brightness>1.0</brightness>
       <topShade>0.75</topShade>
     </wallTop>
   </IsoRim.ModelDef>
@@ -85,6 +85,7 @@
     <thingDef>VGE_VacBarrierDouble</thingDef>
     <model>Models/vge_vac_barrier_2x1_frame.obj</model>
     <doorTopModel>Models/vge_vac_barrier_2x1_top.obj</doorTopModel>
+    <glassModel>Models/vge_vac_barrier_2x1_field.obj</glassModel>
     <builtFor>(2, 1)</builtFor>
   </IsoRim.ModelDef>
   <IsoRim.ModelDef>
@@ -92,6 +93,7 @@
     <thingDef>VGE_VacBarrierTriple</thingDef>
     <model>Models/vge_vac_barrier_3x1_frame.obj</model>
     <doorTopModel>Models/vge_vac_barrier_3x1_top.obj</doorTopModel>
+    <glassModel>Models/vge_vac_barrier_3x1_field.obj</glassModel>
     <builtFor>(3, 1)</builtFor>
   </IsoRim.ModelDef>
   <IsoRim.ModelDef>
@@ -99,6 +101,7 @@
     <thingDef>VGE_VacBarrierQuintuple</thingDef>
     <model>Models/vge_vac_barrier_5x1_frame.obj</model>
     <doorTopModel>Models/vge_vac_barrier_5x1_top.obj</doorTopModel>
+    <glassModel>Models/vge_vac_barrier_5x1_field.obj</glassModel>
     <builtFor>(5, 1)</builtFor>
   </IsoRim.ModelDef>
 
