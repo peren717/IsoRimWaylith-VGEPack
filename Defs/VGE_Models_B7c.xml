@@ -3,7 +3,8 @@
      shield generator, grav field extender (cyan lights red), ancient gravmine (darker, bronze spikes), signal jammer (lens and display
      lit red), the enemy gravship light (IsoRim's red ancient emergency light), the small / lateral / giant thrusters (tan exhaust red;
      wall-height machines like the player ones, wallFit 1.65: user decision, an exception to the storey rule). All under the storey; MayRequire Chapter 2. The
-     parts that are new or changed follow after their review. -->
+     large shield generator (2.45) and grav field amplifier (2.02) are the player models too (user decision: under an enemy ship
+     roof IsoRim's roof clipping hides what rises above it); the enemy oxygen pump has VGE's square vent hood. -->
 <Defs>
   <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
     <defName>R3D_VGE_EnemyShieldGenerator</defName>
@@ -58,6 +59,24 @@
     <model>Models/vge_e_giant_thruster.obj</model>
     <builtFor>(3, 3)</builtFor>
     <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyLargeShieldGenerator</defName>
+    <thingDef>VGE_EnemyLargeShieldGenerator</thingDef>
+    <model>Models/vge_e_large_shield_generator.obj</model>
+    <builtFor>(5, 5)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravFieldAmplifier</defName>
+    <thingDef>VGE_EnemyGravFieldAmplifier</thingDef>
+    <model>Models/vge_e_grav_field_amplifier.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyOxygenPump</defName>
+    <thingDef>VGE_EnemyOxygenPump</thingDef>
+    <model>Models/vge_e_oxygen_pump.obj</model>
+    <builtFor>(1, 1)</builtFor>
   </IsoRim.ModelDef>
   <!-- ancient signal jammer (new model, approved): every rotation of VGE's art is the same picture -->
   <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
