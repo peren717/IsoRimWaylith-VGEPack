@@ -26,6 +26,7 @@ namespace IsoRimVGEPackZ
     //    floor), at VGE's own speed.
     //  - Deck foundations (Api 4): VGE subarmor and subscaffold are built on upper floors like ship decks and count as decks;
     //    VGE artillery damages decks into damaged decks, which count as decks and are repaired by rebuilding the deck.
+    //  - Subscaffold (Api 5): free of the substructure limit on upper decks too, as VGE makes it on the ground.
     // VGE is reached by name: a missing type or method leaves that part as VGE does it (logged once).
     [StaticConstructorOnStartup]
     public static class PackZ
@@ -148,6 +149,7 @@ namespace IsoRimVGEPackZ
             Fog.Apply();
             Decks.Apply();
             DeckRepair.Apply();
+            FreeSubscaffold.Apply();   // (its Api 5 call is checked at run time)
         }
     }
 }

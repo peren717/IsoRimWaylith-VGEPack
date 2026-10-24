@@ -282,6 +282,27 @@ namespace IsoRimVGEPackZ
                     PackZ.applied.Add("deck foundation " + name);
                 }
             }
+            // the damaged deck stands on what VGE's damaged substructure stands on (Chapter 2 adds the affordance its crew
+            // furniture needs to it; the ship deck itself gets Substructure's from ProjectZ)
+            TerrainDef ours = DefDatabase<TerrainDef>.GetNamedSilentFail("VGEPack_DamagedShipDeck");
+            TerrainDef theirs = DefDatabase<TerrainDef>.GetNamedSilentFail("VGE_DamagedSubstructure");
+            if (ours != null && theirs?.affordances != null)
+            {
+                ours.affordances = ours.affordances ?? new List<TerrainAffordanceDef>();
+                int n = 0;
+                foreach (TerrainAffordanceDef a in theirs.affordances)
+                {
+                    if (a != null && !ours.affordances.Contains(a))
+                    {
+                        ours.affordances.Add(a);
+                        n++;
+                    }
+                }
+                if (n > 0)
+                {
+                    PackZ.applied.Add("damaged deck affordances from VGE's damaged substructure (" + n + ")");
+                }
+            }
         }
     }
 }
