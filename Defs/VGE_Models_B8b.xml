@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B8b1 (2026-10-24): rare orbital-station props, part 1. Low-poly models built
+       from VGE's own textures (tools/make_vge_b8b.py, vge_b8b.mtl), under the 1.60 storey. The station antenna has VGE's two
+       random looks (IsoRim picks the variant as the game picks the texture). The two station lights are IsoRim's vanilla
+       emergency light model in VGE's glow colours, hung on the wall like it. Chapter 2 things are skipped quietly. -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_StationConsole</defName>
+    <thingDef>VGE2_StationConsole</thingDef>
+    <model>Models/vge_station_console.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_SmallStationConsole</defName>
+    <thingDef>VGE2_SmallStationConsole</thingDef>
+    <model>Models/vge_station_console_small.obj</model>
+    <builtFor>(2, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_StationLockerBank</defName>
+    <thingDef>VGE2_StationLockerBank</thingDef>
+    <model>Models/vge_station_locker_bank.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_StationSystemRack</defName>
+    <thingDef>VGE2_StationSystemRack</thingDef>
+    <model>Models/vge_station_system_rack.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_StationEquipmentBlock</defName>
+    <thingDef>VGE2_StationEquipmentBlock</thingDef>
+    <model>Models/vge_station_equipment_block.obj</model>
+    <builtFor>(4, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_StationFilingCabinet</defName>
+    <thingDef>VGE2_StationFilingCabinet</thingDef>
+    <model>Models/vge_station_filing_cabinet.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_StationAntenna</defName>
+    <thingDef>VGE2_StationAntenna</thingDef>
+    <models>
+      <li>Models/vge_station_antenna_a.obj</li>
+      <li>Models/vge_station_antenna_b.obj</li>
+    </models>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_NavBeacon</defName>
+    <thingDef>VGE2_NavBeacon</thingDef>
+    <model>Models/vge_station_nav_beacon.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_OrbitalLight</defName>
+    <thingDef>VGE2_OrbitalLight</thingDef>
+    <model>Models/vge_orbital_light.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_PowerSocket</defName>
+    <thingDef>VGE2_PowerSocket</thingDef>
+    <model>Models/vge_power_socket.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_PosBeacon_Green</defName>
+    <thingDef>VGE2_PosBeacon_Green</thingDef>
+    <model>Models/vge_pos_beacon_green.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_PosBeacon_Red</defName>
+    <thingDef>VGE2_PosBeacon_Red</thingDef>
+    <model>Models/vge_pos_beacon_red.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_StationLight</defName>
+    <thingDef>VGE_StationLight</thingDef>
+    <model>Models/vge_station_light.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+    <wallMounted>true</wallMounted>
+    <groundShadow>false</groundShadow>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_StationLight_Blue</defName>
+    <thingDef>VGE_StationLight_Blue</thingDef>
+    <model>Models/vge_station_light_blue.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+    <wallMounted>true</wallMounted>
+    <groundShadow>false</groundShadow>
+  </IsoRim.ModelDef>
+
+</Defs>
