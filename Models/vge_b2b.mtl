@@ -1,0 +1,41 @@
+# IsoRim Waylith - VGE Pack, batch B2b: fixed colours from Vanilla Gravship Expanded's textures (lifted ~1.1x for
+# the 3D shading). stuff* = the thing's stuff colour, sheet* = the bed's second colour (IsoRim); glow* = unlit while lit.
+newmtl stuff_vged
+Kd 1.00 1.00 1.00
+map_Kd IsoRim/Swatches/{stuff}
+newmtl stuff_vged_dark
+Kd 0.72 0.72 0.72
+map_Kd IsoRim/Swatches/{stuff}
+newmtl sheet_vged
+Kd 0.73 0.73 0.73
+map_Kd IsoRim/Swatches/Fabric
+newmtl vged_linen
+Kd 0.90 0.88 0.82
+map_Kd IsoRim/Swatches/Fabric
+newmtl vged_pillow
+Kd 0.98 0.97 0.94
+map_Kd IsoRim/Swatches/Fabric
+newmtl vged_black
+Kd 0.16 0.16 0.17
+newmtl vged_white
+Kd 0.92 0.92 0.93
+map_Kd IsoRim/Swatches/Metal
+newmtl vged_grey
+Kd 0.58 0.58 0.59
+map_Kd IsoRim/Swatches/Metal
+newmtl vged_dark
+Kd 0.34 0.34 0.35
+map_Kd IsoRim/Swatches/Metal
+newmtl vged_screen
+Kd 0.14 0.15 0.17
+newmtl glow_vged_screen
+Kd 0.30 0.72 0.95
+newmtl vged_copper
+Kd 0.66 0.48 0.33
+map_Kd IsoRim/Swatches/Metal
+newmtl vged_yellow
+Kd 0.86 0.78 0.50
+newmtl vged_hazard
+Kd 0.98 0.68 0.20
+newmtl glow_vged_warning
+Kd 1.00 0.86 0.80

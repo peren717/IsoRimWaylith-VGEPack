@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B2b: beds, lockers, shelf, wall mounts, sealant popper, vacuum light
+       (2026-10-24). Low-poly models built only from what Vanilla Gravship Expanded's own textures show
+       (tools/make_vge_b2b.py); vge_b2b.mtl: stuff* faces take the stuff colour, sheet* the beds' second colour. Beds:
+       built facing north with the head south, as VGE's art and the game's layout (no turn). Wall mounts (VGE's
+       isAttachment): wallMounted, raised up the wall by IsoRim's wall-mount rule as the wall torch. VGE_VacCheckpoint
+       keeps VGE's own art (user decision). A thingDef that is not loaded (Chapter 2 absent) is skipped quietly. -->
+
+  <!-- slot heights for Api 28 slots: lower deck 0.46, upper deck 1.26 (binding added separately) -->
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CrewBunkBed</defName>
+    <thingDef>VGE_CrewBunkBed</thingDef>
+    <model>Models/vge_crew_bunk_bed.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <surfaceHeight>0.46</surfaceHeight>
+    <beddingTop>0.54</beddingTop>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MedbayBed</defName>
+    <thingDef>VGE_MedbayBed</thingDef>
+    <model>Models/vge_medbay_bed.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <surfaceHeight>0.46</surfaceHeight>
+    <beddingTop>0.54</beddingTop>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CrewLockers</defName>
+    <thingDef>VGE_CrewLockers</thingDef>
+    <model>Models/vge_crew_lockers.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravshipShelf</defName>
+    <thingDef>VGE_GravshipShelf</thingDef>
+    <model>Models/vge_gravship_shelf.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <surfaceHeight>0.60</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_WallFirefoamPopper</defName>
+    <thingDef>VGE_WallFirefoamPopper</thingDef>
+    <model>Models/vge_wall_firefoam_popper.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+    <wallMounted>true</wallMounted>
+    <groundShadow>false</groundShadow>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_WallToolCabinet</defName>
+    <thingDef>VGE_WallToolCabinet</thingDef>
+    <model>Models/vge_wall_tool_cabinet.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+    <wallMounted>true</wallMounted>
+    <groundShadow>false</groundShadow>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SealantPopper</defName>
+    <thingDef>VGE_SealantPopper</thingDef>
+    <model>Models/vge_sealant_popper.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <!-- Ch.2 -->
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_VacuumWarningLight</defName>
+    <thingDef>VGE_VacuumWarningLight</thingDef>
+    <model>Models/vge_vacuum_warning_light.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+  </IsoRim.ModelDef>
+
+</Defs>
