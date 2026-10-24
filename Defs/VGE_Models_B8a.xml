@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B8a1 (2026-10-24): rare mechanoid buildings, first half. Low-poly models built
+       from VGE's own textures (tools/make_vge_b8a.py, vge_b8a.mtl); everything under the 1.60 storey (mechanoid ships are
+       roofed over them), the thrusters wall-fit as the pack's others. The mechanoid grav engine's and the grav tether's
+       orbs are IsoRim bob parts sitting low in the base's pit (VGE's flat bobbing orb is left out under a model:
+       Source/MechOrbs.cs); the targeting relay's obelisk hovers as IsoRim's mech relay crystal does. Chapter 2 things are
+       skipped quietly without Chapter 2. Not here: the mechanoid turrets (ship-gun batch), the hull platform (a wall). -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidGravEngine</defName>
+    <thingDef>VGE_MechanoidGravEngine</thingDef>
+    <model>Models/vge_mech_grav_engine.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <bobModel>Models/vge_mech_grav_engine_orb.obj</bobModel>
+    <bobHeight>0.10</bobHeight>
+    <bobPeriod>500</bobPeriod>   <!-- VGE's own orb period -->
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidGravTether</defName>
+    <thingDef>VGE_MechanoidGravTether</thingDef>
+    <model>Models/vge_mech_grav_tether.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <bobModel>Models/vge_mech_grav_tether_orb.obj</bobModel>
+    <bobHeight>0.10</bobHeight>
+    <bobPeriod>500</bobPeriod>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_LargeMechanoidThruster</defName>
+    <thingDef>VGE_LargeMechanoidThruster</thingDef>
+    <model>Models/vge_mech_large_thruster.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidStabilizer</defName>
+    <thingDef>VGE_MechanoidStabilizer</thingDef>
+    <model>Models/vge_mech_stabilizer.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidHeatsink</defName>
+    <thingDef>VGE_MechanoidHeatsink</thingDef>
+    <model>Models/vge_mech_heatsink.obj</model>
+    <builtFor>(1, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidSolarPanel</defName>
+    <thingDef>VGE_MechanoidSolarPanel</thingDef>
+    <model>Models/vge_mech_solar_panel.obj</model>
+    <builtFor>(2, 5)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidTargetingRelay</defName>
+    <thingDef>VGE_MechanoidTargetingRelay</thingDef>
+    <model>Models/vge_mech_targeting_relay.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <bobModel>Models/vge_mech_targeting_relay_obelisk.obj</bobModel>
+    <bobHeight>0.15</bobHeight>
+    <bobPeriod>300</bobPeriod>   <!-- as IsoRim's mech relay crystal -->
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidTempShield</defName>
+    <thingDef>VGE_MechanoidTempShield</thingDef>
+    <model>Models/vge_mech_temp_shield.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidAstrofuelNode</defName>
+    <thingDef>VGE_MechanoidAstrofuelNode</thingDef>
+    <model>Models/vge_mech_astrofuel_node.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidResourceProcessor</defName>
+    <thingDef>VGE_MechanoidResourceProcessor</thingDef>
+    <model>Models/vge_mech_resource_processor.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidPodLauncher</defName>
+    <thingDef>VGE_MechanoidPodLauncher</thingDef>
+    <model>Models/vge_mech_pod_launcher.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_HostileWarcomputer</defName>
+    <thingDef>VGE_HostileWarcomputer</thingDef>
+    <model>Models/vge_hostile_warcomputer.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Warcomputer</defName>
+    <thingDef>VGE_Warcomputer</thingDef>
+    <model>Models/vge_warcomputer.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+</Defs>
