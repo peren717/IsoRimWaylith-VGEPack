@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B1b: consoles, cockpit, black box, maintenance hub, gravjumper engine,
+       electric thrusters (2026-10-24). Low-poly models built only from what Vanilla Gravship Expanded's own textures show
+       (toolsmake_vge_b1b.py); fixed colours (vge_b1b.mtl). Built facing north = VGE's _north art; consoles face their
+       interaction cell (south). Thrusters follow the wall height as IsoRim's vanilla thrusters (wallFit 1.65).
+       outlineMinSize 0.001: the flat surface details (cockpit top ribs, black box top signs, thinner than 0.01) get no
+       dark outline. Gravjumper engine: body baked (drawn every frame by the game), state "cooldown" named by the pack
+       (Building_GravEngine.cooldownCompleteTick, as VGE picks its _Cooldown texture); the orb is IsoRim's bob part, and
+       its cooldown orb (VGE _Orb_Cooldown, no blue band) is added by PatchesVGE_Models_B1b.xml when IsoRim has Api 27.
+       A thingDef that is not loaded (Chapter 2 absent) is skipped quietly by IsoRim. -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CopilotConsole</defName>
+    <thingDef>VGE_CopilotConsole</thingDef>
+    <model>Models/vge_copilot_console.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_EngineeringConsole</defName>
+    <thingDef>VGE_EngineeringConsole</thingDef>
+    <model>Models/vge_engineering_console.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravtechConsole</defName>
+    <thingDef>VGE_GravtechConsole</thingDef>
+    <model>Models/vge_gravtech_console.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Ch.2 -->
+    <defName>R3D_VGE_TargetingConsole</defName>
+    <thingDef>VGE_TargetingConsole</thingDef>
+    <model>Models/vge_targeting_console.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_FlightComputer</defName>
+    <thingDef>VGE_FlightComputer</thingDef>
+    <model>Models/vge_flight_computer.obj</model>
+    <builtFor>(2, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_PilotCockpit</defName>
+    <thingDef>VGE_PilotCockpit</thingDef>
+    <model>Models/vge_pilot_cockpit.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <outlineMinSize>0.001</outlineMinSize>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravshipBlackBox</defName>
+    <thingDef>VGE_GravshipBlackBox</thingDef>
+    <model>Models/vge_black_box.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <outlineMinSize>0.001</outlineMinSize>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MaintenanceHub</defName>
+    <thingDef>VGE_MaintenanceHub</thingDef>
+    <model>Models/vge_maintenance_hub.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravjumperEngine</defName>
+    <thingDef>VGE_GravjumperEngine</thingDef>
+    <model>Models/vge_gravjumper_engine.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <byState>
+      <li><state>cooldown</state><model>Models/vge_gravjumper_engine_cooldown.obj</model></li>
+    </byState>
+    <bobModel>Models/vge_gravjumper_orb.obj</bobModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Ch.2 -->
+    <defName>R3D_VGE_SmallElectricThruster</defName>
+    <thingDef>VGE_SmallElectricThruster</thingDef>
+    <model>Models/vge_small_electric_thruster.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Ch.2 -->
+    <defName>R3D_VGE_LargeElectricThruster</defName>
+    <thingDef>VGE_LargeElectricThruster</thingDef>
+    <model>Models/vge_large_electric_thruster.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Ch.2 -->
+    <defName>R3D_VGE_GiantElectricThruster</defName>
+    <thingDef>VGE_GiantElectricThruster</thingDef>
+    <model>Models/vge_giant_electric_thruster.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+
+</Defs>

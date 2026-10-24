@@ -11,7 +11,9 @@ namespace IsoRimVGEPack
     //   "empty"    life support system out of algae (VEF Graphic_RefuelableSingle: fuel <= 0, its _empty texture);
     //   "off"      oxygen / astrofuel valve switched off (the vanilla CompFlickable _Off texture);
     //   "hot"      heatsink holding heat (VGE CompHeatsink draws its _Overlay while stored heat > 0);
-    //   "cooldown" gravheat absorber on cooldown (VGE CompGravheatAbsorber draws its _Cooldown texture).
+    //   "cooldown" gravheat absorber on cooldown (VGE CompGravheatAbsorber draws its _Cooldown texture); gravjumper engine
+    //              cooling down after a flight (B1b: Building_GravEngine.cooldownCompleteTick, as VGE's Graphic_GravEngineSingle
+    //              picks its _Cooldown body and its DrawAt patch the _Orb_Cooldown orb; the orb by bobByState, IsoRim Api 27).
     // VGE's comps are reached by name; a missing type or field leaves that state out (logged once), never the others.
     // While a model stands in (IsoRim Api.ModelStandsIn), VGE's own flat sprites for those states (the heatsink _Overlay,
     // the absorber _Cooldown, drawn every frame by the comps) are left out: the state model shows them. PipeSystem's fill bar
@@ -23,6 +25,7 @@ namespace IsoRimVGEPack
         private static readonly HashSet<ThingDef> valves = new HashSet<ThingDef>();
         private static readonly HashSet<ThingDef> heatsinks = new HashSet<ThingDef>();
         private static readonly HashSet<ThingDef> absorbers = new HashSet<ThingDef>();
+        private static readonly HashSet<ThingDef> engines = new HashSet<ThingDef>();
         private static Type heatsinkType, absorberType;
         private static AccessTools.FieldRef<object, float> storedHeat;
         private static AccessTools.FieldRef<object, int> cooldownEnd;
@@ -51,7 +54,8 @@ namespace IsoRimVGEPack
             {
                 Log.Warning(Pack.Tag + "VGE's gravheat absorber cooldown not found: the absorber keeps its idle model in 3D.");
             }
-            if (lifeSupport.Count + valves.Count + heatsinks.Count + absorbers.Count > 0)
+            Add(engines, "VGE_GravjumperEngine");
+            if (lifeSupport.Count + valves.Count + heatsinks.Count + absorbers.Count + engines.Count > 0)
             {
                 IsoRim.Api.AddModelState(new Func<Thing, string>(State));
             }
@@ -142,6 +146,11 @@ namespace IsoRimVGEPack
             {
                 ThingComp c = Comp(t, heatsinkType);
                 return c != null && storedHeat(c) > 0f ? "hot" : null;
+            }
+            if (engines.Contains(d))
+            {
+                Building_GravEngine e = t as Building_GravEngine;
+                return e != null && Find.TickManager != null && Find.TickManager.TicksGame < e.cooldownCompleteTick ? "cooldown" : null;
             }
             if (absorbers.Contains(d))
             {
