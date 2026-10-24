@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B6b: occasional devices, Chapter 2 (2026-10-24). Low-poly models built from
+       Vanilla Gravship Expanded's own textures (tools/make_vge_b6b.py, vge_b6b.mtl). Built facing north = VGE's _north
+       art. The emergency generator's _Off art is its light-off look: its grille and lamp are glow faces, which follow the
+       building's light. The large shield generator stands taller than a storey (user decision: no floor over it). The
+       salvager dropship is built at VGE's drawn size (7x7 over its 3x5 footprint), nose (the cockpit) north. The orange
+       ancient warning light is IsoRim's vanilla red emergency light model in VGE's orange, hung like it. -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Gravmine</defName>
+    <thingDef>VGE_Gravmine</thingDef>
+    <model>Models/vge_gravmine.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_LargeGravshipShieldGenerator</defName>
+    <thingDef>VGE_LargeGravshipShieldGenerator</thingDef>
+    <model>Models/vge_large_shield_generator.obj</model>
+    <builtFor>(5, 5)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AstrofuelPodLauncher</defName>
+    <thingDef>VGE_AstrofuelPodLauncher</thingDef>
+    <model>Models/vge_astrofuel_pod_launcher.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_EscapePod</defName>
+    <thingDef>VGE_EscapePod</thingDef>
+    <model>Models/vge_escape_pod.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>   <!-- a floor hatch: pawns walk over it, items stay on the floor -->
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravFieldDilutor</defName>
+    <thingDef>VGE_GravFieldDilutor</thingDef>
+    <model>Models/vge_grav_field_dilutor.obj</model>
+    <builtFor>(5, 5)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_EmergencyGenerator</defName>
+    <thingDef>VGE_EmergencyGenerator</thingDef>
+    <model>Models/vge_emergency_generator.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravlaunchCloaker</defName>
+    <thingDef>VGE_GravlaunchCloaker</thingDef>
+    <model>Models/vge_gravlaunch_cloaker.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SalvagerDropship</defName>
+    <thingDef>VGE_SalvagerDropship</thingDef>
+    <model>Models/vge_salvager_dropship.obj</model>
+    <builtFor>(3, 5)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Warpod_HighExplosive</defName>
+    <thingDef>VGE_Warpod_HighExplosive</thingDef>
+    <model>Models/vge_warpod_he.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Warpod_EMP</defName>
+    <thingDef>VGE_Warpod_EMP</thingDef>
+    <model>Models/vge_warpod_emp.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Warpod_Incendiary</defName>
+    <thingDef>VGE_Warpod_Incendiary</thingDef>
+    <model>Models/vge_warpod_incendiary.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Warpod_Antigrain</defName>
+    <thingDef>VGE_Warpod_Antigrain</thingDef>
+    <model>Models/vge_warpod_antigrain.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Warpod_Hellpod</defName>
+    <thingDef>VGE_Warpod_Hellpod</thingDef>
+    <model>Models/vge_warpod_hellpod.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AncientEmergencyLight_Orange</defName>
+    <thingDef>VGE_AncientEmergencyLight_Orange</thingDef>
+    <model>Models/vge_emergency_light_orange.obj</model>
+    <surfaceHeight>0.00</surfaceHeight>
+    <wallMounted>true</wallMounted>
+    <groundShadow>false</groundShadow>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+</Defs>
