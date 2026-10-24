@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch B7c: VGE Chapter 2 enemy ship parts made straight from the player models (auto-approved):
+     shield generator, grav field extender (cyan lights red), ancient gravmine (darker, bronze spikes), signal jammer (lens and display
+     lit red), the enemy gravship light (IsoRim's red ancient emergency light). All under the storey; MayRequire Chapter 2. The
+     parts that are new or changed follow after their review. -->
+<Defs>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyShieldGenerator</defName>
+    <thingDef>VGE_EnemyShieldGenerator</thingDef>
+    <model>Models/vge_e_shield_generator.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravFieldExtender</defName>
+    <thingDef>VGE_EnemyGravFieldExtender</thingDef>
+    <model>Models/vge_e_grav_field_extender.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_AncientGravmine</defName>
+    <thingDef>VGE_AncientGravmine</thingDef>
+    <model>Models/vge_e_gravmine.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemySignalJammer</defName>
+    <thingDef>VGE_EnemySignalJammer</thingDef>
+    <model>Models/vge_e_signal_jammer.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravshipLight_red</defName>
+    <thingDef>VGE_EnemyGravshipLight_red</thingDef>
+    <model>Models/vge_e_gravship_light_red.obj</model>
+    <surfaceHeight>0.00</surfaceHeight>
+    <wallMounted>true</wallMounted>
+    <groundShadow>false</groundShadow>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+</Defs>

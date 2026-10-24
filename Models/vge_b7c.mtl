@@ -1,0 +1,71 @@
+# IsoRim Waylith - VGE Pack, batch B7c: enemy ship parts. Player materials copied (e7c_*), recoloured red where the enemy art is.
+newmtl e7c_oc_dark
+Kd 0.14 0.14 0.15
+newmtl e7c_oc_grey
+Kd 0.56 0.56 0.55
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_oc_grey_mid
+Kd 0.43 0.43 0.43
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vge_frame
+Kd 0.62 0.62 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vge_frame_dark
+Kd 0.31 0.31 0.32
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgee_black
+Kd 0.14 0.14 0.15
+newmtl e7c_vgee_dark
+Kd 0.36 0.36 0.38
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgee_frame_dark
+Kd 0.28 0.28 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgee_gold
+Kd 0.80 0.54 0.12
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgee_grey
+Kd 0.66 0.66 0.67
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgee_light
+Kd 0.86 0.86 0.87
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgee_silver
+Kd 0.84 0.84 0.85
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgee_tan
+Kd 0.82 0.30 0.28
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgeg_brass
+Kd 0.50 0.44 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_vgeg_mine
+Kd 0.34 0.34 0.35
+map_Kd IsoRim/Swatches/Metal
+newmtl ember_e7c_vgee_grey
+Kd 0.92 0.24 0.22
+map_Kd IsoRim/Swatches/Glow
+newmtl ember_e7c_vgee_silver
+Kd 0.92 0.24 0.22
+map_Kd IsoRim/Swatches/Glow
+newmtl glow_e7c_oc_red
+Kd 1.00 0.42 0.38
+map_Kd IsoRim/Swatches/Glow
+newmtl glow_e7c_vgee_blue
+Kd 0.95 0.22 0.20
+newmtl e7c_aj_stone
+Kd 0.46 0.43 0.40
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_aj_top
+Kd 0.54 0.51 0.48
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_aj_dark
+Kd 0.26 0.25 0.24
+newmtl e7c_aj_collar
+Kd 0.80 0.80 0.81
+map_Kd IsoRim/Swatches/Metal
+newmtl e7c_aj_rod
+Kd 0.10 0.10 0.11
+newmtl ember_e7c_aj_lamp
+Kd 0.94 0.56 0.20
+map_Kd IsoRim/Swatches/Glow
