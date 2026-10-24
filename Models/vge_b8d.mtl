@@ -1,0 +1,224 @@
+# IsoRim Waylith - VGE Pack batch B8-destroyed: the intact models' materials (<lib>__<name>), their glow faces as
+# dulled plain colours (dmg_*), and the scorched interior of the cuts. Written by make_vge_b8d.py.
+newmtl vge_b1a__dmg_glow_vge_panel
+Kd 0.518 0.518 0.469
+newmtl vge_b1a__vge_algae
+Kd 0.380 0.520 0.620
+newmtl vge_b1a__vge_bronze
+Kd 0.660 0.560 0.400
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_bronze_dark
+Kd 0.500 0.420 0.300
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_cable
+Kd 0.620 0.620 0.630
+newmtl vge_b1a__vge_cap
+Kd 0.360 0.360 0.370
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_frame
+Kd 0.620 0.620 0.630
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_frame_dark
+Kd 0.310 0.310 0.320
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_gold
+Kd 0.740 0.600 0.290
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_grey
+Kd 0.460 0.460 0.470
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_grille
+Kd 0.240 0.240 0.250
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_hole
+Kd 0.140 0.140 0.150
+newmtl vge_b1a__vge_olive
+Kd 0.520 0.530 0.470
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_olive_dark
+Kd 0.340 0.350 0.310
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_pipe_red
+Kd 0.580 0.360 0.360
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_purple
+Kd 0.460 0.410 0.530
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_purple_dark
+Kd 0.340 0.290 0.360
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_readout
+Kd 0.700 0.550 0.280
+newmtl vge_b1a__vge_red
+Kd 0.820 0.320 0.350
+newmtl vge_b1a__vge_silver
+Kd 0.780 0.780 0.790
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_tan
+Kd 0.820 0.710 0.540
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1a__vge_white
+Kd 0.820 0.820 0.830
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__dmg_glow_vgeb_band
+Kd 0.487 0.519 0.486
+newmtl vge_b1b__dmg_glow_vgeb_led
+Kd 0.514 0.544 0.509
+newmtl vge_b1b__dmg_glow_vgeb_pool
+Kd 0.417 0.452 0.424
+newmtl vge_b1b__dmg_glow_vgeb_ring
+Kd 0.713 0.739 0.684
+newmtl vge_b1b__vgeb_bay
+Kd 0.220 0.240 0.260
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_bronze
+Kd 0.620 0.500 0.340
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_brown
+Kd 0.480 0.390 0.300
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_gold
+Kd 0.780 0.620 0.300
+newmtl vge_b1b__vgeb_green
+Kd 0.420 0.620 0.360
+newmtl vge_b1b__vgeb_grey
+Kd 0.640 0.640 0.650
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_grey_dark
+Kd 0.420 0.420 0.430
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_light
+Kd 0.860 0.860 0.870
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_pink
+Kd 0.780 0.420 0.440
+newmtl vge_b1b__vgeb_red
+Kd 0.820 0.260 0.260
+newmtl vge_b1b__vgeb_screen
+Kd 0.130 0.130 0.140
+newmtl vge_b1b__vgeb_silver
+Kd 0.820 0.820 0.830
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_slat
+Kd 0.300 0.300 0.310
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_tan
+Kd 0.640 0.600 0.530
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_thruster
+Kd 0.680 0.720 0.730
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b1b__vgeb_white
+Kd 0.880 0.880 0.890
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b4__dmg_glow_vgee_band
+Kd 0.487 0.519 0.486
+newmtl vge_b4__dmg_glow_vgee_blue
+Kd 0.421 0.453 0.427
+newmtl vge_b4__vgee_black
+Kd 0.140 0.140 0.150
+newmtl vge_b4__vgee_dark
+Kd 0.360 0.360 0.380
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b4__vgee_frame_dark
+Kd 0.280 0.280 0.300
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b4__vgee_grey
+Kd 0.660 0.660 0.670
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b4__vgee_light
+Kd 0.860 0.860 0.870
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b4__vgee_purple
+Kd 0.500 0.440 0.580
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b4__vgee_purple_dark
+Kd 0.340 0.300 0.400
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b4__vgee_readout
+Kd 0.800 0.620 0.300
+newmtl vge_b4__vgee_screen
+Kd 0.130 0.130 0.140
+newmtl vge_b4__vgee_silver
+Kd 0.840 0.840 0.850
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b4__vgee_tan
+Kd 0.780 0.660 0.440
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__dmg_glow_vgee_band
+Kd 0.487 0.519 0.486
+newmtl vge_b6a__dmg_glow_vgee_blue
+Kd 0.421 0.453 0.427
+newmtl vge_b6a__vge_frame
+Kd 0.620 0.620 0.630
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vge_frame_dark
+Kd 0.310 0.310 0.320
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgee_black
+Kd 0.140 0.140 0.150
+newmtl vge_b6a__vgee_dark
+Kd 0.360 0.360 0.380
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgee_frame_dark
+Kd 0.280 0.280 0.300
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgee_grey
+Kd 0.660 0.660 0.670
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgee_light
+Kd 0.860 0.860 0.870
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgee_purple
+Kd 0.500 0.440 0.580
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgee_purple_dark
+Kd 0.340 0.300 0.400
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgee_readout
+Kd 0.800 0.620 0.300
+newmtl vge_b6a__vgee_screen
+Kd 0.130 0.130 0.140
+newmtl vge_b6a__vgee_silver
+Kd 0.840 0.840 0.850
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgee_tan
+Kd 0.780 0.660 0.440
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgef_olive
+Kd 0.560 0.580 0.520
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6a__vgef_recess
+Kd 0.300 0.220 0.150
+newmtl vge_b6a__vgef_red
+Kd 0.520 0.140 0.150
+newmtl vge_b6a__vgef_redlight
+Kd 0.920 0.220 0.220
+newmtl vge_b6a__vgef_white
+Kd 0.900 0.900 0.910
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6b__dmg_glow_vgeg_green
+Kd 0.576 0.612 0.545
+newmtl vge_b6b__vge_frame
+Kd 0.620 0.620 0.630
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6b__vge_frame_dark
+Kd 0.310 0.310 0.320
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6b__vgee_black
+Kd 0.140 0.140 0.150
+newmtl vge_b6b__vgee_grey
+Kd 0.660 0.660 0.670
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6b__vgee_light
+Kd 0.860 0.860 0.870
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b6b__vgeg_olive_dark
+Kd 0.340 0.340 0.310
+map_Kd IsoRim/Swatches/Metal
+newmtl vged_scorch
+Kd 0.260 0.220 0.200
+newmtl x__vge_frame
+Kd 0.800 0.800 0.800
+newmtl x__vge_frame_dark
+Kd 0.800 0.800 0.800
