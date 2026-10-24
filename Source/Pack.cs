@@ -12,6 +12,7 @@ namespace IsoRimVGEPack
     //    own rule (SectionLayer_GravshipArmorHull.ShouldDrawCornerPiece, called by name) and colour, and that layer's flat
     //    corner pieces are left out (its substructure edges and indoor mask stay): IsoRim.Api.AddWallCorners, HideFlatLayer.
     //  - Gravship scene: the armour layer flies with the ship (Api.FlyLayer); VGE's scaffold mask layers are no geometry.
+    //  - 3D models (DefsVGE_Models_*.xml): the states VGE draws with sprites of its own name the byState models (ModelStates).
     // VGE is reached by name: a missing type or method leaves that part as VGE draws it (logged once).
     [StaticConstructorOnStartup]
     public static class Pack
@@ -44,6 +45,14 @@ namespace IsoRimVGEPack
 
         internal static void Run()
         {
+            try
+            {
+                ModelStates.Run();
+            }
+            catch (Exception e)
+            {
+                Log.Error(Pack.Tag + "Model states failed (B1a state models stay in their default state): " + e);
+            }
             Type layer = AccessTools.TypeByName("VanillaGravshipExpanded2.SectionLayer_GravshipArmorHull");
             ThingDef armour = DefDatabase<ThingDef>.GetNamedSilentFail("VGE_GravshipArmor");
             if (layer != null && armour != null)

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B1a: life support, heat and fuel (2026-10-23). Low-poly models built only
+       from what Vanilla Gravship Expanded's own textures show (toolsmake_vge_b1a.py). Format: IsoRim's DefsModels.xml.
+       Paths are relative to this mod's folder. All built facing north (VGE's _north art); fixed colours (vge_b1a.mtl).
+       A thingDef that is not loaded (Chapter 2 absent) is skipped quietly by IsoRim.
+       byState: the state is named by the pack (Pack.cs, IsoRim Api.AddModelState): "empty" (life support out of algae,
+       VEF's Graphic_RefuelableSingle), "off" (valve switched off, the vanilla _Off graphic), "hot" (heatsink holding heat,
+       VGE's _Overlay), "cooldown" (gravheat absorber on cooldown, VGE's _Cooldown). -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_LargeOxygenTank</defName>
+    <thingDef>VGE_LargeOxygenTank</thingDef>
+    <model>Models/vge_large_oxygen_tank.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SmallOxygenTank</defName>
+    <thingDef>VGE_SmallOxygenTank</thingDef>
+    <model>Models/vge_small_oxygen_tank.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Ch.2 -->
+    <defName>R3D_VGE_AuxiliaryOxygenTank</defName>
+    <thingDef>VGE_AuxiliaryOxygenTank</thingDef>
+    <model>Models/vge_aux_oxygen_tank.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_IndustrialOxygenPump</defName>
+    <thingDef>VGE_IndustrialOxygenPump</thingDef>
+    <model>Models/vge_industrial_oxygen_pump.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <wallFit>1.2</wallFit>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_OxygenHarvester</defName>
+    <thingDef>VGE_OxygenHarvester</thingDef>
+    <model>Models/vge_oxygen_harvester.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_OxygenValve</defName>
+    <thingDef>VGE_OxygenValve</thingDef>
+    <model>Models/vge_oxygen_valve.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <byState>
+      <li><state>off</state><model>Models/vge_oxygen_valve_off.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_OxygenCanisterEmptier</defName>
+    <thingDef>VGE_OxygenCanisterEmptier</thingDef>
+    <model>Models/vge_oxygen_canister_emptier.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_OxygenCanisterFiller</defName>
+    <thingDef>VGE_OxygenCanisterFiller</thingDef>
+    <model>Models/vge_oxygen_canister_filler.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_LifeSupportSystem</defName>
+    <thingDef>VGE_LifeSupportSystem</thingDef>
+    <model>Models/vge_life_support.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <byState>
+      <li><state>empty</state><model>Models/vge_life_support_empty.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_LargeHeatsink</defName>
+    <thingDef>VGE_LargeHeatsink</thingDef>
+    <model>Models/vge_large_heatsink.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <byState>
+      <li><state>hot</state><model>Models/vge_large_heatsink_hot.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SmallHeatsink</defName>
+    <thingDef>VGE_SmallHeatsink</thingDef>
+    <model>Models/vge_small_heatsink.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <byState>
+      <li><state>hot</state><model>Models/vge_small_heatsink_hot.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravheatAbsorber</defName>
+    <thingDef>VGE_GravheatAbsorber</thingDef>
+    <model>Models/vge_gravheat_absorber.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <byState>
+      <li><state>cooldown</state><model>Models/vge_gravheat_absorber_cooldown.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AstrofuelSynthesizer</defName>
+    <thingDef>VGE_AstrofuelSynthesizer</thingDef>
+    <model>Models/vge_astrofuel_synthesizer.obj</model>
+    <builtFor>(4, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GiantAstrofuelTank</defName>
+    <thingDef>VGE_GiantAstrofuelTank</thingDef>
+    <model>Models/vge_giant_astrofuel_tank.obj</model>
+    <builtFor>(6, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AstrofuelGenerator</defName>
+    <thingDef>VGE_AstrofuelGenerator</thingDef>
+    <model>Models/vge_astrofuel_generator.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AstrofuelTap</defName>
+    <thingDef>VGE_AstrofuelTap</thingDef>
+    <model>Models/vge_astrofuel_tap.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AstrofuelValve</defName>
+    <thingDef>VGE_AstrofuelValve</thingDef>
+    <model>Models/vge_astrofuel_valve.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <byState>
+      <li><state>off</state><model>Models/vge_astrofuel_valve_off.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AstrofuelDrain</defName>
+    <thingDef>VGE_AstrofuelDrain</thingDef>
+    <model>Models/vge_astrofuel_drain.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Ch.2 -->
+    <defName>R3D_VGE_AuxiliaryAstrofuelTank</defName>
+    <thingDef>VGE_AuxiliaryAstrofuelTank</thingDef>
+    <model>Models/vge_aux_astrofuel_tank.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+</Defs>
