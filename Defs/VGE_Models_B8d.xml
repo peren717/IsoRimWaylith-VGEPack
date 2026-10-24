@@ -368,4 +368,48 @@
     <aged>0.5</aged>
   </IsoRim.ModelDef>
 
+  <!-- B8-destroyed extras (2026-10-24): VGE's destroyed weapon platforms keep only the base (no gun): the B5/B7a gun frame
+       (0.97 high) with its pedestal fallen in, cut where VGE's art is torn (tools/make_vge_b8dx_src.py + make_vge_b8d.py
+       with B8D_KEEP_UNCUT=1); no 7x7 frame exists, so the large one is the 9x9 frame at 7/9 across. The destroyed
+       warcomputer is the B8a1 warcomputer cut. All under the 1.60 storey. Chapter 2 things are skipped quietly. -->
+  <IsoRim.ModelDef>   <!-- = the 3x3 gun frame + pedestal, 18 % cut away -->
+    <defName>R3D_VGE_DestroyedSmallWeaponPlatform</defName>
+    <thingDef>VGE_DestroyedSmallWeaponPlatform</thingDef>
+    <model>Models/vge_d_smallweaponplatform.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = the 5x5 gun frame + pedestal, 23 % cut away -->
+    <defName>R3D_VGE_DestroyedMediumWeaponPlatform</defName>
+    <thingDef>VGE_DestroyedMediumWeaponPlatform</thingDef>
+    <model>Models/vge_d_mediumweaponplatform.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = the 9x9 gun frame + pedestal at 7/9 across, 20 % cut away -->
+    <defName>R3D_VGE_DestroyedLargeWeaponPlatform</defName>
+    <thingDef>VGE_DestroyedLargeWeaponPlatform</thingDef>
+    <model>Models/vge_d_largeweaponplatform.obj</model>
+    <builtFor>(7, 7)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = the 9x9 gun frame + pedestal, 17 % cut away -->
+    <defName>R3D_VGE_DestroyedGiantWeaponPlatform</defName>
+    <thingDef>VGE_DestroyedGiantWeaponPlatform</thingDef>
+    <model>Models/vge_d_giantweaponplatform.obj</model>
+    <builtFor>(9, 9)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_Warcomputer (B8a1), 4 % cut away -->
+    <defName>R3D_VGE_DestroyedWarComputer</defName>
+    <thingDef>VGE_DestroyedWarComputer</thingDef>
+    <model>Models/vge_d_warcomputer.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
 </Defs>

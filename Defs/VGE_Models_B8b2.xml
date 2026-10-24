@@ -4,7 +4,8 @@
   <!-- IsoRim Waylith - VGE Pack, model batch B8b2 (2026-10-24): rare orbital-station props, part 2. Low-poly models built
        from VGE's own textures (tools/make_vge_b8b2.py, vge_b8b2.mtl), under the 1.60 storey. Random-look things list one
        model per VGE texture in name order (IsoRim picks the variant as the game picks the texture); lootable boxes and
-       pallets show their empty look once opened (emptyModel, as VGE's CompEmptyStateGraphic). The oxyfarm keeps its water
+       pallets show their empty look once opened (emptyModel, as VGE's CompEmptyStateGraphic); full, they hold IsoRim's own item
+       models of their goods (v2, tools/make_vge_b8b2_v2.py, vge_b8b2_v2.mtl). The oxyfarm keeps its water
        on the south side facing north or south, as VGE draws it (it has no north art). Chapter 2 things are skipped
        quietly. -->
 
@@ -58,6 +59,7 @@
     <model>Models/vge_oxyfarm.obj</model>
     <builtFor>(2, 1)</builtFor>
     <rotationByFacing><li>0</li><li>0</li><li>180</li><li>0</li></rotationByFacing>
+    <glassModel>Models/vge_oxyfarm_glass.obj</glassModel>   <!-- v2: the tank is glass, water and algae inside -->
   </IsoRim.ModelDef>
 
   <IsoRim.ModelDef>

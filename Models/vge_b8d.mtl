@@ -222,3 +222,61 @@ newmtl x__vge_frame
 Kd 0.800 0.800 0.800
 newmtl x__vge_frame_dark
 Kd 0.800 0.800 0.800
+# B8-destroyed extras (2026-10-24): the weapon platforms' (B5/B7a frames, pedestals) and the warcomputer's (B8a1) materials.
+newmtl vge_b5__vgeb5_brass
+Kd 0.660 0.520 0.280
+newmtl vge_b5__vgeb5_frame
+Kd 0.620 0.620 0.640
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b5__vgeb5_frame_dark
+Kd 0.400 0.400 0.420
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b5__vgeb5_gun_dark
+Kd 0.360 0.370 0.400
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b5__vgeb5_hazard_k
+Kd 0.130 0.130 0.130
+newmtl vge_b5__vgeb5_hazard_y
+Kd 0.860 0.680 0.140
+newmtl vge_b5__vgeb5_plate
+Kd 0.360 0.360 0.380
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b5__vgeb5_ring
+Kd 0.520 0.520 0.540
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b7a__vgeb5_brass
+Kd 0.660 0.520 0.280
+newmtl vge_b7a__vgeb5_frame
+Kd 0.620 0.620 0.640
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b7a__vgeb5_frame_dark
+Kd 0.400 0.400 0.420
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b7a__vgeb5_gun_dark
+Kd 0.360 0.370 0.400
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b7a__vgeb5_hazard_k
+Kd 0.130 0.130 0.130
+newmtl vge_b7a__vgeb5_hazard_y
+Kd 0.860 0.680 0.140
+newmtl vge_b7a__vgeb5_plate
+Kd 0.360 0.360 0.380
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b7a__vgeb5_ring
+Kd 0.520 0.520 0.540
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b8a__dmg_glow_vgem_wc_blue
+Kd 0.408 0.436 0.412
+newmtl vge_b8a__vgem_cable
+Kd 0.450 0.450 0.460
+newmtl vge_b8a__vgem_grey
+Kd 0.580 0.580 0.580
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b8a__vgem_pit
+Kd 0.170 0.170 0.140
+newmtl vge_b8a__vgem_silver
+Kd 0.780 0.780 0.780
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_b8a__vgem_steel_dark
+Kd 0.360 0.360 0.370
+map_Kd IsoRim/Swatches/Metal
