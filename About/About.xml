@@ -17,6 +17,11 @@
       <displayName>Vanilla Gravship Expanded - Chapter 1</displayName>
       <steamWorkshopUrl>steam://url/CommunityFilePage/3609835606</steamWorkshopUrl>
     </li>
+    <li>
+      <packageId>Peren.IsoRimWaylith.VEFPack</packageId>
+      <displayName>IsoRim Waylith - VE Framework Pack</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3825099183</steamWorkshopUrl>
+    </li>
   </modDependencies>
   <loadAfter>
     <li>Peren.IsoRim17</li>
@@ -24,6 +29,7 @@
     <li>OskarPotocki.VanillaFactionsExpanded.Core</li>
     <li>vanillaexpanded.gravship</li>
     <li>vanillaexpanded.gravship2</li>
+    <li>Peren.IsoRimWaylith.VEFPack</li>
   </loadAfter>
   <description>Vanilla Gravship Expanded in IsoRim's 3D view and on IsoRimZ floors.
 VGE armour hull corners stand in 3D and fly with the ship.
