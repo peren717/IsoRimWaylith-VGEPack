@@ -13,6 +13,7 @@ namespace IsoRimVGEPack
     //    corner pieces are left out (its substructure edges and indoor mask stay): IsoRim.Api.AddWallCorners, HideFlatLayer.
     //  - Gravship scene: the armour layer flies with the ship (Api.FlyLayer); VGE's scaffold mask layers are no geometry.
     //  - 3D models (DefsVGE_Models_*.xml): the states VGE draws with sprites of its own name the byState models (ModelStates).
+    //  - Crew bunk bed (BunkBeds.dll): its flat upper bunk left out under the model, sleepers on their decks (BunkBedsGlue).
     // VGE is reached by name: a missing type or method leaves that part as VGE draws it (logged once).
     [StaticConstructorOnStartup]
     public static class Pack
@@ -52,6 +53,14 @@ namespace IsoRimVGEPack
             catch (Exception e)
             {
                 Log.Error(Pack.Tag + "Model states failed (B1a state models stay in their default state): " + e);
+            }
+            try
+            {
+                BunkBedsGlue.Run(new Harmony("peren.isorimwaylith.vgepack.bunkbeds"));
+            }
+            catch (Exception e)
+            {
+                Log.Error(Pack.Tag + "Bunk bed setup failed (the crew bunk bed keeps BunkBeds' flat drawing over the model): " + e);
             }
             Type layer = AccessTools.TypeByName("VanillaGravshipExpanded2.SectionLayer_GravshipArmorHull");
             ThingDef armour = DefDatabase<ThingDef>.GetNamedSilentFail("VGE_GravshipArmor");
