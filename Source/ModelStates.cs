@@ -13,7 +13,9 @@ namespace IsoRimVGEPack
     //   "hot"      heatsink holding heat (VGE CompHeatsink draws its _Overlay while stored heat > 0);
     //   "cooldown" gravheat absorber on cooldown (VGE CompGravheatAbsorber draws its _Cooldown texture); gravjumper engine
     //              cooling down after a flight (B1b: Building_GravEngine.cooldownCompleteTick, as VGE's Graphic_GravEngineSingle
-    //              picks its _Cooldown body and its DrawAt patch the _Orb_Cooldown orb; the orb by bobByState, IsoRim Api 27).
+    //              picks its _Cooldown body and its DrawAt patch the _Orb_Cooldown orb; the orb by bobByState, IsoRim Api 27);
+    //              B4: the vanilla grav engine (VGE re-skin, same rule) and the signal jammer on cooldown (VGE2
+    //              CompSignalJammer.cooldownTicksLeft > 0, as it draws its _Cooldown art; its flat cooldown sprite left out under a model).
     // VGE's comps are reached by name; a missing type or field leaves that state out (logged once), never the others.
     // While a model stands in (IsoRim Api.ModelStandsIn), VGE's own flat sprites for those states (the heatsink _Overlay,
     // the absorber _Cooldown, drawn every frame by the comps) are left out: the state model shows them. PipeSystem's fill bar
@@ -26,6 +28,9 @@ namespace IsoRimVGEPack
         private static readonly HashSet<ThingDef> heatsinks = new HashSet<ThingDef>();
         private static readonly HashSet<ThingDef> absorbers = new HashSet<ThingDef>();
         private static readonly HashSet<ThingDef> engines = new HashSet<ThingDef>();
+        private static readonly HashSet<ThingDef> jammers = new HashSet<ThingDef>();
+        private static Type jammerType;
+        private static AccessTools.FieldRef<object, int> jammerCooldown;
         private static Type heatsinkType, absorberType;
         private static AccessTools.FieldRef<object, float> storedHeat;
         private static AccessTools.FieldRef<object, int> cooldownEnd;
@@ -54,13 +59,21 @@ namespace IsoRimVGEPack
             {
                 Log.Warning(Pack.Tag + "VGE's gravheat absorber cooldown not found: the absorber keeps its idle model in 3D.");
             }
-            Add(engines, "VGE_GravjumperEngine");
-            if (lifeSupport.Count + valves.Count + heatsinks.Count + absorbers.Count + engines.Count > 0)
+            Add(engines, "VGE_GravjumperEngine", "GravEngine");   // GravEngine: VGE's re-skin (B4), the same _Cooldown art
+            // (B4, Chapter 2) the signal jammer on cooldown: VGE2 CompSignalJammer.OnCooldown (cooldownTicksLeft > 0), as it
+            // draws its SignalJammer_Cooldown art
+            jammerType = AccessTools.TypeByName("VanillaGravshipExpanded2.CompSignalJammer");
+            if (jammerType != null && AccessTools.Field(jammerType, "cooldownTicksLeft") != null)
+            {
+                jammerCooldown = AccessTools.FieldRefAccess<int>(jammerType, "cooldownTicksLeft");
+                Add(jammers, "SignalJammer");
+            }
+            if (lifeSupport.Count + valves.Count + heatsinks.Count + absorbers.Count + engines.Count + jammers.Count > 0)
             {
                 IsoRim.Api.AddModelState(new Func<Thing, string>(State));
             }
             Harmony h = new Harmony("peren.isorimwaylith.vgepack.models");
-            foreach (Type t in new[] { heatsinkType, absorberType })
+            foreach (Type t in new[] { heatsinkType, absorberType, jammerType })
             {
                 System.Reflection.MethodInfo m = t != null ? AccessTools.DeclaredMethod(t, "PostDraw") : null;
                 if (m != null)
@@ -156,6 +169,11 @@ namespace IsoRimVGEPack
             {
                 ThingComp c = Comp(t, absorberType);
                 return c != null && Find.TickManager != null && Find.TickManager.TicksGame < cooldownEnd(c) ? "cooldown" : null;
+            }
+            if (jammers.Contains(d))
+            {
+                ThingComp c = Comp(t, jammerType);
+                return c != null && jammerCooldown(c) > 0 ? "cooldown" : null;
             }
             return null;
         }

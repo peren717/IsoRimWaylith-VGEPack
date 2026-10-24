@@ -1,0 +1,54 @@
+# IsoRim Waylith - VGE Pack, batch B4: fixed colours from Vanilla Gravship Expanded's textures (lifted ~1.1x for
+# the 3D shading). glow* = unlit while the building's light is on (IsoRim).
+newmtl vgee_grey
+Kd 0.66 0.66 0.67
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_light
+Kd 0.86 0.86 0.87
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_silver
+Kd 0.84 0.84 0.85
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_dark
+Kd 0.36 0.36 0.38
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_black
+Kd 0.14 0.14 0.15
+newmtl vgee_frame
+Kd 0.62 0.62 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_frame_dark
+Kd 0.28 0.28 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_tan
+Kd 0.78 0.66 0.44
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_purple
+Kd 0.50 0.44 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_purple_dark
+Kd 0.34 0.30 0.40
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_gold
+Kd 0.84 0.64 0.26
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_screen
+Kd 0.13 0.13 0.14
+newmtl vgee_readout
+Kd 0.80 0.62 0.30
+newmtl vgee_wheel
+Kd 0.74 0.40 0.40
+newmtl vgee_pipe_red
+Kd 0.62 0.36 0.32
+newmtl vgee_pink
+Kd 0.86 0.56 0.52
+newmtl glow_vgee_blue
+Kd 0.10 0.72 0.96
+newmtl glow_vgee_band
+Kd 0.25 0.78 0.98
+newmtl vgee_pool_cool
+Kd 0.56 0.36 0.32
+newmtl glow_vgee_red
+Kd 1.00 0.36 0.24
+newmtl glow_vgee_field
+Kd 0.84 0.90 0.94
