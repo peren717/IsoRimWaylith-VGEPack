@@ -22,6 +22,7 @@ namespace IsoRimVGEPackZ
     //    fog rule again, so the upper floors the colony reaches stay revealed.
     //  - Artillery (Floors): incoming VGE artillery that misses lands on the target's floor; salvager rockets on the
     //    dropship target's floor; the salvager dropship lands on its centre's floor.
+    //  - Ranges (Api 2): VGE's grav field extender placement and the terminal/turret link ranges measure 3D between floors.
     //  - Turrets (Api 4): VGE gravship turrets turn toward ProjectZ.Api.AimPoint (the right direction to a target on another
     //    floor), at VGE's own speed.
     //  - Deck foundations (Api 4): VGE subarmor and subscaffold are built on upper floors like ship decks and count as decks;
@@ -137,6 +138,7 @@ namespace IsoRimVGEPackZ
             GroundSize.Apply();
             Floors.Apply();
             Turret.Apply();   // (its Api 4 call is checked at run time)
+            Ranges.Apply();
         }
     }
 
