@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- The gravjumper engine's cooldown orb (VGE _Orb_Cooldown: no blue band) needs IsoRim's state models for the bob
+       part (ModelDef.bobByState, IsoRim Api 27). An older IsoRim does not know the field, so it is added only when IsoRim
+       has Api 27 or later (IsoRimVGEPack.PatchOperation_IfIsoRimApi, Source/ApiGate.cs); before that the orb keeps its
+       blue band while the engine cools down. -->
+  <Operation Class="IsoRimVGEPack.PatchOperation_IfIsoRimApi">
+    <minVersion>27</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_GravjumperEngine"]</xpath>
+      <value>
+        <bobByState>
+          <li><state>cooldown</state><model>Models/vge_gravjumper_orb_cooldown.obj</model></li>
+        </bobByState>
+      </value>
+    </apply>
+  </Operation>
+
+</Patch>

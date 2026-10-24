@@ -1,5 +1,6 @@
 # IsoRim Waylith - VGE Pack, batch B1a: fixed colours sampled from Vanilla Gravship Expanded's textures
-# (lifted ~1.1x for the 3D shading). glow* = unlit in IsoRim.
+# (lifted ~1.1x for the 3D shading). glow* = unlit in IsoRim while the building's light is on; ember* = heat glow,
+# unlit whatever the light (IsoRim keeps embers lit; they follow fuel only, and these buildings take none).
 newmtl vge_frame
 Kd 0.62 0.62 0.63
 map_Kd IsoRim/Swatches/Metal
@@ -64,7 +65,7 @@ newmtl vge_cable_hot
 Kd 0.80 0.50 0.46
 newmtl vge_readout
 Kd 0.70 0.55 0.28
-newmtl glow_vge_heat
+newmtl ember_vge_heat
 Kd 1.00 0.48 0.16
 map_Kd IsoRim/Swatches/Glow
 newmtl glow_vge_panel

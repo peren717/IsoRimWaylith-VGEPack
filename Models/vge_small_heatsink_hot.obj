@@ -201,7 +201,7 @@ f 67 72 71
 f 68 65 69
 f 68 69 72
 o vge_small_heatsink_hot_9
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v -0.5000 0.1200 0.6600
 v -0.4000 0.1200 0.6600
 v -0.4000 0.1200 -0.6600
@@ -223,7 +223,7 @@ f 75 80 79
 f 76 73 77
 f 76 77 80
 o vge_small_heatsink_hot_10
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v -0.2000 0.1200 0.6600
 v -0.1000 0.1200 0.6600
 v -0.1000 0.1200 -0.6600
@@ -245,7 +245,7 @@ f 83 88 87
 f 84 81 85
 f 84 85 88
 o vge_small_heatsink_hot_11
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v 0.1000 0.1200 0.6600
 v 0.2000 0.1200 0.6600
 v 0.2000 0.1200 -0.6600
@@ -267,7 +267,7 @@ f 91 96 95
 f 92 89 93
 f 92 93 96
 o vge_small_heatsink_hot_12
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v 0.4000 0.1200 0.6600
 v 0.5000 0.1200 0.6600
 v 0.5000 0.1200 -0.6600

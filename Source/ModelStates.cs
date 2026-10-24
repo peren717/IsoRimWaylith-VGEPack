@@ -11,18 +11,21 @@ namespace IsoRimVGEPack
     //   "empty"    life support system out of algae (VEF Graphic_RefuelableSingle: fuel <= 0, its _empty texture);
     //   "off"      oxygen / astrofuel valve switched off (the vanilla CompFlickable _Off texture);
     //   "hot"      heatsink holding heat (VGE CompHeatsink draws its _Overlay while stored heat > 0);
-    //   "cooldown" gravheat absorber on cooldown (VGE CompGravheatAbsorber draws its _Cooldown texture).
+    //   "cooldown" gravheat absorber on cooldown (VGE CompGravheatAbsorber draws its _Cooldown texture); gravjumper engine
+    //              cooling down after a flight (B1b: Building_GravEngine.cooldownCompleteTick, as VGE's Graphic_GravEngineSingle
+    //              picks its _Cooldown body and its DrawAt patch the _Orb_Cooldown orb; the orb by bobByState, IsoRim Api 27).
     // VGE's comps are reached by name; a missing type or field leaves that state out (logged once), never the others.
     // While a model stands in (IsoRim Api.ModelStandsIn), VGE's own flat sprites for those states (the heatsink _Overlay,
     // the absorber _Cooldown, drawn every frame by the comps) are left out: the state model shows them. PipeSystem's fill bar
-    // of a modelled storage tank stands up as a card over the model (IsoRim Api.BeginUpright), as IsoRim's work bars do,
-    // instead of lying flat through the tank.
+    // of a modelled storage tank stands up as a card over the model's middle (IsoRim Api.BeginUpright, hinged on the bar,
+    // drawn there for the moment instead of at its 2D offset), as IsoRim's work bars do, instead of lying flat through the tank.
     internal static class ModelStates
     {
         private static readonly HashSet<ThingDef> lifeSupport = new HashSet<ThingDef>();
         private static readonly HashSet<ThingDef> valves = new HashSet<ThingDef>();
         private static readonly HashSet<ThingDef> heatsinks = new HashSet<ThingDef>();
         private static readonly HashSet<ThingDef> absorbers = new HashSet<ThingDef>();
+        private static readonly HashSet<ThingDef> engines = new HashSet<ThingDef>();
         private static Type heatsinkType, absorberType;
         private static AccessTools.FieldRef<object, float> storedHeat;
         private static AccessTools.FieldRef<object, int> cooldownEnd;
@@ -51,7 +54,8 @@ namespace IsoRimVGEPack
             {
                 Log.Warning(Pack.Tag + "VGE's gravheat absorber cooldown not found: the absorber keeps its idle model in 3D.");
             }
-            if (lifeSupport.Count + valves.Count + heatsinks.Count + absorbers.Count > 0)
+            Add(engines, "VGE_GravjumperEngine");
+            if (lifeSupport.Count + valves.Count + heatsinks.Count + absorbers.Count + engines.Count > 0)
             {
                 IsoRim.Api.AddModelState(new Func<Thing, string>(State));
             }
@@ -70,8 +74,9 @@ namespace IsoRimVGEPack
             }
             Type storage = AccessTools.TypeByName("PipeSystem.CompResourceStorage");
             System.Reflection.MethodInfo sm = storage != null ? AccessTools.DeclaredMethod(storage, "PostDraw") : null;
-            if (sm != null)
+            if (sm != null && AccessTools.Field(storage, "request") != null)
             {
+                barRequest = AccessTools.FieldRefAccess<GenDraw.FillableBarRequest>(storage, "request");
                 h.Patch(sm, prefix: new HarmonyMethod(typeof(ModelStates), nameof(BarPostDraw_Prefix)),
                     finalizer: new HarmonyMethod(typeof(ModelStates), nameof(BarPostDraw_Finalizer)));
             }
@@ -83,22 +88,30 @@ namespace IsoRimVGEPack
             return !IsoRim.Api.ModelStandsIn(__instance.parent);
         }
 
+        private static AccessTools.FieldRef<object, GenDraw.FillableBarRequest> barRequest;
+        private static UnityEngine.Vector3 barCenter;   // the bar's own centre while it is drawn over the middle (main thread)
+
         public static void BarPostDraw_Prefix(ThingComp __instance, out bool __state)
         {
             __state = false;
             Thing t = __instance.parent;
             if (IsoRim.Api.ModelStandsIn(t))
             {
-                IsoRim.Api.BeginUpright(IsoRim.Api.ModelHeight(t.def) + 0.3f);   // hinged on the bar itself (its VGE offset kept)
+                ref GenDraw.FillableBarRequest req = ref barRequest(__instance);
+                barCenter = req.center;
+                UnityEngine.Vector3 mid = t.DrawPos;
+                req.center = new UnityEngine.Vector3(mid.x, barCenter.y, mid.z);
+                IsoRim.Api.BeginUpright(IsoRim.Api.ModelHeight(t.def) + 0.3f);   // hinged on the bar, now over the middle
                 __state = true;
             }
         }
 
-        public static Exception BarPostDraw_Finalizer(Exception __exception, bool __state)
+        public static Exception BarPostDraw_Finalizer(ThingComp __instance, Exception __exception, bool __state)
         {
             if (__state)
             {
                 IsoRim.Api.EndUpright();
+                barRequest(__instance).center = barCenter;
             }
             return __exception;
         }
@@ -133,6 +146,11 @@ namespace IsoRimVGEPack
             {
                 ThingComp c = Comp(t, heatsinkType);
                 return c != null && storedHeat(c) > 0f ? "hot" : null;
+            }
+            if (engines.Contains(d))
+            {
+                Building_GravEngine e = t as Building_GravEngine;
+                return e != null && Find.TickManager != null && Find.TickManager.TicksGame < e.cooldownCompleteTick ? "cooldown" : null;
             }
             if (absorbers.Contains(d))
             {

@@ -1603,7 +1603,7 @@ f 535 459 460
 f 536 457 533
 f 536 460 457
 o vge_gravheat_absorber_cooldown_14
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v 0.4250 0.1200 -0.0000
 v 0.3926 0.1200 -0.1626
 v 0.3005 0.1200 -0.3005
@@ -1697,7 +1697,7 @@ f 551 568 567
 f 552 537 553
 f 552 553 568
 o vge_gravheat_absorber_cooldown_15
-usemtl glow_vge_panel
+usemtl ember_vge_heat
 v -0.8960 0.0600 1.4800
 v 0.8960 0.0600 1.4800
 v 0.8960 0.0600 1.4600

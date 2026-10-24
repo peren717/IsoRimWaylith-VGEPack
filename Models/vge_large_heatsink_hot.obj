@@ -201,7 +201,7 @@ f 67 72 71
 f 68 65 69
 f 68 69 72
 o vge_large_heatsink_hot_9
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v -1.1300 0.1200 1.0800
 v -1.0300 0.1200 1.0800
 v -1.0300 0.1200 -1.0800
@@ -223,7 +223,7 @@ f 75 80 79
 f 76 73 77
 f 76 77 80
 o vge_large_heatsink_hot_10
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v -0.7700 0.1200 1.0800
 v -0.6700 0.1200 1.0800
 v -0.6700 0.1200 -1.0800
@@ -245,7 +245,7 @@ f 83 88 87
 f 84 81 85
 f 84 85 88
 o vge_large_heatsink_hot_11
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v -0.4100 0.1200 1.0800
 v -0.3100 0.1200 1.0800
 v -0.3100 0.1200 -1.0800
@@ -267,7 +267,7 @@ f 91 96 95
 f 92 89 93
 f 92 93 96
 o vge_large_heatsink_hot_12
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v -0.0500 0.1200 1.0800
 v 0.0500 0.1200 1.0800
 v 0.0500 0.1200 -1.0800
@@ -289,7 +289,7 @@ f 99 104 103
 f 100 97 101
 f 100 101 104
 o vge_large_heatsink_hot_13
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v 0.3100 0.1200 1.0800
 v 0.4100 0.1200 1.0800
 v 0.4100 0.1200 -1.0800
@@ -311,7 +311,7 @@ f 107 112 111
 f 108 105 109
 f 108 109 112
 o vge_large_heatsink_hot_14
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v 0.6700 0.1200 1.0800
 v 0.7700 0.1200 1.0800
 v 0.7700 0.1200 -1.0800
@@ -333,7 +333,7 @@ f 115 120 119
 f 116 113 117
 f 116 117 120
 o vge_large_heatsink_hot_15
-usemtl glow_vge_heat
+usemtl ember_vge_heat
 v 1.0300 0.1200 1.0800
 v 1.1300 0.1200 1.0800
 v 1.1300 0.1200 -1.0800
