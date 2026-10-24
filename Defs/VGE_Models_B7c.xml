@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- IsoRim Waylith - VGE Pack, batch B7c: VGE Chapter 2 enemy ship parts made straight from the player models (auto-approved):
      shield generator, grav field extender (cyan lights red), ancient gravmine (darker, bronze spikes), signal jammer (lens and display
-     lit red), the enemy gravship light (IsoRim's red ancient emergency light). All under the storey; MayRequire Chapter 2. The
+     lit red), the enemy gravship light (IsoRim's red ancient emergency light), the small / lateral / giant thrusters (tan exhaust red;
+     wall-height machines like the player ones, wallFit 1.65: user decision, an exception to the storey rule). All under the storey; MayRequire Chapter 2. The
      parts that are new or changed follow after their review. -->
 <Defs>
   <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
@@ -36,5 +37,34 @@
     <wallMounted>true</wallMounted>
     <groundShadow>false</groundShadow>
     <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemySmallThruster</defName>
+    <thingDef>VGE_EnemySmallThruster</thingDef>
+    <model>Models/vge_e_small_thruster.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyLargeThruster</defName>
+    <thingDef>VGE_EnemyLargeThruster</thingDef>
+    <model>Models/vge_e_lateral_thruster.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGiantThruster</defName>
+    <thingDef>VGE_EnemyGiantThruster</thingDef>
+    <model>Models/vge_e_giant_thruster.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+  <!-- ancient signal jammer (new model, approved): every rotation of VGE's art is the same picture -->
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_AncientSignalJammer</defName>
+    <thingDef>VGE_AncientSignalJammer</thingDef>
+    <model>Models/vge_ancient_signal_jammer.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <ignoreRotation>true</ignoreRotation>
   </IsoRim.ModelDef>
 </Defs>

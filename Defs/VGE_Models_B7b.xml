@@ -2,7 +2,7 @@
 <!-- IsoRim Waylith - VGE Pack, batch B7b: VGE Chapter 2 enemy engines and terminals, made from the player models (recoloured red,
      the cockpit and bridge turned half round as VGE's enemy art). Enemy ship parts fit under the storey (user rule): the engine
      orbs bob 0.10 and the gravhulk orb sits sunk in its pool. VGE's own flat orb: Source/EnemyOrbs.cs. All MayRequire Chapter 2.
-     The gravlock tether follows after its model review. -->
+     The gravlock tether (new model, approved v3): its geodesic cage sunk into the pit, top 1.49 + bob 0.10. -->
 <Defs>
   <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
     <defName>R3D_VGE_EnemyGravjumperEngine</defName>
@@ -70,5 +70,13 @@
     <thingDef>VGE_EnemyAstrofuelSynthesizer</thingDef>
     <model>Models/vge_e_astrofuel_synthesizer.obj</model>
     <builtFor>(4, 2)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravlockTether</defName>
+    <thingDef>VGE_EnemyGravlockTether</thingDef>
+    <model>Models/vge_e_gravlock_tether.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <bobModel>Models/vge_e_gravlock_tether_orb.obj</bobModel>
+    <bobHeight>0.10</bobHeight>
   </IsoRim.ModelDef>
 </Defs>
