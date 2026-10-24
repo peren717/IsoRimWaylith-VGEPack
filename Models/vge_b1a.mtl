@@ -1,0 +1,72 @@
+# IsoRim Waylith - VGE Pack, batch B1a: fixed colours sampled from Vanilla Gravship Expanded's textures
+# (lifted ~1.1x for the 3D shading). glow* = unlit in IsoRim.
+newmtl vge_frame
+Kd 0.62 0.62 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_frame_dark
+Kd 0.31 0.31 0.32
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_grey
+Kd 0.46 0.46 0.47
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_cap
+Kd 0.36 0.36 0.37
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_hole
+Kd 0.14 0.14 0.15
+newmtl vge_grille
+Kd 0.24 0.24 0.25
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_silver
+Kd 0.78 0.78 0.79
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_gold
+Kd 0.74 0.60 0.29
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_bronze
+Kd 0.66 0.56 0.40
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_bronze_dark
+Kd 0.50 0.42 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_tan
+Kd 0.82 0.71 0.54
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_red
+Kd 0.82 0.32 0.35
+newmtl vge_purple
+Kd 0.46 0.41 0.53
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_purple_dark
+Kd 0.34 0.29 0.36
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_pipe_red
+Kd 0.58 0.36 0.36
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_olive
+Kd 0.52 0.53 0.47
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_olive_dark
+Kd 0.34 0.35 0.31
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_algae
+Kd 0.38 0.52 0.62
+newmtl vge_algae_empty
+Kd 0.30 0.33 0.38
+newmtl vge_white
+Kd 0.82 0.82 0.83
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_hose
+Kd 0.20 0.22 0.25
+newmtl vge_cable
+Kd 0.62 0.62 0.63
+newmtl vge_cable_hot
+Kd 0.80 0.50 0.46
+newmtl vge_readout
+Kd 0.70 0.55 0.28
+newmtl glow_vge_heat
+Kd 1.00 0.48 0.16
+map_Kd IsoRim/Swatches/Glow
+newmtl glow_vge_panel
+Kd 1.00 0.55 0.25
+map_Kd IsoRim/Swatches/Glow
