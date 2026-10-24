@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch B7b: VGE Chapter 2 enemy engines and terminals, made from the player models (recoloured red,
+     the cockpit and bridge turned half round as VGE's enemy art). Enemy ship parts fit under the storey (user rule): the engine
+     orbs bob 0.10 and the gravhulk orb sits sunk in its pool. VGE's own flat orb: Source/EnemyOrbs.cs. All MayRequire Chapter 2.
+     The gravlock tether follows after its model review. -->
+<Defs>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravjumperEngine</defName>
+    <thingDef>VGE_EnemyGravjumperEngine</thingDef>
+    <model>Models/vge_e_gravjumper_engine.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <bobModel>Models/vge_e_gravjumper_orb.obj</bobModel>
+    <bobHeight>0.10</bobHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravEngine</defName>
+    <thingDef>VGE_EnemyGravEngine</thingDef>
+    <model>Models/vge_e_grav_engine.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <bobModel>Models/vge_e_grav_engine_orb.obj</bobModel>
+    <bobHeight>0.10</bobHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravhulkEngine</defName>
+    <thingDef>VGE_EnemyGravhulkEngine</thingDef>
+    <model>Models/vge_e_gravhulk_engine.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <bobModel>Models/vge_e_gravhulk_orb.obj</bobModel>
+    <bobHeight>0.10</bobHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyPilotCockpit</defName>
+    <thingDef>VGE_EnemyPilotCockpit</thingDef>
+    <model>Models/vge_e_pilot_cockpit.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <outlineMinSize>0.001</outlineMinSize>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyPilotConsole</defName>
+    <thingDef>VGE_EnemyPilotConsole</thingDef>
+    <model>Models/vge_e_pilot_console.obj</model>
+    <builtFor>(3, 2)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyPilotBridge</defName>
+    <thingDef>VGE_EnemyPilotBridge</thingDef>
+    <model>Models/vge_e_pilot_bridge.obj</model>
+    <builtFor>(5, 3)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyTargetingTerminal</defName>
+    <thingDef>VGE_EnemyTargetingTerminal</thingDef>
+    <model>Models/vge_e_targeting_terminal.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyTargetingConsole</defName>
+    <thingDef>VGE_EnemyTargetingConsole</thingDef>
+    <model>Models/vge_e_targeting_console.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyAlgaeOxygenator</defName>
+    <thingDef>VGE_EnemyAlgaeOxygenator</thingDef>
+    <model>Models/vge_e_algae_oxygenator.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyAstrofuelSynthesizer</defName>
+    <thingDef>VGE_EnemyAstrofuelSynthesizer</thingDef>
+    <model>Models/vge_e_astrofuel_synthesizer.obj</model>
+    <builtFor>(4, 2)</builtFor>
+  </IsoRim.ModelDef>
+</Defs>

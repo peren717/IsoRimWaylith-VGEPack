@@ -30,6 +30,7 @@ namespace IsoRimVGEPack
                     return;
                 }
                 Setup26.Run();
+                EnemyOrbs.Run();   // (B7b) the enemy grav engines' flat orbs while their models stand in
                 if (IsoRim.Api.Version >= 30)
                 {
                     Setup30.Run();
