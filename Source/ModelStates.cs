@@ -59,7 +59,7 @@ namespace IsoRimVGEPack
             {
                 Log.Warning(Pack.Tag + "VGE's gravheat absorber cooldown not found: the absorber keeps its idle model in 3D.");
             }
-            Add(engines, "VGE_GravjumperEngine", "GravEngine");   // GravEngine: VGE's re-skin (B4), the same _Cooldown art
+            Add(engines, "VGE_GravjumperEngine", "GravEngine", "VGE_GravhulkEngine");   // GravEngine: VGE's re-skin (B4); the hulk engine (B6a): the same _Cooldown art
             // (B4, Chapter 2) the signal jammer on cooldown: VGE2 CompSignalJammer.OnCooldown (cooldownTicksLeft > 0), as it
             // draws its SignalJammer_Cooldown art
             jammerType = AccessTools.TypeByName("VanillaGravshipExpanded2.CompSignalJammer");
