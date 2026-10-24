@@ -19,6 +19,8 @@ namespace IsoRimVGEPack
     //   "off"      (B6b, Chapter 2) emergency gravship generator not switched on (VGE2 CompPowerEmergencyGravshipGenerator.IsActive
     //              false: Building_EmergencyGravshipGenerator draws its _Off art then; its glower stays lit while idle, so the
     //              glow faces cannot follow the light here).
+    //   "off"      (B8a2) mechanoid overshield generator with its shield down (CompProjectileInterceptor.Active false:
+    //              Building_MechanoidOvershield draws its _Off art then).
     // VGE's comps are reached by name; a missing type or field leaves that state out (logged once), never the others.
     // While a model stands in (IsoRim Api.ModelStandsIn), VGE's own flat sprites for those states (the heatsink _Overlay,
     // the absorber _Cooldown, drawn every frame by the comps) are left out: the state model shows them. (PipeSystem's storage fill
@@ -34,6 +36,7 @@ namespace IsoRimVGEPack
         private static readonly HashSet<ThingDef> emergencyGenerators = new HashSet<ThingDef>();
         private static Type emergencyType;
         private static AccessTools.FieldRef<object, bool> emergencyActive;
+        private static readonly HashSet<ThingDef> overshields = new HashSet<ThingDef>();
         private static Type jammerType;
         private static AccessTools.FieldRef<object, int> jammerCooldown;
         private static Type heatsinkType, absorberType;
@@ -83,7 +86,8 @@ namespace IsoRimVGEPack
             {
                 Log.Warning(Pack.Tag + "VGE's emergency generator active flag not found: its lamp and grille follow its glower in 3D.");
             }
-            if (lifeSupport.Count + valves.Count + heatsinks.Count + absorbers.Count + engines.Count + jammers.Count + emergencyGenerators.Count > 0)
+            Add(overshields, "VGE_MechanoidOvershieldGenerator");
+            if (lifeSupport.Count + valves.Count + heatsinks.Count + absorbers.Count + engines.Count + jammers.Count + emergencyGenerators.Count + overshields.Count > 0)
             {
                 IsoRim.Api.AddModelState(new Func<Thing, string>(State));
             }
@@ -153,6 +157,11 @@ namespace IsoRimVGEPack
             {
                 ThingComp c = Comp(t, jammerType);
                 return c != null && jammerCooldown(c) > 0 ? "cooldown" : null;
+            }
+            if (overshields.Contains(d))
+            {
+                CompProjectileInterceptor c = t.TryGetComp<CompProjectileInterceptor>();
+                return c != null && !c.Active ? "off" : null;
             }
             if (emergencyGenerators.Contains(d))
             {

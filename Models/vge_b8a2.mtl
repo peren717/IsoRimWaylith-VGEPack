@@ -1,0 +1,49 @@
+# IsoRim Waylith - VGE Pack, model batch B8a2 (with B8a1's colours): mechanoid buildings. Colours sampled from VGE's textures.
+newmtl vgem_light
+Kd 0.71 0.71 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_mid
+Kd 0.55 0.56 0.48
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_dark
+Kd 0.31 0.32 0.26
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_pit
+Kd 0.17 0.17 0.14
+newmtl vgem_grille
+Kd 0.66 0.40 0.42
+newmtl glow_vgem_red
+Kd 0.80 0.31 0.31
+newmtl vgem_purple
+Kd 0.42 0.38 0.52
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_tan
+Kd 0.82 0.71 0.55
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_brown
+Kd 0.50 0.42 0.31
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_silver
+Kd 0.78 0.78 0.78
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_grey
+Kd 0.58 0.58 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_steel_dark
+Kd 0.36 0.36 0.37
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_cable
+Kd 0.45 0.45 0.46
+newmtl glow_vgem_wc_red
+Kd 0.86 0.30 0.24
+newmtl glow_vgem_wc_blue
+Kd 0.16 0.66 0.94
+newmtl vgem2_shell
+Kd 0.40 0.40 0.40
+map_Kd IsoRim/Swatches/Metal
+newmtl glow_vgem2_green
+Kd 0.50 0.83 0.51
+newmtl glow_vgem2_white
+Kd 0.93 0.94 0.84
+newmtl vgem2_sphere_off
+Kd 0.22 0.22 0.21
