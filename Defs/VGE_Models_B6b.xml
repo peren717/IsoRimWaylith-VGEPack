@@ -3,8 +3,9 @@
 
   <!-- IsoRim Waylith - VGE Pack, model batch B6b: occasional devices, Chapter 2 (2026-10-24). Low-poly models built from
        Vanilla Gravship Expanded's own textures (tools/make_vge_b6b.py, vge_b6b.mtl). Built facing north = VGE's _north
-       art. The emergency generator's _Off art is its light-off look: its grille and lamp are glow faces, which follow the
-       building's light. The large shield generator stands taller than a storey (user decision: no floor over it). The
+       art. The emergency generator's _Off art is its light-off look; VGE draws it while the generator is not switched on
+       (CompPowerEmergencyGravshipGenerator.IsActive), so its "off" model (grille and lamp unlit) follows that, not its
+       glower (lit while idle); broken down, IsoRim's own unlit glow keeps it dark too. The large shield generator stands taller than a storey (user decision: no floor over it). The
        salvager dropship is built at VGE's drawn size (7x7 over its 3x5 footprint), nose (the cockpit) north. The orange
        ancient warning light is IsoRim's vanilla red emergency light model in VGE's orange, hung like it. -->
 
@@ -49,6 +50,9 @@
     <thingDef>VGE_EmergencyGenerator</thingDef>
     <model>Models/vge_emergency_generator.obj</model>
     <builtFor>(3, 3)</builtFor>
+    <byState>   <!-- not switched on (VGE's _Off art): grille and lamp unlit (Source/ModelStates.cs) -->
+      <li><state>off</state><model>Models/vge_emergency_generator_off.obj</model></li>
+    </byState>
   </IsoRim.ModelDef>
 
   <IsoRim.ModelDef>

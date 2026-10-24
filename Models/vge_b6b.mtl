@@ -147,3 +147,7 @@ newmtl oc_dark
 Kd 0.14 0.14 0.15
 newmtl glow_vgeg_orange
 Kd 1.00 0.62 0.24
+newmtl vgeg_grille_off
+Kd 0.96 0.62 0.40
+newmtl vgeg_lamp_off
+Kd 1.00 0.44 0.36
