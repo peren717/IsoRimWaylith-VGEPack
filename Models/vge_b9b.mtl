@@ -1,0 +1,45 @@
+# IsoRim Waylith - VGE Pack, model batch B9b: VGE apparel (colours from VGE's textures; stuff_* parts take the item's
+# colour, as IsoRim's own vacsuit: copied from IsoRim's isorim.mtl / coats.mtl / masks.mtl)
+newmtl stuff_plain
+Kd 1.000 1.000 1.000
+newmtl stuff_plain_dark
+Kd 0.800 0.800 0.800
+newmtl stuff_coat_under
+Kd 0.300 0.300 0.300
+newmtl stuff_vac_white
+Kd 0.930 0.930 0.940
+newmtl stuff_vac_grey
+Kd 0.620 0.630 0.650
+newmtl vac_dark
+Kd 0.220 0.230 0.250
+newmtl vgeb_gold
+Kd 0.76 0.62 0.27
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb_dark
+Kd 0.22 0.22 0.24
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb_white
+Kd 0.92 0.92 0.93
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb_grey
+Kd 0.62 0.62 0.64
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb_grey_dark
+Kd 0.40 0.40 0.42
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb_yellow
+Kd 0.80 0.64 0.32
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb_yellow_dark
+Kd 0.62 0.48 0.22
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb_red
+Kd 0.66 0.22 0.22
+newmtl vgeb_gold_dark
+Kd 0.56 0.44 0.18
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb_seal
+Kd 0.32 0.33 0.35
+map_Kd IsoRim/Swatches/Metal
+newmtl stuff_seam
+Kd 0.560 0.560 0.580

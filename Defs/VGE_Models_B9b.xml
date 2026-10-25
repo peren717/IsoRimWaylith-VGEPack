@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B9b (2026-10-24): VGE apparel on IsoRim's 3D colonists, after IsoRim's own
+       conventions (tools/make_vge_b9b.py, vge_b9b.mtl): the suits as body garments with a model per build, made on
+       IsoRim's own vacsuit of that build (drawn as the coat: what is under them is hidden); the helmets on the head; the
+       packs on the back and the targeter at the hip (IsoRim.WornGearDef). The prestige suit's and helmet's white takes
+       the item's colour (VGE's mask); its gold parts and the combat suit's colours are fixed. On the ground IsoRim's
+       GroundGear lays the worn pieces down by itself. Things whose mod is not loaded are skipped quietly. -->
+
+  <IsoRim.ApparelModelDef>
+    <defName>R3DApparel_VGE_Vacsuit_Prestige</defName>
+    <apparel>VGE_Apparel_Vacsuit_Prestige</apparel>
+    <slot>Body</slot>
+    <model>Models/person_male_vge_prestige_vacsuit.obj</model>
+    <bodyModels>
+      <female>Models/person_female_vge_prestige_vacsuit.obj</female>
+      <thin>Models/person_thin_vge_prestige_vacsuit.obj</thin>
+      <fat>Models/person_fat_vge_prestige_vacsuit.obj</fat>
+      <hulk>Models/person_hulk_vge_prestige_vacsuit.obj</hulk>
+    </bodyModels>
+  </IsoRim.ApparelModelDef>
+
+  <IsoRim.ApparelModelDef>
+    <defName>R3DApparel_VGE_VacsuitHelmet_Prestige</defName>
+    <apparel>VGE_Apparel_VacsuitHelmet_Prestige</apparel>
+    <slot>Head</slot>
+    <model>Models/person_hat_vge_prestige_vacsuit_helmet.obj</model>
+  </IsoRim.ApparelModelDef>
+
+  <IsoRim.ApparelModelDef>
+    <defName>R3DApparel_VGE_CombatVacsuit</defName>
+    <apparel>VGE_Apparel_CombatVacsuit</apparel>
+    <slot>Body</slot>
+    <model>Models/person_male_vge_combat_vacsuit.obj</model>
+    <bodyModels>
+      <female>Models/person_female_vge_combat_vacsuit.obj</female>
+      <thin>Models/person_thin_vge_combat_vacsuit.obj</thin>
+      <fat>Models/person_fat_vge_combat_vacsuit.obj</fat>
+      <hulk>Models/person_hulk_vge_combat_vacsuit.obj</hulk>
+    </bodyModels>
+  </IsoRim.ApparelModelDef>
+
+  <IsoRim.ApparelModelDef>
+    <defName>R3DApparel_VGE_CombatVacsuitHelmet</defName>
+    <apparel>VGE_Apparel_CombatVacsuitHelmet</apparel>
+    <slot>Head</slot>
+    <model>Models/person_hat_vge_combat_vacsuit_helmet.obj</model>
+  </IsoRim.ApparelModelDef>
+
+  <IsoRim.WornGearDef>
+    <defName>R3DGear_VGE_Apparel_OxygenPack</defName>
+    <apparel>VGE_Apparel_OxygenPack</apparel>
+    <model>Models/person_pack_vge_oxygen_pack.obj</model>
+    <mount>pack</mount>
+  </IsoRim.WornGearDef>
+
+  <IsoRim.WornGearDef>
+    <defName>R3DGear_VGE_Apparel_Astrorig</defName>
+    <apparel>VGE_Apparel_Astrorig</apparel>
+    <model>Models/person_pack_vge_astrorig.obj</model>
+    <mount>pack</mount>
+  </IsoRim.WornGearDef>
+
+  <IsoRim.WornGearDef>
+    <defName>R3DGear_VGE_GravshipBombardmentTargeter</defName>
+    <apparel>VGE_GravshipBombardmentTargeter</apparel>
+    <model>Models/person_tool_vge_bombardment_targeter.obj</model>
+    <mount>hip</mount>
+  </IsoRim.WornGearDef>
+
+</Defs>
