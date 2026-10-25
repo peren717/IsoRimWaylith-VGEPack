@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B9a (2026-10-24): the oxyalgae plant and four items, from VGE's textures
+       (tools/make_vge_b9a.py, vge_b9a.mtl), after IsoRim's own conventions: the plant as IsoRim's crops (grown looks in
+       VGE's texture order, a young look until harvestable, scaled with growth; it grows in hydroponics basins and
+       agrocells), resource items as IsoRim's raw materials (one, a few, a full stack), the disposable oxygen pack on the
+       ground and worn on the back (VGE draws it as a pack). -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_OxyalgaePlant</defName>
+    <thingDef>VGE_OxyalgaePlant</thingDef>
+    <models>
+      <li>Models/vge_oxyalgae_plant_a.obj</li>
+      <li>Models/vge_oxyalgae_plant_b.obj</li>
+    </models>
+    <surfaceHeight>0.00</surfaceHeight>
+    <randomRotation>true</randomRotation>
+    <scaleJitter>0.10</scaleJitter>
+    <growthScale>true</growthScale>
+    <immatureModels>
+      <li>Models/vge_oxyalgae_plant_young.obj</li>
+    </immatureModels>
+    <scatter>0.16</scatter>
+    <groundShadow>false</groundShadow>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Oxyalgae</defName>
+    <thingDef>VGE_Oxyalgae</thingDef>
+    <stackModels>
+      <li>Models/vge_item_oxyalgae_a.obj</li>
+      <li>Models/vge_item_oxyalgae_b.obj</li>
+      <li>Models/vge_item_oxyalgae_c.obj</li>
+    </stackModels>
+    <overArt>true</overArt>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Astrofuel</defName>
+    <thingDef>VGE_Astrofuel</thingDef>
+    <stackModels>
+      <li>Models/vge_item_astrofuel_a.obj</li>
+      <li>Models/vge_item_astrofuel_b.obj</li>
+      <li>Models/vge_item_astrofuel_c.obj</li>
+    </stackModels>
+    <overArt>true</overArt>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_OxygenCanister</defName>
+    <thingDef>VGE_OxygenCanister</thingDef>
+    <stackModels>
+      <li>Models/vge_item_oxygen_canister_a.obj</li>
+      <li>Models/vge_item_oxygen_canister_b.obj</li>
+      <li>Models/vge_item_oxygen_canister_c.obj</li>
+    </stackModels>
+    <overArt>true</overArt>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Apparel_DisposableOxygenPack</defName>
+    <thingDef>VGE_Apparel_DisposableOxygenPack</thingDef>
+    <model>Models/vge_item_oxygen_pack.obj</model>
+  </IsoRim.ModelDef>
+
+  <IsoRim.WornGearDef>
+    <defName>R3DGear_VGE_Apparel_DisposableOxygenPack</defName>
+    <apparel>VGE_Apparel_DisposableOxygenPack</apparel>
+    <model>Models/person_pack_vge_oxygen.obj</model>
+    <mount>pack</mount>
+  </IsoRim.WornGearDef>
+
+</Defs>
