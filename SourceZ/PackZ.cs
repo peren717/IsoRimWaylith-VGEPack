@@ -26,10 +26,19 @@ namespace IsoRimVGEPackZ
     //    floor), at VGE's own speed.
     //  - Deck foundations (Api 4): VGE subarmor and subscaffold are built on upper floors like ship decks and count as decks;
     //    VGE artillery damages decks into damaged decks, which count as decks and are repaired by rebuilding the deck.
+    //  - The mass lance (Api 1, RegisterLobbedShot): the astropede's VGE_MassLance needs a line of sight; its slug only flies
+    //    overhead to pass over walls and cover. Declared direct: it stays on its floor, its misses on the target's floor, and
+    //    it does not come down on a deck over its target (a lobbed shell would). VGE's artillery stays lobbed.
     // VGE is reached by name: a missing type or method leaves that part as VGE does it (logged once).
     [StaticConstructorOnStartup]
     public static class PackZ
     {
+        // The mass lance is a direct shot (see above); every other verb: no say.
+        private static bool? LanceRule(Verb verb, IntVec3 from, IntVec3 to)
+        {
+            return verb?.EquipmentSource != null && verb.EquipmentSource.def.defName == "VGE_MassLance" ? false : (bool?)null;
+        }
+
         internal const string Tag = "[IsoRim VGE Pack, IsoRimZ] ";
         internal static readonly Harmony H = new Harmony("peren.isorimwaylith.vgepack.z");
         internal static readonly List<string> applied = new List<string>();
@@ -45,6 +54,8 @@ namespace IsoRimVGEPackZ
                     return;
                 }
                 Setup2.Run();
+                ProjectZ.Api.RegisterLobbedShot(new Func<Verb, IntVec3, IntVec3, bool?>(LanceRule));
+                applied.Add("mass lance direct");
                 if (ProjectZ.Api.Version >= 4)
                 {
                     Setup4.Run();

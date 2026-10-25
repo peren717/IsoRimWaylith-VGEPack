@@ -14,6 +14,9 @@ namespace IsoRimVGEPack
     //  - Gravship scene: the armour layer flies with the ship (Api.FlyLayer); VGE's scaffold mask layers are no geometry.
     //  - (IsoRim Api 30) Vac barrier fields: the 3D field across the doorway takes VGE's recolourable barrier colour
     //    (Building_VacBarrier_Recolorable.barrierColor): IsoRim.Api.AddGlassColor.
+    //  - (IsoRim Api 20) The mass lance (VGE_MassLance, the astropede's): a direct weapon (it needs a line of sight) whose
+    //    slug flies overhead so it passes over walls and cover; IsoRim draws it straight, not on the shell arc
+    //    (IsoRim.Api.AddProjectileArc). Its floors are the IsoRimZ part's (PackZ: declared direct).
     // VGE is reached by name: a missing type or method leaves that part as VGE draws it (logged once).
     [StaticConstructorOnStartup]
     public static class Pack
@@ -31,6 +34,7 @@ namespace IsoRimVGEPack
                 }
                 Setup26.Run();
                 EnemyOrbs.Run();   // (B7b) the enemy grav engines' flat orbs while their models stand in
+                DirectShots.Run(); // (Api 20) the mass lance drawn as the direct shot it is
                 if (IsoRim.Api.Version >= 30)
                 {
                     Setup30.Run();
@@ -40,6 +44,24 @@ namespace IsoRimVGEPack
             {
                 Log.Error(Tag + "Setup failed (VGE armour corners stay flat in 3D): " + e);
             }
+        }
+    }
+
+    // The mass lance's slug (VGE_MassLance: a weapon that needs a line of sight, its projectile flies overhead to pass over
+    // walls and cover) is a direct shot: drawn straight from the gun, not on the shell arc. Api 20 (AddProjectileArc).
+    internal static class DirectShots
+    {
+        internal const string MassLance = "VGE_MassLance";
+
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+        internal static void Run()
+        {
+            IsoRim.Api.AddProjectileArc(new Func<Projectile, bool?>(Arc));
+        }
+
+        private static bool? Arc(Projectile p)
+        {
+            return p != null && p.EquipmentDef != null && p.EquipmentDef.defName == MassLance ? false : (bool?)null;
         }
     }
 
