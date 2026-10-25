@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, pawn batch P1: the mechanoids hover (hoverHeight / hoverBob), IsoRim Api 32, one gate each. -->
+<Patch>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>32</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_Hunter"]</xpath>
+      <value>
+        <hoverHeight>0.45</hoverHeight>
+        <hoverBob>0.05</hoverBob>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>32</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_Astronaut"]</xpath>
+      <value>
+        <hoverHeight>0.38</hoverHeight>
+        <hoverBob>0.05</hoverBob>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>32</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_Astropede"]</xpath>
+      <value>
+        <hoverHeight>0.35</hoverHeight>
+        <hoverBob>0.05</hoverBob>
+      </value>
+    </apply>
+  </Operation>
+</Patch>
