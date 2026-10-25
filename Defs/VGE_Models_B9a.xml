@@ -63,6 +63,7 @@
     <apparel>VGE_Apparel_DisposableOxygenPack</apparel>
     <model>Models/person_pack_vge_oxygen.obj</model>
     <mount>pack</mount>
+    <tintMaterials><li>vgea_yellow</li></tintMaterials>   <!-- dyed, it takes the dye -->
   </IsoRim.WornGearDef>
 
 </Defs>

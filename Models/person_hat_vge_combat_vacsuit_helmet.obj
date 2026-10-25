@@ -1281,7 +1281,7 @@ v 0.1878 0.7717 0.0568
 v 0.1759 0.7500 0.0532
 v 0.1878 0.7283 0.0568
 v 0.2116 0.7283 0.0639
-usemtl vgeb9_white
+usemtl stuff_vgeb9_white
 f 1 3 2
 f 1 4 3
 f 1 5 4
@@ -1714,7 +1714,7 @@ f 214 215 218
 f 215 216 218
 f 216 217 218
 f 217 194 218
-usemtl vgeb9_grey
+usemtl stuff_vgeb9_grey
 f 219 220 235
 f 219 235 234
 f 309 325 310
@@ -2071,7 +2071,7 @@ f 232 323 233
 f 232 322 323
 f 307 308 398
 f 307 398 397
-usemtl vgeb9_grey
+usemtl stuff_vgeb9_grey
 f 399 400 405
 f 399 405 404
 f 434 440 435
@@ -2735,7 +2735,7 @@ f 719 720 736
 f 719 736 735
 f 720 705 721
 f 720 721 736
-usemtl vgeb9_grey
+usemtl stuff_vgeb9_grey
 f 752 738 737
 f 752 739 738
 f 752 740 739
@@ -2918,7 +2918,7 @@ f 815 816 832
 f 815 832 831
 f 816 801 817
 f 816 817 832
-usemtl vgeb9_grey
+usemtl stuff_vgeb9_grey
 f 848 834 833
 f 848 835 834
 f 848 836 835
@@ -3040,7 +3040,7 @@ f 879 880 896
 f 879 896 895
 f 880 865 881
 f 880 881 896
-usemtl vgeb9_grey
+usemtl stuff_vgeb9_grey
 f 897 898 909
 f 897 909 908
 f 974 986 975
@@ -3345,7 +3345,7 @@ f 906 984 907
 f 906 983 984
 f 972 973 1050
 f 972 1050 1049
-usemtl vgeb9_white
+usemtl stuff_vgeb9_white
 f 1051 1052 1061
 f 1051 1061 1060
 f 1105 1115 1106

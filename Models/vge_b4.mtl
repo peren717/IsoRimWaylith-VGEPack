@@ -52,3 +52,9 @@ newmtl glow_vgee_red
 Kd 1.00 0.36 0.24
 newmtl glow_vgee_field
 Kd 0.84 0.90 0.94
+# vge_frame / vge_frame_dark: the base plate and rim (the B1a helper) - defined here as they render in the approved sheets and in
+# game until now (an undefined material draws 0.8 grey): no colour change (dyefix branch, 2026-10-25)
+newmtl vge_frame
+Kd 0.80 0.80 0.80
+newmtl vge_frame_dark
+Kd 0.80 0.80 0.80

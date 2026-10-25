@@ -43,3 +43,14 @@ Kd 0.32 0.33 0.35
 map_Kd IsoRim/Swatches/Metal
 newmtl stuff_seam
 Kd 0.560 0.560 0.580
+# dyefix (2026-10-25): the combat vacsuit's and its helmet's white armour and grey suit take the item's colour (the
+# ApparelModelDef tint is the item's DrawColor: white undyed, so undyed they look as before)
+newmtl stuff_vgeb9_white
+Kd 0.92 0.92 0.93
+map_Kd IsoRim/Swatches/Metal
+newmtl stuff_vgeb9_grey
+Kd 0.62 0.62 0.64
+map_Kd IsoRim/Swatches/Metal
+newmtl stuff_vgeb9_grey_dark
+Kd 0.40 0.40 0.42
+map_Kd IsoRim/Swatches/Metal

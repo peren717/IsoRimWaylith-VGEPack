@@ -5,7 +5,8 @@
        conventions (tools/make_vge_b9b.py, vge_b9b.mtl): the suits as body garments with a model per build, made on
        IsoRim's own vacsuit of that build (drawn as the coat: what is under them is hidden); the helmets on the head; the
        packs on the back and the targeter at the hip (IsoRim.WornGearDef). The prestige suit's and helmet's white takes
-       the item's colour (VGE's mask); its gold parts and the combat suit's colours are fixed. On the ground IsoRim's
+       the item's colour (VGE's mask); its gold parts are fixed; the combat suit's and helmet's white and grey take the dye too (dyefix), the packs' and targeter's main
+       colour (tintMaterials) once dyed. On the ground IsoRim's
        GroundGear lays the worn pieces down by itself. Things whose mod is not loaded are skipped quietly. -->
 
   <IsoRim.ApparelModelDef>
@@ -53,6 +54,7 @@
     <apparel>VGE_Apparel_OxygenPack</apparel>
     <model>Models/person_pack_vge_oxygen_pack.obj</model>
     <mount>pack</mount>
+    <tintMaterials><li>vgeb9_yellow</li></tintMaterials>   <!-- dyed, it takes the dye -->
   </IsoRim.WornGearDef>
 
   <IsoRim.WornGearDef>
@@ -60,6 +62,7 @@
     <apparel>VGE_Apparel_Astrorig</apparel>
     <model>Models/person_pack_vge_astrorig.obj</model>
     <mount>pack</mount>
+    <tintMaterials><li>vgeb9_white</li></tintMaterials>   <!-- dyed, it takes the dye -->
   </IsoRim.WornGearDef>
 
   <IsoRim.WornGearDef>
@@ -67,6 +70,7 @@
     <apparel>VGE_GravshipBombardmentTargeter</apparel>
     <model>Models/person_tool_vge_bombardment_targeter.obj</model>
     <mount>hip</mount>
+    <tintMaterials><li>vgeb9_grey</li></tintMaterials>   <!-- dyed, it takes the dye -->
   </IsoRim.WornGearDef>
 
 </Defs>
