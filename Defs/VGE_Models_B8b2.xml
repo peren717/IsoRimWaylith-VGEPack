@@ -67,6 +67,7 @@
     <thingDef>VGE2_LockedShuttle</thingDef>
     <model>Models/vge_locked_shuttle.obj</model>
     <builtFor>(3, 5)</builtFor>
+    <paintedHull>true</paintedHull>   <!-- v4 (user): IsoRim's passenger shuttle model, its own colours (unpainted white), tail fins tan -->
   </IsoRim.ModelDef>
 
   <IsoRim.ModelDef>

@@ -1,0 +1,27 @@
+# IsoRim Waylith - VGE Pack: the locked shuttle's materials: IsoRim's own (isorim.mtl, copied) plus the tan fins.
+newmtl stuff_dark
+Kd 0.800 0.800 0.800
+map_Kd IsoRim/Swatches/{stuff}
+newmtl stuff
+Kd 1.000 1.000 1.000
+map_Kd IsoRim/Swatches/{stuff}
+newmtl glass_dark
+Kd 0.160 0.220 0.270
+newmtl vgels_fin_tan
+Kd 0.60 0.47 0.27
+map_Kd IsoRim/Swatches/Metal
+newmtl hull
+Kd 0.700 0.730 0.760
+map_Kd IsoRim/Swatches/Metal
+newmtl hull_dark
+Kd 0.400 0.430 0.470
+map_Kd IsoRim/Swatches/Metal
+newmtl paint_red
+Kd 0.560 0.240 0.200
+map_Kd IsoRim/Swatches/Metal
+newmtl rust_dark
+Kd 0.300 0.210 0.160
+map_Kd IsoRim/Swatches/Metal
+newmtl gun_dark
+Kd 0.200 0.200 0.220
+map_Kd IsoRim/Swatches/Metal
