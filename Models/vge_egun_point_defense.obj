@@ -3509,7 +3509,7 @@ f 1203 1208 1207
 f 1204 1201 1205
 f 1204 1205 1208
 o vge_egun_point_defense_62
-usemtl glow_vgeb5_laser
+usemtl beam_vgeb5_laser
 v 0.9500 0.2850 0.4650
 v 1.9000 0.2850 0.4650
 v 1.9000 0.2850 0.4350

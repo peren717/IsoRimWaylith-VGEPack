@@ -32,7 +32,7 @@ Kd 0.14 0.14 0.15
 newmtl vgeb5_laser
 Kd 0.90 0.18 0.14
 map_Kd IsoRim/Swatches/Glow
-newmtl glow_vgeb5_laser
+newmtl beam_vgeb5_laser
 Kd 0.95 0.24 0.20
 map_Kd IsoRim/Swatches/Glow
 newmtl vgeb5_white
