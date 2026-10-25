@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, playtest fix pt1 (2026-10-25): the player's compact gravship turrets (minigun, autocannon,
+     uranium slug; 1x1). Their art is the enemy compact turrets' without the red light, so B7a's models without the light
+     (tools\make_vge_pt1.py), on B7a's compact base, pivot 0.38. Chapter 2 (MayRequire). -->
+<Defs>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_GravshipMinigunTurret</defName>
+    <thingDef>VGE_GravshipMinigunTurret</thingDef>
+    <model>Models/vge_compact_base.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <topModel>Models/vge_compact_minigun_player.obj</topModel>
+    <topHeight>0.38</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_GravshipAutocannonTurret</defName>
+    <thingDef>VGE_GravshipAutocannonTurret</thingDef>
+    <model>Models/vge_compact_base.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <topModel>Models/vge_compact_autocannon_player.obj</topModel>
+    <topHeight>0.38</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_GravshipUraniumSlugTurret</defName>
+    <thingDef>VGE_GravshipUraniumSlugTurret</thingDef>
+    <model>Models/vge_compact_base.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <topModel>Models/vge_compact_uranium_slug_player.obj</topModel>
+    <topHeight>0.38</topHeight>
+  </IsoRim.ModelDef>
+</Defs>
