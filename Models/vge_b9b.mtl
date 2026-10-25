@@ -12,33 +12,33 @@ newmtl stuff_vac_grey
 Kd 0.620 0.630 0.650
 newmtl vac_dark
 Kd 0.220 0.230 0.250
-newmtl vgeb_gold
+newmtl vgeb9_gold
 Kd 0.76 0.62 0.27
 map_Kd IsoRim/Swatches/Metal
-newmtl vgeb_dark
+newmtl vgeb9_dark
 Kd 0.22 0.22 0.24
 map_Kd IsoRim/Swatches/Metal
-newmtl vgeb_white
+newmtl vgeb9_white
 Kd 0.92 0.92 0.93
 map_Kd IsoRim/Swatches/Metal
-newmtl vgeb_grey
+newmtl vgeb9_grey
 Kd 0.62 0.62 0.64
 map_Kd IsoRim/Swatches/Metal
-newmtl vgeb_grey_dark
+newmtl vgeb9_grey_dark
 Kd 0.40 0.40 0.42
 map_Kd IsoRim/Swatches/Metal
-newmtl vgeb_yellow
+newmtl vgeb9_yellow
 Kd 0.80 0.64 0.32
 map_Kd IsoRim/Swatches/Metal
-newmtl vgeb_yellow_dark
+newmtl vgeb9_yellow_dark
 Kd 0.62 0.48 0.22
 map_Kd IsoRim/Swatches/Metal
-newmtl vgeb_red
+newmtl vgeb9_red
 Kd 0.66 0.22 0.22
-newmtl vgeb_gold_dark
+newmtl vgeb9_gold_dark
 Kd 0.56 0.44 0.18
 map_Kd IsoRim/Swatches/Metal
-newmtl vgeb_seal
+newmtl vgeb9_seal
 Kd 0.32 0.33 0.35
 map_Kd IsoRim/Swatches/Metal
 newmtl stuff_seam

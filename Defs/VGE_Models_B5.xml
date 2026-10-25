@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch B5: the ship guns on tall open frames (user rules 2026-10-24): a frame taller than a storey
+     (IsoRimZ height rule: no floor over it), legs at the corners, machinery over head height; the gun (topModel) turns on a
+     fixed pedestal (square block, round tier) over the roof. The pedestal (roofModel) and the gun rising through the roof
+     (topThroughRoof) need IsoRim Api 31: Patches/IsoRimGate_B5.xml adds them; an older IsoRim draws the frame and the gun, the
+     gun cut by a roof over it. Not the three compact 1x1 turrets. Chapter 2 guns: MayRequire. -->
+<Defs>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GaussGun</defName>
+    <thingDef>VGE_GaussGun</thingDef>
+    <model>Models/vge_gun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_gun_gauss.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_JavelinPod</defName>
+    <thingDef>VGE_JavelinPod</thingDef>
+    <model>Models/vge_gun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_gun_javelin_pod.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AnticraftCaster</defName>
+    <thingDef>VGE_AnticraftCaster</thingDef>
+    <model>Models/vge_gun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_gun_anticraft_caster.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_PointDefenseTurret</defName>
+    <thingDef>VGE_PointDefenseTurret</thingDef>
+    <model>Models/vge_gun_frame_3x3_trim.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_gun_point_defense.obj</topModel>
+    <topHeight>2.33</topHeight>
+    <outlineMinSize>0.04</outlineMinSize>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_AstrofireLauncher</defName>
+    <thingDef>VGE_AstrofireLauncher</thingDef>
+    <model>Models/vge_gun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_gun_astrofire.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_GaussHowitzer</defName>
+    <thingDef>VGE_GaussHowitzer</thingDef>
+    <model>Models/vge_gun_frame_5x5.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <topModel>Models/vge_gun_gauss_howitzer.obj</topModel>
+    <topHeight>2.47</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_JavelinLauncher</defName>
+    <thingDef>VGE_JavelinLauncher</thingDef>
+    <model>Models/vge_gun_frame_5x5.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <topModel>Models/vge_gun_javelin_launcher.obj</topModel>
+    <topHeight>2.47</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_AnticraftEmitter</defName>
+    <thingDef>VGE_AnticraftEmitter</thingDef>
+    <model>Models/vge_gun_frame_5x5.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <topModel>Models/vge_gun_anticraft_emitter.obj</topModel>
+    <topHeight>2.47</topHeight>
+  </IsoRim.ModelDef>
+</Defs>

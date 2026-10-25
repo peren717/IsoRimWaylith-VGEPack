@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch WS: VGE's giant wormspitter (Chapter 2 insect turret, user approved 2026-10-24). A plain
+     turret model from VGE's art: the rock crater (model, drawn 0.1 south like VGE's base) and the worm with its open mouth
+     (topModel), VGE's 0.75 offset built in. It can't stand under a roof (VGE's place worker), so it keeps its full height. -->
+<Defs>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_GiantWormspitter</defName>
+    <thingDef>VGE_GiantWormspitter</thingDef>
+    <model>Models/vge_wormspitter_base.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_wormspitter_top.obj</topModel>
+    <topHeight>0.10</topHeight>
+  </IsoRim.ModelDef>
+</Defs>

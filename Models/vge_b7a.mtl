@@ -1,0 +1,52 @@
+# IsoRim Waylith - VGE Pack, batch B7a: enemy ship guns (B5 materials + enemy lights). Fixed colours from VGE's art.
+newmtl vgeb5_plate
+Kd 0.36 0.36 0.38
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb5_frame
+Kd 0.62 0.62 0.64
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb5_frame_dark
+Kd 0.40 0.40 0.42
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb5_hazard_y
+Kd 0.86 0.68 0.14
+newmtl vgeb5_hazard_k
+Kd 0.13 0.13 0.13
+newmtl vgeb5_ring
+Kd 0.52 0.52 0.54
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb5_brass
+Kd 0.66 0.52 0.28
+newmtl vgeb5_gun
+Kd 0.66 0.67 0.70
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb5_gun_dark
+Kd 0.36 0.37 0.40
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb5_red
+Kd 0.55 0.26 0.27
+newmtl vgeb5_purple
+Kd 0.50 0.40 0.60
+newmtl vgeb5_tube
+Kd 0.14 0.14 0.15
+newmtl vgeb5_laser
+Kd 0.90 0.18 0.14
+map_Kd IsoRim/Swatches/Glow
+newmtl glow_vgeb5_laser
+Kd 0.95 0.24 0.20
+map_Kd IsoRim/Swatches/Glow
+newmtl vgeb5_white
+Kd 0.86 0.86 0.86
+newmtl ember_vgeb7_red
+Kd 0.95 0.20 0.16
+map_Kd IsoRim/Swatches/Glow
+newmtl vgeb7_tan
+Kd 0.62 0.50 0.34
+newmtl vgeb7_yellow
+Kd 0.80 0.74 0.36
+newmtl vgeb7_def
+Kd 0.40 0.41 0.52
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb7_def_dark
+Kd 0.26 0.27 0.34
+map_Kd IsoRim/Swatches/Metal

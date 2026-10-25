@@ -1,35 +1,35 @@
 # IsoRim Waylith - VGE Pack, pawn batch P2: VGE's insect creatures (colours of VGE's tinted art).
-newmtl vgei_worm
+newmtl vgeins_worm
 Kd 0.56 0.49 0.45
-newmtl vgei_worm_dark
+newmtl vgeins_worm_dark
 Kd 0.40 0.35 0.32
-newmtl vgei_worm_mid
+newmtl vgeins_worm_mid
 Kd 0.47 0.41 0.37
-newmtl vgei_mouth
+newmtl vgeins_mouth
 Kd 0.17 0.15 0.14
-newmtl vgei_pede
+newmtl vgeins_pede
 Kd 0.50 0.47 0.40
-newmtl vgei_pede_dark
+newmtl vgeins_pede_dark
 Kd 0.33 0.31 0.26
-newmtl vgei_pede_light
+newmtl vgeins_pede_light
 Kd 0.60 0.57 0.49
-newmtl vgei_leech
+newmtl vgeins_leech
 Kd 0.52 0.46 0.43
-newmtl vgei_leech_dark
+newmtl vgeins_leech_dark
 Kd 0.30 0.27 0.25
-newmtl vgei_tooth
+newmtl vgeins_tooth
 Kd 0.66 0.62 0.58
-newmtl vgei_moss
+newmtl vgeins_moss
 Kd 0.50 0.51 0.34
-newmtl vgei_moss_dark
+newmtl vgeins_moss_dark
 Kd 0.38 0.40 0.25
-newmtl vgei_hole
+newmtl vgeins_hole
 Kd 0.24 0.25 0.17
-newmtl vgei_null
+newmtl vgeins_null
 Kd 0.64 0.62 0.57
-newmtl vgei_null_dark
+newmtl vgeins_null_dark
 Kd 0.42 0.41 0.38
-newmtl vgei_null_belly
+newmtl vgeins_null_belly
 Kd 0.28 0.28 0.27
-newmtl vgei_null_face
+newmtl vgeins_null_face
 Kd 0.18 0.18 0.18

@@ -1,0 +1,26 @@
+# IsoRim Waylith - VGE Pack, pawn batch P1: VGE's mechanoids. Fixed colours from VGE's art; *_mark = faction colour.
+newmtl vgemk_white
+Kd 0.86 0.86 0.86
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemk_grey
+Kd 0.62 0.62 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemk_dark
+Kd 0.24 0.24 0.24
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemk_lens
+Kd 0.10 0.10 0.11
+newmtl vgemk_lens_hi
+Kd 0.36 0.36 0.38
+newmtl vgemk_mark
+Kd 0.84 0.84 0.82
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemk_purple
+Kd 0.63 0.54 0.76
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemk_gun
+Kd 0.66 0.60 0.54
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemk_gun_dark
+Kd 0.36 0.32 0.30
+map_Kd IsoRim/Swatches/Metal

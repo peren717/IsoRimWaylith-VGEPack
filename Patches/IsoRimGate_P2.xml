@@ -2,7 +2,7 @@
 <!-- IsoRim Waylith - VGE Pack, pawn batch P2: the exoworm hovers (VGE: VEF floating) by IsoRim Api 32's hoverHeight /
      hoverBob; an older IsoRim does not know these fields, so they come in here behind the gate. -->
 <Patch>
-  <Operation Class="IsoRimVGEPack.PatchOperation_IfIsoRimApi">
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
     <minVersion>32</minVersion>
     <apply Class="PatchOperationAdd">
       <success>Always</success>

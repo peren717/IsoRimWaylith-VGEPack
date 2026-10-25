@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch B3: the vac barrier fields' look (glassOpacity, glassGlow) needs IsoRim Api 30; an
+     older IsoRim does not know these fields (an XML error in Defs/) and draws no door glass anyway, so they come in here.
+     VGE's barrier colour comes from the pack's code (Api.AddGlassColor). -->
+<Patch>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>30</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_VacBarrierDouble" or defName="R3D_VGE_VacBarrierTriple" or defName="R3D_VGE_VacBarrierQuintuple"]</xpath>
+      <value>
+        <glassOpacity>0.35</glassOpacity>
+        <glassGlow>true</glassGlow>
+      </value>
+    </apply>
+  </Operation>
+</Patch>

@@ -2412,7 +2412,7 @@ f 442 548 443
 f 442 547 548
 f 532 533 638
 f 532 638 637
-usemtl vgeb_gold_dark
+usemtl vgeb9_gold_dark
 f 639 644 640
 f 639 643 644
 f 640 645 641
@@ -2517,7 +2517,7 @@ f 691 641 642
 f 692 690 689
 f 691 642 639
 f 692 687 690
-usemtl vgeb_gold
+usemtl vgeb9_gold
 f 693 698 694
 f 693 697 698
 f 694 699 695
@@ -2614,7 +2614,7 @@ f 741 695 696
 f 742 740 739
 f 741 696 693
 f 742 737 740
-usemtl vgeb_gold_dark
+usemtl vgeb9_gold_dark
 f 743 744 751
 f 743 751 750
 f 778 786 779
@@ -2751,7 +2751,7 @@ f 748 784 749
 f 748 783 784
 f 776 777 812
 f 776 812 811
-usemtl vgeb_gold
+usemtl vgeb9_gold
 f 813 814 821
 f 813 821 820
 f 848 856 849
@@ -2888,7 +2888,7 @@ f 818 854 819
 f 818 853 854
 f 846 847 882
 f 846 882 881
-usemtl vgeb_gold_dark
+usemtl vgeb9_gold_dark
 f 883 884 891
 f 883 891 890
 f 918 926 919
@@ -3025,7 +3025,7 @@ f 888 924 889
 f 888 923 924
 f 916 917 952
 f 916 952 951
-usemtl vgeb_gold
+usemtl vgeb9_gold
 f 953 954 961
 f 953 961 960
 f 988 996 989
@@ -3162,7 +3162,7 @@ f 958 994 959
 f 958 993 994
 f 986 987 1022
 f 986 1022 1021
-usemtl vgeb_seal
+usemtl vgeb9_seal
 f 1023 1029 1030
 f 1023 1030 1024
 f 1024 1030 1031

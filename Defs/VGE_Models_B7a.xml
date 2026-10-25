@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch B7a: VGE Chapter 2 enemy ship guns (user decisions 2026-10-24). The ship guns, the 9x9 giants
+     too, on the B5 tall open frames with the square block + round tier pedestal (roofModel) and the gun over the roof
+     (topThroughRoof): those two fields need IsoRim Api 31 and come in through Patches/IsoRimGate_B7a.xml. Enemy versions of the B5
+     guns: the B5 models with red signal lights (ember: lit without power). The three compact enemy turrets and the defender
+     turret: plain models. All Chapter 2 (MayRequire). -->
+<Defs>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGaussBombard</defName>
+    <thingDef>VGE_EnemyGaussBombard</thingDef>
+    <model>Models/vge_gun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_egun_gauss_bombard.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGaussGun</defName>
+    <thingDef>VGE_EnemyGaussGun</thingDef>
+    <model>Models/vge_gun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_egun_gauss.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyJavelinPod</defName>
+    <thingDef>VGE_EnemyJavelinPod</thingDef>
+    <model>Models/vge_gun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_egun_javelin_pod.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyAnticraftCaster</defName>
+    <thingDef>VGE_EnemyAnticraftCaster</thingDef>
+    <model>Models/vge_gun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_egun_anticraft_caster.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyPointDefenseTurret</defName>
+    <thingDef>VGE_EnemyPointDefenseTurret</thingDef>
+    <model>Models/vge_gun_frame_3x3_trim.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_egun_point_defense.obj</topModel>
+    <topHeight>2.33</topHeight>
+    <outlineMinSize>0.04</outlineMinSize>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGaussHowitzer</defName>
+    <thingDef>VGE_EnemyGaussHowitzer</thingDef>
+    <model>Models/vge_gun_frame_5x5.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <topModel>Models/vge_egun_gauss_howitzer.obj</topModel>
+    <topHeight>2.47</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyJavelinLauncher</defName>
+    <thingDef>VGE_EnemyJavelinLauncher</thingDef>
+    <model>Models/vge_gun_frame_5x5.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <topModel>Models/vge_egun_javelin_launcher.obj</topModel>
+    <topHeight>2.47</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGaussCannon</defName>
+    <thingDef>VGE_EnemyGaussCannon</thingDef>
+    <model>Models/vge_gun_frame_9x9.obj</model>
+    <builtFor>(9, 9)</builtFor>
+    <topModel>Models/vge_egun_gauss_cannon.obj</topModel>
+    <topHeight>2.68</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyAnticraftBeam</defName>
+    <thingDef>VGE_EnemyAnticraftBeam</thingDef>
+    <model>Models/vge_gun_frame_9x9.obj</model>
+    <builtFor>(9, 9)</builtFor>
+    <topModel>Models/vge_egun_anticraft_beam.obj</topModel>
+    <topHeight>2.68</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravshipMinigunTurret</defName>
+    <thingDef>VGE_EnemyGravshipMinigunTurret</thingDef>
+    <model>Models/vge_compact_base.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <topModel>Models/vge_compact_minigun.obj</topModel>
+    <topHeight>0.38</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravshipAutocannonTurret</defName>
+    <thingDef>VGE_EnemyGravshipAutocannonTurret</thingDef>
+    <model>Models/vge_compact_base.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <topModel>Models/vge_compact_autocannon.obj</topModel>
+    <topHeight>0.38</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_EnemyGravshipUraniumSlugTurret</defName>
+    <thingDef>VGE_EnemyGravshipUraniumSlugTurret</thingDef>
+    <model>Models/vge_compact_base.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <topModel>Models/vge_compact_uranium_slug.obj</topModel>
+    <topHeight>0.38</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_Turret_DefenderTurret</defName>
+    <thingDef>VGE_Turret_DefenderTurret</thingDef>
+    <model>Models/vge_defender_base.obj</model>
+    <surfaceHeight>0.00</surfaceHeight>
+    <builtFor>(1, 1)</builtFor>
+    <topModel>Models/vge_defender_gun.obj</topModel>
+    <topHeight>0.44</topHeight>
+  </IsoRim.ModelDef>
+</Defs>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch MT: VGE's four mechanoid ship guns (user approved 2026-10-24) on the B5 ship-gun rules: the tall
+     open frame, the square block + round tier pedestal over the roof (roofModel) and the gun over the roof (topThroughRoof); those two
+     fields need IsoRim Api 31 and come in through Patches/IsoRimGate_MT.xml. Mechanoid colours from their art (cream frames, beige
+     plating, red sensor eye lit without power). Mass driver and heavy charge annihilator: Gravship; charge battery and inferno
+     artillery: Chapter 2 (MayRequire). -->
+<Defs>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MassDriver</defName>
+    <thingDef>VGE_MassDriver</thingDef>
+    <model>Models/vge_mgun_frame_5x5.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <topModel>Models/vge_mgun_mass_driver.obj</topModel>
+    <topHeight>2.47</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_HeavyChargeAnnihilator</defName>
+    <thingDef>VGE_HeavyChargeAnnihilator</thingDef>
+    <model>Models/vge_mgun_frame_3x3.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <topModel>Models/vge_mgun_heavy_charge_annihilator.obj</topModel>
+    <topHeight>2.33</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_MechanoidChargeBattery</defName>
+    <thingDef>VGE_MechanoidChargeBattery</thingDef>
+    <model>Models/vge_mgun_frame_5x5.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <topModel>Models/vge_mgun_charge_battery.obj</topModel>
+    <topHeight>2.47</topHeight>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_MechanoidInfernoArtillery</defName>
+    <thingDef>VGE_MechanoidInfernoArtillery</thingDef>
+    <model>Models/vge_mgun_frame_5x5.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <topModel>Models/vge_mgun_inferno_artillery.obj</topModel>
+    <topHeight>2.47</topHeight>
+  </IsoRim.ModelDef>
+</Defs>

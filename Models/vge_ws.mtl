@@ -1,0 +1,19 @@
+# IsoRim Waylith - VGE Pack, batch WS: the giant wormspitter. Fixed colours from VGE's art (organic: no swatch).
+newmtl vgews_rock
+Kd 0.44 0.43 0.33
+newmtl vgews_rim
+Kd 0.59 0.58 0.45
+newmtl vgews_pit
+Kd 0.24 0.23 0.19
+newmtl vgews_root
+Kd 0.40 0.33 0.28
+newmtl vgews_body
+Kd 0.60 0.50 0.43
+newmtl vgews_rib
+Kd 0.46 0.38 0.32
+newmtl vgews_petal
+Kd 0.29 0.24 0.21
+newmtl vgews_fleck
+Kd 0.56 0.46 0.40
+newmtl vgews_throat
+Kd 0.13 0.10 0.09

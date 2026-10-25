@@ -1,0 +1,111 @@
+# IsoRim Waylith - VGE Pack, batch B7b: enemy engines and terminals. Player materials copied (e7_*), recoloured red where the enemy art is.
+newmtl glow_e7_vgeb_band
+Kd 0.95 0.30 0.28
+newmtl glow_e7_vgeb_pool
+Kd 0.95 0.22 0.20
+newmtl glow_e7_vgee_band
+Kd 0.95 0.30 0.28
+newmtl glow_e7_vgee_blue
+Kd 0.95 0.22 0.20
+newmtl e7_vge_algae
+Kd 0.68 0.44 0.46
+newmtl e7_vge_bronze_dark
+Kd 0.50 0.42 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vge_cap
+Kd 0.36 0.36 0.37
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vge_frame
+Kd 0.62 0.62 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vge_frame_dark
+Kd 0.31 0.31 0.32
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vge_grey
+Kd 0.46 0.46 0.47
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vge_hole
+Kd 0.14 0.14 0.15
+newmtl e7_vge_hose
+Kd 0.20 0.22 0.25
+newmtl e7_vge_pipe_red
+Kd 0.58 0.36 0.36
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vge_purple
+Kd 0.46 0.41 0.53
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vge_readout
+Kd 0.88 0.26 0.24
+newmtl e7_vge_red
+Kd 0.82 0.32 0.35
+newmtl e7_vge_white
+Kd 0.82 0.82 0.83
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgeb_gold
+Kd 0.88 0.26 0.24
+newmtl e7_vgeb_grey
+Kd 0.64 0.64 0.65
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgeb_grey_dark
+Kd 0.42 0.42 0.43
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgeb_light
+Kd 0.86 0.86 0.87
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgeb_pink
+Kd 0.72 0.24 0.24
+newmtl ember_e7_vgeb_red
+Kd 0.92 0.24 0.22
+map_Kd IsoRim/Swatches/Glow
+newmtl e7_vgeb_screen
+Kd 0.13 0.13 0.14
+newmtl e7_vgeb_silver
+Kd 0.82 0.82 0.83
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgeb_slat
+Kd 0.30 0.30 0.31
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgee_black
+Kd 0.14 0.14 0.15
+newmtl e7_vgee_dark
+Kd 0.36 0.36 0.38
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgee_frame_dark
+Kd 0.28 0.28 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgee_grey
+Kd 0.66 0.66 0.67
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgee_readout
+Kd 0.90 0.26 0.24
+newmtl e7_vgee_screen
+Kd 0.13 0.13 0.14
+newmtl e7_vgee_silver
+Kd 0.84 0.84 0.85
+map_Kd IsoRim/Swatches/Metal
+newmtl e7_vgee_wheel
+Kd 0.74 0.40 0.40
+newmtl ember_e7_vgef_red
+Kd 0.92 0.22 0.22
+map_Kd IsoRim/Swatches/Glow
+newmtl ember_e7_vgef_redlight
+Kd 0.95 0.26 0.24
+map_Kd IsoRim/Swatches/Glow
+newmtl e7t_plate
+Kd 0.62 0.62 0.64
+map_Kd IsoRim/Swatches/Metal
+newmtl e7t_plate_dark
+Kd 0.36 0.36 0.38
+map_Kd IsoRim/Swatches/Metal
+newmtl e7t_dark
+Kd 0.16 0.16 0.17
+newmtl e7t_white
+Kd 0.88 0.88 0.89
+map_Kd IsoRim/Swatches/Metal
+newmtl e7t_silver
+Kd 0.80 0.80 0.82
+map_Kd IsoRim/Swatches/Metal
+newmtl glow_e7t_pool
+Kd 0.95 0.24 0.22
+newmtl glow_e7t_core
+Kd 0.88 0.26 0.26

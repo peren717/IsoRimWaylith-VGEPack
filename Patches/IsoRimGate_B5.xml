@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch B5: the ship guns' pedestals (roofModel) and guns over the roof (topThroughRoof) need
+     IsoRim Api 31; an older IsoRim does not know these fields (an XML error in Defs/), so they come in here, one gate per gun
+     (Chapter 2 guns: no error when their entry is left out without Chapter 2). -->
+<Patch>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_GaussGun"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_JavelinPod"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_AnticraftCaster"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_PointDefenseTurret"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3_trim.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_AstrofireLauncher"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_GaussHowitzer"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_5x5.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_JavelinLauncher"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_5x5.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_AnticraftEmitter"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_5x5.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+</Patch>

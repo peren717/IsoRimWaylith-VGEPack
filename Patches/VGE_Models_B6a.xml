@@ -2,7 +2,7 @@
 <Patch>
 
   <!-- The hulk engine's cooldown orb (VGE _Orb_Cooldown: thin dark seams) needs IsoRim Api 27 (bobByState). -->
-  <Operation Class="IsoRimVGEPack.PatchOperation_IfIsoRimApi">
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
     <minVersion>27</minVersion>
     <apply Class="PatchOperationAdd">
       <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_GravhulkEngine"]</xpath>

@@ -1,0 +1,44 @@
+# IsoRim Waylith - VGE Pack, batch MT: mechanoid ship guns. Fixed colours from VGE's mechanoid art.
+newmtl vgemt_plate
+Kd 0.30 0.30 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemt_frame
+Kd 0.80 0.79 0.73
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemt_frame_dark
+Kd 0.42 0.42 0.40
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemt_band_light
+Kd 0.84 0.83 0.77
+newmtl vgemt_band_dark
+Kd 0.22 0.22 0.22
+newmtl vgemt_ring
+Kd 0.66 0.65 0.60
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemt_gun
+Kd 0.66 0.60 0.54
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemt_gun_light
+Kd 0.78 0.73 0.67
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemt_gun_dark
+Kd 0.40 0.36 0.33
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemt_vent
+Kd 0.16 0.15 0.15
+newmtl vgemt_grey
+Kd 0.62 0.63 0.65
+map_Kd IsoRim/Swatches/Metal
+newmtl vgemt_rod
+Kd 0.76 0.80 0.82
+map_Kd IsoRim/Swatches/Metal
+newmtl ember_vgemt_eye
+Kd 0.92 0.22 0.20
+map_Kd IsoRim/Swatches/Glow
+# (the core and charge glows: no Glow swatch, it is yellow and would turn violet pink, cyan green)
+newmtl ember_vgemt_core
+Kd 0.82 0.42 0.95
+newmtl ember_vgemt_core_hi
+Kd 0.96 0.76 1.00
+newmtl ember_vgemt_charge
+Kd 0.62 0.86 0.95

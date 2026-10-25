@@ -3,8 +3,8 @@
 
   <!-- The crew bunk bed's sleepers each on their own deck: lower 0.46, upper 1.26 (ModelDef.slots, IsoRim Api 28; the slot is
        the bed's own, BunkBeds numbers its levels so). An older IsoRim does not know the field, so it is added only when IsoRim
-       has Api 28 or later (IsoRimVGEPack.PatchOperation_IfIsoRimApi, Source/ApiGate.cs); before that both lie on the lower deck. -->
-  <Operation Class="IsoRimVGEPack.PatchOperation_IfIsoRimApi">
+       has Api 28 or later (IsoRimPackGate.PatchOperation_IfIsoRimApi, IsoRim's shared gate DLL); before that both lie on the lower deck. -->
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
     <minVersion>28</minVersion>
     <apply Class="PatchOperationAdd">
       <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_CrewBunkBed"]</xpath>

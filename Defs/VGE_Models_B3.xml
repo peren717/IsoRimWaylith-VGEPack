@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B3: walls and doors (2026-10-24). Built only from what Vanilla Gravship
+       Expanded's own textures show (tools\make_vge_b3.py for the door models). Format: IsoRim's Defs\Models.xml.
+       A thingDef that is not loaded (Chapter 2 absent) is skipped quietly by IsoRim.
+       Walls: IsoRim wall tops (Api 11): the block every wall is, full height; the sides cut at run time from the face strip
+       VGE's own atlas draws along a wall's south edge (one cell wide, laid up the wall), the cap darker as VGE's top. -->
+
+  <!-- structural beam: girder lattice; the face strip is the beam bar over the truss with its "/\" braces -->
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravshipStructuralBeam</defName>
+    <thingDef>VGE_GravshipStructuralBeam</thingDef>
+    <wallTop>
+      <height>1.65</height>
+      <rule>None</rule>
+      <texture>Things/Structures/Linked/GravshipStructuralBeam_Atlas</texture>
+      <strips>
+        <li><x>205</x><y>155</y><width>102</width><height>33</height></li>
+      </strips>
+      <tile>(1.0, 0.32)</tile>
+      <brightness>2.0</brightness>
+      <topShade>0.45</topShade>
+    </wallTop>
+  </IsoRim.ModelDef>
+
+  <!-- gravship armour (Ch.2): light plating with a seam line under a medium bevel; dark grey core on top. The diagonal hull
+       corners are the pack's Api 26 wedges. -->
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravshipArmor</defName>
+    <thingDef>VGE_GravshipArmor</thingDef>
+    <wallTop>
+      <height>1.65</height>
+      <rule>None</rule>
+      <texture>Things/Structures/Platform/Gravarmor/GravshipArmorHull_Atlas</texture>
+      <strips>
+        <li><x>205</x><y>151</y><width>102</width><height>37</height></li>
+      </strips>
+      <tile>(1.0, 0.36)</tile>
+      <brightness>1.0</brightness>
+      <topShade>0.75</topShade>
+    </wallTop>
+  </IsoRim.ModelDef>
+
+  <!-- airlock door 1x1 (Ch.2, a supported door made of stuff): frame, lintel with its window strip, two sliding panels
+       (IsoRim's one-cell supported door path, Doors.DrawSupported) -->
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AirlockDoor</defName>
+    <thingDef>VGE_AirlockDoor</thingDef>
+    <model>Models/vge_airlock_frame.obj</model>
+    <doorTopModel>Models/vge_airlock_top.obj</doorTopModel>
+    <doorLeafModel>Models/vge_airlock_leaf.obj</doorLeafModel>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <!-- wide doors (IsoRim Api 29: multi-cell supported doors drawn from their models; an older IsoRim keeps VGE's flat sprites).
+       Airlocks 2x1 / 3x1 / 5x1 (Ch.2, stuff): frame, lintel, two panels (half the width each, sliding apart). Vac barriers 2x1 /
+       3x1 / 5x1 (Ch.1): frame and lintel, no panels; the field stays the game's own glow sprite. -->
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Airlock2x1Door</defName>
+    <thingDef>VGE_Airlock2x1Door</thingDef>
+    <model>Models/vge_airlock_2x1_frame.obj</model>
+    <doorTopModel>Models/vge_airlock_2x1_top.obj</doorTopModel>
+    <doorLeafModel>Models/vge_airlock_2x1_leaf.obj</doorLeafModel>
+    <builtFor>(2, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Airlock3x1Door</defName>
+    <thingDef>VGE_Airlock3x1Door</thingDef>
+    <model>Models/vge_airlock_3x1_frame.obj</model>
+    <doorTopModel>Models/vge_airlock_3x1_top.obj</doorTopModel>
+    <doorLeafModel>Models/vge_airlock_3x1_leaf.obj</doorLeafModel>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Airlock5x1Door</defName>
+    <thingDef>VGE_Airlock5x1Door</thingDef>
+    <model>Models/vge_airlock_5x1_frame.obj</model>
+    <doorTopModel>Models/vge_airlock_5x1_top.obj</doorTopModel>
+    <doorLeafModel>Models/vge_airlock_5x1_leaf.obj</doorLeafModel>
+    <builtFor>(5, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_VacBarrierDouble</defName>
+    <thingDef>VGE_VacBarrierDouble</thingDef>
+    <model>Models/vge_vac_barrier_2x1_frame.obj</model>
+    <doorTopModel>Models/vge_vac_barrier_2x1_top.obj</doorTopModel>
+    <glassModel>Models/vge_vac_barrier_2x1_field.obj</glassModel>
+    <builtFor>(2, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_VacBarrierTriple</defName>
+    <thingDef>VGE_VacBarrierTriple</thingDef>
+    <model>Models/vge_vac_barrier_3x1_frame.obj</model>
+    <doorTopModel>Models/vge_vac_barrier_3x1_top.obj</doorTopModel>
+    <glassModel>Models/vge_vac_barrier_3x1_field.obj</glassModel>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_VacBarrierQuintuple</defName>
+    <thingDef>VGE_VacBarrierQuintuple</thingDef>
+    <model>Models/vge_vac_barrier_5x1_frame.obj</model>
+    <doorTopModel>Models/vge_vac_barrier_5x1_top.obj</doorTopModel>
+    <glassModel>Models/vge_vac_barrier_5x1_field.obj</glassModel>
+    <builtFor>(5, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+</Defs>

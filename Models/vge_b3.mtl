@@ -1,0 +1,22 @@
+# IsoRim Waylith - VGE Pack, batch B3: doors. stuff* = tinted by the door's stuff (VGE's airlock art is drawn white and
+# tinted the same way); fixed colours from VGE's art for the windows and the vac barrier frames.
+newmtl stuff_vgeb3
+Kd 0.86 0.86 0.86
+map_Kd IsoRim/Swatches/{stuff}
+newmtl stuff_vgeb3_dark
+Kd 0.62 0.62 0.62
+map_Kd IsoRim/Swatches/{stuff}
+newmtl stuff_vgeb3_hi
+Kd 0.98 0.98 0.98
+map_Kd IsoRim/Swatches/{stuff}
+newmtl vgeb3_window
+Kd 0.24 0.24 0.25
+newmtl vgeb3_vac
+Kd 0.42 0.42 0.43
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb3_vac_dark
+Kd 0.33 0.33 0.34
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb3_vac_top
+Kd 0.60 0.60 0.61
+map_Kd IsoRim/Swatches/Metal

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, batch B7a: the enemy ship guns' pedestals (roofModel) and guns over the roof (topThroughRoof) need
+     IsoRim Api 31, one gate per gun (no error without Chapter 2). -->
+<Patch>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyGaussBombard"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyGaussGun"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyJavelinPod"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyAnticraftCaster"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyPointDefenseTurret"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_3x3_trim.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyGaussHowitzer"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_5x5.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyJavelinLauncher"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_5x5.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyGaussCannon"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_9x9.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>31</minVersion>
+    <apply Class="PatchOperationAdd">
+      <success>Always</success>
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_EnemyAnticraftBeam"]</xpath>
+      <value>
+        <roofModel>Models/vge_gun_pedestal_9x9.obj</roofModel>
+        <topThroughRoof>true</topThroughRoof>
+      </value>
+    </apply>
+  </Operation>
+</Patch>

@@ -37,7 +37,7 @@
     <xpath>/Defs/IsoRim.ModelDef[defName="R3D_FuelOptimizer"]</xpath>
   </Operation>
   <!-- the grav engine's cooldown orb (thin dark seams, VGE _Orb_Cooldown) needs IsoRim Api 27 (bobByState) -->
-  <Operation Class="IsoRimVGEPack.PatchOperation_IfIsoRimApi">
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
     <minVersion>27</minVersion>
     <apply Class="PatchOperationAdd">
       <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_GravEngine"]</xpath>

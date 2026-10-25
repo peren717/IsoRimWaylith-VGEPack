@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, pawn batch P1: VGE's three mechanoids (user approved 2026-10-24), drawn by IsoRim's mech rig
+     (Mechs.cs): the body and the parts that move (head turns to aim, the gun shows when the game shows it, the astronaut's
+     nozzle nods while it works). Faction colour on the parts VGE's Allegiance masks mark (vgemk_mark); the Ancient look is
+     drawn worn by IsoRim. All three hover (VEF's floating comp): hoverHeight / hoverBob need IsoRim Api 32 and come in
+     through Patches/IsoRimGate_P1.xml; an older IsoRim draws them standing on the ground. The astronaut is VGE's Biotech
+     part (MayRequire). -->
+<Defs>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Hunter</defName>
+    <thingDef>VGE_Hunter</thingDef>
+    <model>Models/vge_hunter.obj</model>
+    <mech>true</mech>
+    <factionMaterials>
+      <li>vgemk_mark</li>
+    </factionMaterials>
+    <mechParts>
+      <li><model>Models/vge_hunter_eye.obj</model><motion>head</motion><pivot>(0, 0.42, 0)</pivot><maxTurn>40</maxTurn></li>
+      <li><model>Models/vge_hunter_pod.obj</model><motion>weapon</motion><pivot>(0, 0.13, 0.10)</pivot><weapon>VGE_RocketswarmPod</weapon></li>
+    </mechParts>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>R3D_VGE_Astronaut</defName>
+    <thingDef>VGE_Astronaut</thingDef>
+    <model>Models/vge_astronaut.obj</model>
+    <mech>true</mech>
+    <factionMaterials>
+      <li>vgemk_mark</li>
+    </factionMaterials>
+    <mechParts>
+      <li><model>Models/vge_astronaut_nozzle.obj</model><motion>pitch</motion><pivot>(0, 0.30, 0.19)</pivot><swing>14</swing></li>
+    </mechParts>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Astropede</defName>
+    <thingDef>VGE_Astropede</thingDef>
+    <model>Models/vge_astropede.obj</model>
+    <mech>true</mech>
+    <factionMaterials>
+      <li>vgemk_mark</li>
+    </factionMaterials>
+    <mechParts>
+      <li><model>Models/vge_astropede_eye.obj</model><motion>head</motion><pivot>(0, 0.66, 0.80)</pivot><maxTurn>30</maxTurn></li>
+      <li><model>Models/vge_astropede_lance.obj</model><motion>weapon</motion><pivot>(0.42, 0.24, 0.40)</pivot><weapon>VGE_MassLance</weapon></li>
+    </mechParts>
+  </IsoRim.ModelDef>
+</Defs>

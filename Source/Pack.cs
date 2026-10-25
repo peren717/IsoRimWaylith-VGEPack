@@ -12,8 +12,13 @@ namespace IsoRimVGEPack
     //    own rule (SectionLayer_GravshipArmorHull.ShouldDrawCornerPiece, called by name) and colour, and that layer's flat
     //    corner pieces are left out (its substructure edges and indoor mask stay): IsoRim.Api.AddWallCorners, HideFlatLayer.
     //  - Gravship scene: the armour layer flies with the ship (Api.FlyLayer); VGE's scaffold mask layers are no geometry.
-    //  - 3D models (DefsVGE_Models_*.xml): the states VGE draws with sprites of its own name the byState models (ModelStates).
+    //  - 3D models (Defs/VGE_Models_*.xml): the states VGE draws with sprites of its own name the byState models (ModelStates).
     //  - Crew bunk bed (BunkBeds.dll): its flat upper bunk left out under the model, sleepers on their decks (BunkBedsGlue).
+    //  - (IsoRim Api 30) Vac barrier fields: the 3D field across the doorway takes VGE's recolourable barrier colour
+    //    (Building_VacBarrier_Recolorable.barrierColor): IsoRim.Api.AddGlassColor.
+    //  - (IsoRim Api 20) The mass lance (VGE_MassLance, the astropede's): a direct weapon (it needs a line of sight) whose
+    //    slug flies overhead so it passes over walls and cover; IsoRim draws it straight, not on the shell arc
+    //    (IsoRim.Api.AddProjectileArc). Its floors are the IsoRimZ part's (PackZ: declared direct).
     // VGE is reached by name: a missing type or method leaves that part as VGE draws it (logged once).
     [StaticConstructorOnStartup]
     public static class Pack
@@ -30,11 +35,67 @@ namespace IsoRimVGEPack
                     return;
                 }
                 Setup26.Run();
+                EnemyOrbs.Run();   // (B7b) the enemy grav engines' flat orbs while their models stand in
+                DirectShots.Run(); // (Api 20) the mass lance drawn as the direct shot it is
+                if (IsoRim.Api.Version >= 30)
+                {
+                    Setup30.Run();
+                }
             }
             catch (Exception e)
             {
                 Log.Error(Tag + "Setup failed (VGE armour corners stay flat in 3D): " + e);
             }
+        }
+    }
+
+    // The mass lance's slug (VGE_MassLance: a weapon that needs a line of sight, its projectile flies overhead to pass over
+    // walls and cover) is a direct shot: drawn straight from the gun, not on the shell arc. Api 20 (AddProjectileArc).
+    internal static class DirectShots
+    {
+        internal const string MassLance = "VGE_MassLance";
+
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+        internal static void Run()
+        {
+            IsoRim.Api.AddProjectileArc(new Func<Projectile, bool?>(Arc));
+        }
+
+        private static bool? Arc(Projectile p)
+        {
+            return p != null && p.EquipmentDef != null && p.EquipmentDef.defName == MassLance ? false : (bool?)null;
+        }
+    }
+
+    // Everything that names Api 30 members lives here, so an older IsoRim never loads them.
+    internal static class Setup30
+    {
+        private const float FieldOpacity = 0.35f;
+        private static Type barrierType;
+        private static FieldInfo barrierColour;
+
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+        internal static void Run()
+        {
+            barrierType = AccessTools.TypeByName("VanillaGravshipExpanded.Building_VacBarrier_Recolorable");
+            barrierColour = barrierType != null ? AccessTools.Field(barrierType, "barrierColor") : null;
+            if (barrierColour == null || barrierColour.FieldType != typeof(Color))
+            {
+                Log.Warning(Pack.Tag + "VGE's vac barrier colour not found: 3D vac barrier fields keep their own colour.");
+                return;
+            }
+            IsoRim.Api.AddGlassColor(new Func<Thing, Color?>(FieldColour));
+        }
+
+        // VGE's barrier colour for its recolourable vac barriers (the field's tint), at the field's opacity; others: null.
+        private static Color? FieldColour(Thing t)
+        {
+            if (t == null || !barrierType.IsInstanceOfType(t))
+            {
+                return null;
+            }
+            Color c = (Color)barrierColour.GetValue(t);
+            return new Color(c.r, c.g, c.b, FieldOpacity);
         }
     }
 
