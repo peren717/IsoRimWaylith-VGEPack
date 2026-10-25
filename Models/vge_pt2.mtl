@@ -1,0 +1,14 @@
+# IsoRim Waylith - VGE Pack, pt2 props: fixed colours sampled from Vanilla Gravship Expanded's faux plant textures
+# (lifted ~1.05x for the 3D shading). The pot itself is isorim.mtl's stuff / stuff_dark (steel grey, or the paint).
+newmtl vgept2_green
+Kd 0.33 0.54 0.26
+map_Kd IsoRim/Swatches/Leaf
+newmtl vgept2_green_dark
+Kd 0.27 0.42 0.22
+map_Kd IsoRim/Swatches/Leaf
+newmtl vgept2_green_deep
+Kd 0.27 0.37 0.24
+map_Kd IsoRim/Swatches/Leaf
+newmtl vgept2_soil
+Kd 0.47 0.40 0.34
+map_Kd IsoRim/Swatches/Soil

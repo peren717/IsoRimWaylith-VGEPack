@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim Waylith - VGE Pack, playtest fix pt2 (2026-10-25): two small chapter 1 props the inventory missed
+     (tools\make_vge_pt2.py, vge_pt2.mtl). The faux plant has three looks, picked as VGE's Graphic_Random picks its texture
+     (IsoRim: variants by the thing's ID, textures in name order A, B, C); its metal pot is stuff-coloured (steel grey,
+     the paint once painted). The gauss shell ammo box uses B1a's greys (vge_b1a.mtl). -->
+<Defs>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_FauxPlant</defName>
+    <thingDef>VGE_FauxPlant</thingDef>
+    <models>
+      <li>Models/vge_faux_plant_a.obj</li>
+      <li>Models/vge_faux_plant_b.obj</li>
+      <li>Models/vge_faux_plant_c.obj</li>
+    </models>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_AmmoBox_GaussShell</defName>
+    <thingDef>VGE_AmmoBox_GaussShell</thingDef>
+    <model>Models/vge_ammo_box_gauss.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+</Defs>
