@@ -1,0 +1,58 @@
+# IsoRim Waylith - VGE Pack, model batch B8c (with B8a's colours): insect structures. Colours sampled from VGE's textures.
+newmtl vgem_light
+Kd 0.71 0.71 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_mid
+Kd 0.55 0.56 0.48
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_dark
+Kd 0.31 0.32 0.26
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_pit
+Kd 0.17 0.17 0.14
+newmtl vgem_grille
+Kd 0.66 0.40 0.42
+newmtl glow_vgem_red
+Kd 0.80 0.31 0.31
+newmtl vgem_purple
+Kd 0.42 0.38 0.52
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_tan
+Kd 0.82 0.71 0.55
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_brown
+Kd 0.50 0.42 0.31
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_silver
+Kd 0.78 0.78 0.78
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_grey
+Kd 0.58 0.58 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_steel_dark
+Kd 0.36 0.36 0.37
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_cable
+Kd 0.45 0.45 0.46
+newmtl glow_vgem_wc_red
+Kd 0.86 0.30 0.24
+newmtl glow_vgem_wc_blue
+Kd 0.16 0.66 0.94
+newmtl vgei_olive
+Kd 0.50 0.50 0.36
+newmtl vgei_olive_dark
+Kd 0.36 0.36 0.26
+newmtl vgei_hole
+Kd 0.24 0.24 0.18
+newmtl vgei_flesh
+Kd 0.55 0.47 0.43
+newmtl vgei_goo
+Kd 0.42 0.43 0.30
+newmtl vgei_strut
+Kd 0.30 0.30 0.31
+map_Kd IsoRim/Swatches/Metal
+newmtl vgei_plate
+Kd 0.55 0.55 0.55
+map_Kd IsoRim/Swatches/Metal
+newmtl glow_vgei_red
+Kd 0.80 0.30 0.18

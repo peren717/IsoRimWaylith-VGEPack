@@ -1,0 +1,27 @@
+# IsoRim Waylith - VGE Pack, model batch B9a: the oxyalgae plant and items (colours from VGE's textures).
+newmtl vgea_kelp
+Kd 0.36 0.60 0.50
+newmtl vgea_kelp_dark
+Kd 0.20 0.38 0.32
+newmtl vgea_purple
+Kd 0.55 0.46 0.62
+map_Kd IsoRim/Swatches/Metal
+newmtl vgea_purple_dark
+Kd 0.40 0.33 0.47
+map_Kd IsoRim/Swatches/Metal
+newmtl vgea_label
+Kd 0.58 0.58 0.60
+newmtl vgea_label_line
+Kd 0.30 0.30 0.32
+newmtl vgea_cap
+Kd 0.24 0.24 0.25
+map_Kd IsoRim/Swatches/Metal
+newmtl vgea_yellow
+Kd 0.80 0.64 0.32
+map_Kd IsoRim/Swatches/Metal
+newmtl vgea_yellow_dark
+Kd 0.62 0.48 0.22
+map_Kd IsoRim/Swatches/Metal
+newmtl vgea_grey
+Kd 0.52 0.53 0.54
+map_Kd IsoRim/Swatches/Metal

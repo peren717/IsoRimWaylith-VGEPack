@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B8-destroyed (2026-10-24): VGE's destroyed buildings (Chapter 1 VQEA_*, Chapter 2
+       VGE_*) as their intact counterpart's model broken: jagged chunks cut away where VGE's destroyed art shows the damage,
+       the cut faces scorched, the lights dead (tools/make_vge_b8d.py, vge_b8d.mtl; the engines' orbs merged in, static), and
+       drawn old with IsoRim's aged look (Api 15, below the pack's Api 26 baseline). Footprint and the intact entry's
+       fitting fields (wallFit, rotationByFacing) as the intact thing; no state models. Chapter 2 things are skipped quietly
+       without Chapter 2 (IsoRim skips unknown thingDefs). Not here: the destroyed war computer and gravlock tether (no
+       intact model yet) and the destroyed weapon platforms (they follow the ship-gun batch). -->
+
+  <IsoRim.ModelDef>   <!-- = VGE_SmallOxygenTank, 19.1 % cut away -->
+    <defName>R3D_VQEA_DestroyedSmallOxygenTank</defName>
+    <thingDef>VQEA_DestroyedSmallOxygenTank</thingDef>
+    <model>Models/vge_d_smalloxygentank.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = ChemfuelTank, 19 % cut away -->
+    <defName>R3D_VQEA_DestroyedSmallAstrofuelTank</defName>
+    <thingDef>VQEA_DestroyedSmallAstrofuelTank</thingDef>
+    <model>Models/vge_d_smallastrofueltank.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = GravFieldExtender, 17.6 % cut away -->
+    <defName>R3D_VQEA_DestroyedGravExtender</defName>
+    <thingDef>VQEA_DestroyedGravExtender</thingDef>
+    <model>Models/vge_d_gravextender.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = SmallThruster, 20 % cut away -->
+    <defName>R3D_VQEA_DestroyedSmallThruster</defName>
+    <thingDef>VQEA_DestroyedSmallThruster</thingDef>
+    <model>Models/vge_d_smallthruster.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = LargeThruster, 24.4 % cut away -->
+    <defName>R3D_VQEA_DestroyedLargeThruster</defName>
+    <thingDef>VQEA_DestroyedLargeThruster</thingDef>
+    <model>Models/vge_d_largethruster.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_SmallHeatsink, 15.3 % cut away -->
+    <defName>R3D_VQEA_DestroyedSmallHeatsink</defName>
+    <thingDef>VQEA_DestroyedSmallHeatsink</thingDef>
+    <model>Models/vge_d_smallheatsink.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_LargeOxygenTank, 25 % cut away -->
+    <defName>R3D_VGE_DestroyedLargeOxygenTank</defName>
+    <thingDef>VGE_DestroyedLargeOxygenTank</thingDef>
+    <model>Models/vge_d_largeoxygentank.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_LifeSupportSystem, 26 % cut away -->
+    <defName>R3D_VGE_DestroyedLifeSupportSystem</defName>
+    <thingDef>VGE_DestroyedLifeSupportSystem</thingDef>
+    <model>Models/vge_d_lifesupportsystem.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = LargeChemfuelTank, 16.8 % cut away -->
+    <defName>R3D_VGE_DestroyedLargeChemfuelTank</defName>
+    <thingDef>VGE_DestroyedLargeChemfuelTank</thingDef>
+    <model>Models/vge_d_largechemfueltank.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GiantAstrofuelTank, 20.5 % cut away -->
+    <defName>R3D_VGE_DestroyedGiantAstrofuelTank</defName>
+    <thingDef>VGE_DestroyedGiantAstrofuelTank</thingDef>
+    <model>Models/vge_d_giantastrofueltank.obj</model>
+    <builtFor>(6, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_AstrofuelSynthesizer, 20 % cut away -->
+    <defName>R3D_VGE_DestroyedAstrofuelSynthesizer</defName>
+    <thingDef>VGE_DestroyedAstrofuelSynthesizer</thingDef>
+    <model>Models/vge_d_astrofuelsynthesizer.obj</model>
+    <builtFor>(4, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_AstrofuelGenerator, 15.8 % cut away -->
+    <defName>R3D_VGE_DestroyedAstrofuelGenerator</defName>
+    <thingDef>VGE_DestroyedAstrofuelGenerator</thingDef>
+    <model>Models/vge_d_astrofuelgenerator.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_IndustrialAstrofuelGenerator, 15.4 % cut away -->
+    <defName>R3D_VGE_DestroyedIndustrialAstrofuelGenerator</defName>
+    <thingDef>VGE_DestroyedIndustrialAstrofuelGenerator</thingDef>
+    <model>Models/vge_d_industrialastrofuelgenerator.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_Astropurifier, 29.8 % cut away -->
+    <defName>R3D_VGE_DestroyedAstropurifier</defName>
+    <thingDef>VGE_DestroyedAstropurifier</thingDef>
+    <model>Models/vge_d_astropurifier.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = FuelOptimizer, 23.9 % cut away -->
+    <defName>R3D_VGE_DestroyedFuelOptimizer</defName>
+    <thingDef>VGE_DestroyedFuelOptimizer</thingDef>
+    <model>Models/vge_d_fueloptimizer.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_OxygenReclaimer, 15.9 % cut away -->
+    <defName>R3D_VGE_DestroyedOxygenReclaimer</defName>
+    <thingDef>VGE_DestroyedOxygenReclaimer</thingDef>
+    <model>Models/vge_d_oxygenreclaimer.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <rotationByFacing><li>0</li><li>180</li><li>0</li><li>180</li></rotationByFacing>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_LargeHeatsink, 15.1 % cut away -->
+    <defName>R3D_VGE_DestroyedLargeHeatsink</defName>
+    <thingDef>VGE_DestroyedLargeHeatsink</thingDef>
+    <model>Models/vge_d_largeheatsink.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GravheatAbsorber, 16 % cut away -->
+    <defName>R3D_VGE_DestroyedGravheatAbsorber</defName>
+    <thingDef>VGE_DestroyedGravheatAbsorber</thingDef>
+    <model>Models/vge_d_gravheatabsorber.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GiantThruster, 17.5 % cut away -->
+    <defName>R3D_VGE_DestroyedGiantThruster</defName>
+    <thingDef>VGE_DestroyedGiantThruster</thingDef>
+    <model>Models/vge_d_giantthruster.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <wallFit>1.65</wallFit>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_PilotCockpit, 18.8 % cut away -->
+    <defName>R3D_VGE_DestroyedPilotCockpit</defName>
+    <thingDef>VGE_DestroyedPilotCockpit</thingDef>
+    <model>Models/vge_d_pilotcockpit.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = PilotConsole, 19.1 % cut away -->
+    <defName>R3D_VGE_DestroyedPilotConsole</defName>
+    <thingDef>VGE_DestroyedPilotConsole</thingDef>
+    <model>Models/vge_d_pilotconsole.obj</model>
+    <builtFor>(3, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_PilotBridge, 20.8 % cut away -->
+    <defName>R3D_VGE_DestroyedPilotBridge</defName>
+    <thingDef>VGE_DestroyedPilotBridge</thingDef>
+    <model>Models/vge_d_pilotbridge.obj</model>
+    <builtFor>(5, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_CopilotConsole, 26.9 % cut away -->
+    <defName>R3D_VGE_DestroyedCopilotConsole</defName>
+    <thingDef>VGE_DestroyedCopilotConsole</thingDef>
+    <model>Models/vge_d_copilotconsole.obj</model>
+    <builtFor>(3, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_TargetingTerminal, 23.9 % cut away -->
+    <defName>R3D_VGE_DestroyedTargetingTerminal</defName>
+    <thingDef>VGE_DestroyedTargetingTerminal</thingDef>
+    <model>Models/vge_d_targetingterminal.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GunnerSubpersonaCore, 19.2 % cut away -->
+    <defName>R3D_VGE_DestroyedGunnerSubpersonaCore</defName>
+    <thingDef>VGE_DestroyedGunnerSubpersonaCore</thingDef>
+    <model>Models/vge_d_gunnersubpersonacore.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GravtechConsole, 9.5 % cut away -->
+    <defName>R3D_VGE_DestroyedGravtechConsole</defName>
+    <thingDef>VGE_DestroyedGravtechConsole</thingDef>
+    <model>Models/vge_d_gravtechconsole.obj</model>
+    <builtFor>(3, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_FlightComputer, 22.8 % cut away -->
+    <defName>R3D_VGE_DestroyedFlightComputer</defName>
+    <thingDef>VGE_DestroyedFlightComputer</thingDef>
+    <model>Models/vge_d_flightcomputer.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GravFieldAmplifier, 13.3 % cut away -->
+    <defName>R3D_VGE_DestroyedGravFieldAmplifier</defName>
+    <thingDef>VGE_DestroyedGravFieldAmplifier</thingDef>
+    <model>Models/vge_d_gravfieldamplifier.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_MaintenanceHub, 17.6 % cut away -->
+    <defName>R3D_VGE_DestroyedMaintenanceHub</defName>
+    <thingDef>VGE_DestroyedMaintenanceHub</thingDef>
+    <model>Models/vge_d_maintenancehub.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_CapacitorHarmonizer, 21.8 % cut away -->
+    <defName>R3D_VGE_DestroyedCapacitorHarmonizer</defName>
+    <thingDef>VGE_DestroyedCapacitorHarmonizer</thingDef>
+    <model>Models/vge_d_capacitorharmonizer.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_Gravlift, 24.4 % cut away -->
+    <defName>R3D_VGE_DestroyedGravlift</defName>
+    <thingDef>VGE_DestroyedGravlift</thingDef>
+    <model>Models/vge_d_gravlift.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_EngineeringConsole, 23.6 % cut away -->
+    <defName>R3D_VGE_DestroyedEngineeringConsole</defName>
+    <thingDef>VGE_DestroyedEngineeringConsole</thingDef>
+    <model>Models/vge_d_engineeringconsole.obj</model>
+    <builtFor>(3, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = GravcorePowerCell, 20.7 % cut away -->
+    <defName>R3D_VGE_DestroyedGravcorePowerCell</defName>
+    <thingDef>VGE_DestroyedGravcorePowerCell</thingDef>
+    <model>Models/vge_d_gravcorepowercell.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GravcorePowerCoil, 15.5 % cut away -->
+    <defName>R3D_VGE_DestroyedGravcorePowerCoil</defName>
+    <thingDef>VGE_DestroyedGravcorePowerCoil</thingDef>
+    <model>Models/vge_d_gravcorepowercoil.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GravjumperEngine, 20.8 % cut away -->
+    <defName>R3D_VGE_DestroyedGravjumperEngine</defName>
+    <thingDef>VGE_DestroyedGravjumperEngine</thingDef>
+    <model>Models/vge_d_gravjumperengine.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = GravEngine, 18.9 % cut away -->
+    <defName>R3D_VGE_DestroyedGravEngine</defName>
+    <thingDef>VGE_DestroyedGravEngine</thingDef>
+    <model>Models/vge_d_gravengine.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GravhulkEngine, 15 % cut away -->
+    <defName>R3D_VGE_DestroyedGravhulkEngine</defName>
+    <thingDef>VGE_DestroyedGravhulkEngine</thingDef>
+    <model>Models/vge_d_gravhulkengine.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_TargetingConsole, 25.4 % cut away -->
+    <defName>R3D_VGE_DestroyedTargetingConsole</defName>
+    <thingDef>VGE_DestroyedTargetingConsole</thingDef>
+    <model>Models/vge_d_targetingconsole.obj</model>
+    <builtFor>(3, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GravlaunchCloaker, 16.3 % cut away -->
+    <defName>R3D_VGE_DestroyedGravlunchCloaker</defName>
+    <thingDef>VGE_DestroyedGravlunchCloaker</thingDef>
+    <model>Models/vge_d_gravlunchcloaker.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_SmallElectricThruster, 22.1 % cut away -->
+    <defName>R3D_VGE_DestroyedSmallElectricThruster</defName>
+    <thingDef>VGE_DestroyedSmallElectricThruster</thingDef>
+    <model>Models/vge_d_smallelectricthruster.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_LargeElectricThruster, 18.5 % cut away -->
+    <defName>R3D_VGE_DestroyedLargeElectricThruster</defName>
+    <thingDef>VGE_DestroyedLargeElectricThruster</thingDef>
+    <model>Models/vge_d_largeelectricthruster.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_GiantElectricThruster, 21.3 % cut away -->
+    <defName>R3D_VGE_DestroyedGiantElectricThruster</defName>
+    <thingDef>VGE_DestroyedGiantElectricThruster</thingDef>
+    <model>Models/vge_d_giantelectricthruster.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <wallFit>1.65</wallFit>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_AuxiliaryOxygenTank, 19 % cut away -->
+    <defName>R3D_VGE_DestroyedAuxiliaryOxygenTank</defName>
+    <thingDef>VGE_DestroyedAuxiliaryOxygenTank</thingDef>
+    <model>Models/vge_d_auxiliaryoxygentank.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_AuxiliaryAstrofuelTank, 15.3 % cut away -->
+    <defName>R3D_VGE_DestroyedAuxiliaryAstrofuelTank</defName>
+    <thingDef>VGE_DestroyedAuxiliaryAstrofuelTank</thingDef>
+    <model>Models/vge_d_auxiliaryastrofueltank.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <!-- B8-destroyed extras (2026-10-24): VGE's destroyed weapon platforms keep only the base (no gun): the B5/B7a gun frame
+       (0.97 high) with its pedestal fallen in, cut where VGE's art is torn (tools/make_vge_b8dx_src.py + make_vge_b8d.py
+       with B8D_KEEP_UNCUT=1); no 7x7 frame exists, so the large one is the 9x9 frame at 7/9 across. The destroyed
+       warcomputer is the B8a1 warcomputer cut. All under the 1.60 storey. Chapter 2 things are skipped quietly. -->
+  <IsoRim.ModelDef>   <!-- = the 3x3 gun frame + pedestal, 18 % cut away -->
+    <defName>R3D_VGE_DestroyedSmallWeaponPlatform</defName>
+    <thingDef>VGE_DestroyedSmallWeaponPlatform</thingDef>
+    <model>Models/vge_d_smallweaponplatform.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = the 5x5 gun frame + pedestal, 23 % cut away -->
+    <defName>R3D_VGE_DestroyedMediumWeaponPlatform</defName>
+    <thingDef>VGE_DestroyedMediumWeaponPlatform</thingDef>
+    <model>Models/vge_d_mediumweaponplatform.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = the 9x9 gun frame + pedestal at 7/9 across, 20 % cut away -->
+    <defName>R3D_VGE_DestroyedLargeWeaponPlatform</defName>
+    <thingDef>VGE_DestroyedLargeWeaponPlatform</thingDef>
+    <model>Models/vge_d_largeweaponplatform.obj</model>
+    <builtFor>(7, 7)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = the 9x9 gun frame + pedestal, 17 % cut away -->
+    <defName>R3D_VGE_DestroyedGiantWeaponPlatform</defName>
+    <thingDef>VGE_DestroyedGiantWeaponPlatform</thingDef>
+    <model>Models/vge_d_giantweaponplatform.obj</model>
+    <builtFor>(9, 9)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- = VGE_Warcomputer (B8a1), 4 % cut away -->
+    <defName>R3D_VGE_DestroyedWarComputer</defName>
+    <thingDef>VGE_DestroyedWarComputer</thingDef>
+    <model>Models/vge_d_warcomputer.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <aged>0.5</aged>
+  </IsoRim.ModelDef>
+
+</Defs>

@@ -1,0 +1,42 @@
+# IsoRim Waylith - VGE Pack batch B8b2 v2: the algae colour and the copied IsoRim item colours (vgec_*).
+newmtl vgeo_algae
+Kd 0.24 0.42 0.66
+newmtl vgec_foil
+Kd 0.760 0.760 0.720
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_medicine_ind_case
+Kd 0.400 0.580 0.600
+newmtl vgec_medicine_ind_cross
+Kd 0.620 0.740 0.740
+newmtl vgec_medicine_ind_line
+Kd 0.310 0.390 0.400
+newmtl vgec_medicine_ind_seam
+Kd 0.140 0.200 0.210
+newmtl vgec_medicine_ind_side
+Kd 0.330 0.480 0.500
+newmtl vgec_metal
+Kd 0.600 0.620 0.650
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_paint_olive
+Kd 0.400 0.420 0.300
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_rawmat_comp
+Kd 0.560 0.480 0.340
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_rawmat_comp_green
+Kd 0.720 0.760 0.600
+newmtl vgec_rawmat_gravlite
+Kd 0.660 0.700 0.700
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_rawmat_spacer
+Kd 0.400 0.340 0.380
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_rawmat_spacer_disc
+Kd 0.800 0.800 0.820
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_rawmat_steelbar
+Kd 0.620 0.630 0.650
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_rawmat_steelbar_end
+Kd 0.420 0.430 0.460
+map_Kd IsoRim/Swatches/Metal

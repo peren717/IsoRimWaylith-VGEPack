@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B8b2 (2026-10-24): rare orbital-station props, part 2. Low-poly models built
+       from VGE's own textures (tools/make_vge_b8b2.py, vge_b8b2.mtl), under the 1.60 storey. Random-look things list one
+       model per VGE texture in name order (IsoRim picks the variant as the game picks the texture); lootable boxes and
+       pallets show their empty look once opened (emptyModel, as VGE's CompEmptyStateGraphic); full, they hold IsoRim's own item
+       models of their goods (v2, tools/make_vge_b8b2_v2.py, vge_b8b2_v2.mtl). The oxyfarm keeps its water
+       on the south side facing north or south, as VGE draws it (it has no north art). Chapter 2 things are skipped
+       quietly. -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_TradingContainer</defName>
+    <thingDef>VGE2_TradingContainer</thingDef>
+    <models>
+      <li>Models/vge_trading_container_a.obj</li>
+      <li>Models/vge_trading_container_b.obj</li>
+      <li>Models/vge_trading_container_c.obj</li>
+      <li>Models/vge_trading_container_d.obj</li>
+      <li>Models/vge_trading_container_e.obj</li>
+      <li>Models/vge_trading_container_f.obj</li>
+      <li>Models/vge_trading_container_g.obj</li>
+      <li>Models/vge_trading_container_h.obj</li>
+    </models>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_ExplosivesCrate</defName>
+    <thingDef>VGE2_ExplosivesCrate</thingDef>
+    <models>
+      <li>Models/vge_explosives_crate_a.obj</li>
+      <li>Models/vge_explosives_crate_b.obj</li>
+    </models>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_AstrofuelBarrel</defName>
+    <thingDef>VGE2_AstrofuelBarrel</thingDef>
+    <models>
+      <li>Models/vge_astrofuel_barrel_a.obj</li>
+      <li>Models/vge_astrofuel_barrel_b.obj</li>
+      <li>Models/vge_astrofuel_barrel_c.obj</li>
+    </models>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_AstrofuelPipeSegment</defName>
+    <thingDef>VGE2_AstrofuelPipeSegment</thingDef>
+    <model>Models/vge_astrofuel_pipe_segment.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_Oxyfarm</defName>
+    <thingDef>VGE2_Oxyfarm</thingDef>
+    <model>Models/vge_oxyfarm.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <rotationByFacing><li>0</li><li>0</li><li>180</li><li>0</li></rotationByFacing>
+    <glassModel>Models/vge_oxyfarm_glass.obj</glassModel>   <!-- v2: the tank is glass, water and algae inside -->
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_LockedShuttle</defName>
+    <thingDef>VGE2_LockedShuttle</thingDef>
+    <model>Models/vge_locked_shuttle.obj</model>
+    <builtFor>(3, 5)</builtFor>
+    <paintedHull>true</paintedHull>   <!-- v4 (user): IsoRim's passenger shuttle model, its own colours (unpainted white), tail fins tan -->
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SpacerBox_Gravlite</defName>
+    <thingDef>VGE_SpacerBox_Gravlite</thingDef>
+    <model>Models/vge_spacer_box_gravlite.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <emptyModel>Models/vge_spacer_box_gravlite_empty.obj</emptyModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SpacerBox_ComponentIndustrial</defName>
+    <thingDef>VGE_SpacerBox_ComponentIndustrial</thingDef>
+    <model>Models/vge_spacer_box_component.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <emptyModel>Models/vge_spacer_box_component_empty.obj</emptyModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SpacerBox_ComponentSpacer</defName>
+    <thingDef>VGE_SpacerBox_ComponentSpacer</thingDef>
+    <model>Models/vge_spacer_box_electronics.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <emptyModel>Models/vge_spacer_box_electronics_empty.obj</emptyModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SpacerBox_Steel</defName>
+    <thingDef>VGE_SpacerBox_Steel</thingDef>
+    <model>Models/vge_spacer_box_steel.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <emptyModel>Models/vge_spacer_box_steel_empty.obj</emptyModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SpacerPallet_Medicine</defName>
+    <thingDef>VGE_SpacerPallet_Medicine</thingDef>
+    <model>Models/vge_spacer_pallet_medicine.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <emptyModel>Models/vge_spacer_pallet_empty.obj</emptyModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SpacerPallet_SurvivalMeals</defName>
+    <thingDef>VGE_SpacerPallet_SurvivalMeals</thingDef>
+    <model>Models/vge_spacer_pallet_meals.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <emptyModel>Models/vge_spacer_pallet_empty.obj</emptyModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravJunk</defName>
+    <thingDef>VGE_GravJunk</thingDef>
+    <models>
+      <li>Models/vge_grav_junk_a.obj</li>
+      <li>Models/vge_grav_junk_b.obj</li>
+      <li>Models/vge_grav_junk_c.obj</li>
+      <li>Models/vge_grav_junk_d.obj</li>
+    </models>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+</Defs>

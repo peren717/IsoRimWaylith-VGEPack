@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B8a2 (2026-10-24): rare mechanoid buildings, second half. Low-poly models built
+       from VGE's own textures (tools/make_vge_b8a2.py, vge_b8a2.mtl); everything under the 1.60 storey. The overshield
+       generator shows its dark sphere while the shield is down (pack state "off", Source/ModelStates.cs, as VGE's _Off
+       art). The auxiliary processor and the resource crate have three looks each, picked as VGE's Graphic_Random picks
+       its texture (IsoRim: variants by the thing's ID, textures in name order A, B, C). Chapter 2 things are skipped
+       quietly without Chapter 2. -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidArtilleryLoader</defName>
+    <thingDef>VGE_MechanoidArtilleryLoader</thingDef>
+    <model>Models/vge_mech_artillery_loader.obj</model>
+    <builtFor>(1, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidGravcapacitor</defName>
+    <thingDef>VGE_MechanoidGravcapacitor</thingDef>
+    <model>Models/vge_mech_gravcapacitor.obj</model>
+    <builtFor>(2, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidOvershieldGenerator</defName>
+    <thingDef>VGE_MechanoidOvershieldGenerator</thingDef>
+    <model>Models/vge_mech_overshield.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <byState>
+      <li><state>off</state><model>Models/vge_mech_overshield_off.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidSignalJammer</defName>
+    <thingDef>VGE_MechanoidSignalJammer</thingDef>
+    <model>Models/vge_mech_signal_jammer.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidAuxiliaryProcessor</defName>
+    <thingDef>VGE_MechanoidAuxiliaryProcessor</thingDef>
+    <models>
+      <li>Models/vge_mech_aux_processor_a.obj</li>
+      <li>Models/vge_mech_aux_processor_b.obj</li>
+      <li>Models/vge_mech_aux_processor_c.obj</li>
+    </models>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidGravfieldAmplifier</defName>
+    <thingDef>VGE_MechanoidGravfieldAmplifier</thingDef>
+    <model>Models/vge_mech_amplifier.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidGravfieldExtender</defName>
+    <thingDef>VGE_MechanoidGravfieldExtender</thingDef>
+    <model>Models/vge_mech_extender.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidInformationSpire</defName>
+    <thingDef>VGE_MechanoidInformationSpire</thingDef>
+    <model>Models/vge_mech_info_spire.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidResourceCrate</defName>
+    <thingDef>VGE_MechanoidResourceCrate</thingDef>
+    <models>
+      <li>Models/vge_mech_crate_a.obj</li>
+      <li>Models/vge_mech_crate_b.obj</li>
+      <li>Models/vge_mech_crate_c.obj</li>
+    </models>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_MechanoidSensorNode</defName>
+    <thingDef>VGE_MechanoidSensorNode</thingDef>
+    <model>Models/vge_mech_sensor_node.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_MechNavBeacon</defName>
+    <thingDef>VGE2_MechNavBeacon</thingDef>
+    <model>Models/vge_mech_nav_beacon.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE2_MechVertex</defName>
+    <thingDef>VGE2_MechVertex</thingDef>
+    <model>Models/vge_mech_vertex.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+</Defs>

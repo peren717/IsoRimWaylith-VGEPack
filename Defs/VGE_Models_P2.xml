@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, pawn batch P2 (2026-10-24): VGE Chapter 2's six insect creatures as IsoRim animals (body
+       facing north, one leg model at each hip for the exoleech's claws and the nullipede's legs), from VGE's sprites
+       (tools/make_vge_insects.py, vge_insects.mtl), in IsoRim's face budget. Downed or dead they lie on their side
+       (deadBellyUp off). The exoworm's hover (Api 32) comes in through Patches/IsoRimGate_P2.xml. Things whose mod is not
+       loaded are skipped quietly. -->
+
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">   <!-- S-curved worm, raised front loop, open mouth; hovers (Patches/IsoRimGate_P2.xml, Api 32) -->
+    <defName>R3D_VGE_Exoworm</defName>
+    <thingDef>VGE_Exoworm</thingDef>
+    <model>Models/vge_exoworm.obj</model>
+    <animal>true</animal>
+    <deadBellyUp>false</deadBellyUp>
+    <stride>0.30</stride>
+    <bodyCentre>0.10</bodyCentre>
+    <bodyHalfWidth>0.10</bodyHalfWidth>
+    <bodyHalfLength>0.30</bodyHalfLength>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">   <!-- segmented grub, forward spike, hooked mandibles; legless, rigid -->
+    <defName>R3D_VGE_Exopede</defName>
+    <thingDef>VGE_Exopede</thingDef>
+    <model>Models/vge_exopede.obj</model>
+    <animal>true</animal>
+    <deadBellyUp>false</deadBellyUp>
+    <stride>0.45</stride>
+    <bodyCentre>0.22</bodyCentre>
+    <bodyHalfWidth>0.28</bodyHalfWidth>
+    <bodyHalfLength>0.65</bodyHalfLength>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">   <!-- rearing armoured grub, toothed round mouth; its two claws are the legs -->
+    <defName>R3D_VGE_Exoleech</defName>
+    <thingDef>VGE_Exoleech</thingDef>
+    <model>Models/vge_exoleech.obj</model>
+    <animal>true</animal>
+    <deadBellyUp>false</deadBellyUp>
+    <legModel>Models/vge_exoleech_leg.obj</legModel>
+    <legs>
+      <li>(-0.24, 0.62, 0.30)</li>
+      <li>(0.24, 0.62, 0.30)</li>
+    </legs>
+    <legLength>0.62</legLength>
+    <legSwing>22</legSwing>
+    <legSplay>18</legSplay>
+    <stride>0.55</stride>
+    <bodyCentre>0.30</bodyCentre>
+    <bodyHalfWidth>0.30</bodyHalfWidth>
+    <bodyHalfLength>0.90</bodyHalfLength>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">   <!-- moss-green pitted mound with crawling worms and worm mouths; legless -->
+    <defName>R3D_VGE_Exohive</defName>
+    <thingDef>VGE_Exohive</thingDef>
+    <model>Models/vge_exohive.obj</model>
+    <animal>true</animal>
+    <deadBellyUp>false</deadBellyUp>
+    <stride>0.60</stride>
+    <bodyCentre>0.40</bodyCentre>
+    <bodyHalfWidth>0.58</bodyHalfWidth>
+    <bodyHalfLength>0.60</bodyHalfLength>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">   <!-- heap of tangled worms with mouths at the front; legless -->
+    <defName>R3D_VGE_ExowormKnot</defName>
+    <thingDef>VGE_ExowormKnot</thingDef>
+    <model>Models/vge_exoworm_knot.obj</model>
+    <animal>true</animal>
+    <deadBellyUp>false</deadBellyUp>
+    <stride>0.80</stride>
+    <bodyCentre>0.48</bodyCentre>
+    <bodyHalfWidth>0.80</bodyHalfWidth>
+    <bodyHalfLength>0.98</bodyHalfLength>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">   <!-- rearing armoured worm-centipede with a round sandworm maw (four fangs), tail claw; 12 short legs -->
+    <defName>R3D_VGE_Nullipede</defName>
+    <thingDef>VFEI2_Nullipede</thingDef>
+    <model>Models/vge_nullipede.obj</model>
+    <animal>true</animal>
+    <deadBellyUp>false</deadBellyUp>
+    <legModel>Models/vge_nullipede_leg.obj</legModel>
+    <legs>
+      <li>(-0.36, 0.26, -1.30)</li>
+      <li>(0.36, 0.26, -1.30)</li>
+      <li>(-0.36, 0.26, -1.05)</li>
+      <li>(0.36, 0.26, -1.05)</li>
+      <li>(-0.36, 0.26, -0.80)</li>
+      <li>(0.36, 0.26, -0.80)</li>
+      <li>(-0.36, 0.26, -0.55)</li>
+      <li>(0.36, 0.26, -0.55)</li>
+      <li>(-0.36, 0.26, -0.30)</li>
+      <li>(0.36, 0.26, -0.30)</li>
+      <li>(-0.36, 0.26, -0.05)</li>
+      <li>(0.36, 0.26, -0.05)</li>
+    </legs>
+    <legLength>0.26</legLength>
+    <legSwing>20</legSwing>
+    <legSplay>38</legSplay>
+    <stride>0.70</stride>
+    <bodyCentre>0.34</bodyCentre>
+    <bodyHalfWidth>0.42</bodyHalfWidth>
+    <bodyHalfLength>1.75</bodyHalfLength>
+  </IsoRim.ModelDef>
+
+</Defs>

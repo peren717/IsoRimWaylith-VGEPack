@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B2a: compact benches and work furniture (2026-10-24). Low-poly models built
+       only from what Vanilla Gravship Expanded's own textures show (tools/make_vge_b2a.py); fixed colours (vge_b2a.mtl).
+       Built facing north = VGE's _north art. Benches: operator south, worktop at 0.62 (surfaceHeight, as IsoRim's
+       vanilla benches: products in work rest on it). Comms terminal: operator north (VGE interaction cell (0,0,1)).
+       Agrocell: VGE's floor-built grower; its plants stand on the bed (surfaceHeight 0.05). -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactDrugLab</defName>
+    <thingDef>VGE_CompactDrugLab</thingDef>
+    <model>Models/vge_compact_drug_lab.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <surfaceHeight>0.62</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactFabBench</defName>
+    <thingDef>VGE_CompactFabBench</thingDef>
+    <model>Models/vge_compact_fab_bench.obj</model>
+    <builtFor>(3, 1)</builtFor>
+    <surfaceHeight>0.62</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactMachiningTable</defName>
+    <thingDef>VGE_CompactMachiningTable</thingDef>
+    <model>Models/vge_compact_machining_table.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <surfaceHeight>0.62</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactRefinery</defName>
+    <thingDef>VGE_CompactRefinery</thingDef>
+    <model>Models/vge_compact_refinery.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <surfaceHeight>0.62</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactSmithy</defName>
+    <thingDef>VGE_CompactSmithy</thingDef>
+    <model>Models/vge_compact_smithy.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <surfaceHeight>0.62</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactStove</defName>
+    <thingDef>VGE_CompactStove</thingDef>
+    <model>Models/vge_compact_stove.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <surfaceHeight>0.62</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactTailor</defName>
+    <thingDef>VGE_CompactTailor</thingDef>
+    <model>Models/vge_compact_tailor.obj</model>
+    <builtFor>(2, 1)</builtFor>
+    <surfaceHeight>0.62</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactMultiAnalyzer</defName>
+    <thingDef>VGE_CompactMultiAnalyzer</thingDef>
+    <model>Models/vge_compact_multi_analyzer.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CompactResearchBench</defName>
+    <thingDef>VGE_CompactResearchBench</thingDef>
+    <model>Models/vge_compact_research_bench.obj</model>
+    <builtFor>(3, 1)</builtFor>
+    <surfaceHeight>0.62</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CommsTerminal</defName>
+    <thingDef>VGE_CommsTerminal</thingDef>
+    <model>Models/vge_comms_terminal.obj</model>
+    <builtFor>(3, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Agrocell</defName>
+    <thingDef>VGE_Agrocell</thingDef>
+    <model>Models/vge_agrocell.obj</model>
+    <builtFor>(1, 3)</builtFor>
+    <surfaceHeight>0.05</surfaceHeight>
+  </IsoRim.ModelDef>
+
+</Defs>

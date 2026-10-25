@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B6a: occasional devices, Chapter 1 (2026-10-24). Low-poly models built from
+       Vanilla Gravship Expanded's own textures (tools/make_vge_b6a.py, vge_b6a.mtl). Built facing north = VGE's _north
+       art. The hulk engine: body baked (drawn every frame by the game), state "cooldown" named by the pack (as the
+       gravjumper), the orb is IsoRim's bob part (its cooldown orb added by Patches/VGE_Models_B6a.xml with IsoRim Api 27).
+       The oxygen reclaimer turns half round facing east or west, as VGE draws its E/W art. The industrial generator, the
+       hulk engine, the amplifier and the scanner cluster stand taller than a storey (user decision: no floor over them).
+       Biotech / Ideology things are skipped quietly when the DLC is absent. The pilot bridge (v3) is built at VGE's
+       drawn size, its screens placed cell by cell on VGE's north art. -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_IndustrialAstrofuelGenerator</defName>
+    <thingDef>VGE_IndustrialAstrofuelGenerator</thingDef>
+    <model>Models/vge_industrial_astrofuel_generator.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Astropurifier</defName>
+    <thingDef>VGE_Astropurifier</thingDef>
+    <model>Models/vge_astropurifier.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GiantThruster</defName>
+    <thingDef>VGE_GiantThruster</thingDef>
+    <model>Models/vge_giant_astrofuel_thruster.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_OxygenReclaimer</defName>
+    <thingDef>VGE_OxygenReclaimer</thingDef>
+    <model>Models/vge_oxygen_reclaimer.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <rotationByFacing><li>0</li><li>180</li><li>0</li><li>180</li></rotationByFacing>   <!-- east and west as VGE's own E/W art -->
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_TargetingTerminal</defName>
+    <thingDef>VGE_TargetingTerminal</thingDef>
+    <model>Models/vge_targeting_terminal.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_DamagedEscapePod</defName>
+    <thingDef>VGE_DamagedEscapePod</thingDef>
+    <model>Models/vge_damaged_escape_pod.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravhulkEngine</defName>
+    <thingDef>VGE_GravhulkEngine</thingDef>
+    <model>Models/vge_gravhulk_engine.obj</model>
+    <builtFor>(5, 5)</builtFor>
+    <bobModel>Models/vge_gravhulk_orb.obj</bobModel>
+    <byState>
+      <li><state>cooldown</state><model>Models/vge_gravhulk_engine_cooldown.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravFieldAmplifier</defName>
+    <thingDef>VGE_GravFieldAmplifier</thingDef>
+    <model>Models/vge_grav_field_amplifier.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_WallOrbitalTradeBeacon</defName>
+    <thingDef>VGE_WallOrbitalTradeBeacon</thingDef>
+    <model>Models/vge_wall_trade_beacon.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <surfaceHeight>0.00</surfaceHeight>
+    <wallMounted>true</wallMounted>
+    <groundShadow>false</groundShadow>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravcorePowerCoil</defName>
+    <thingDef>VGE_GravcorePowerCoil</thingDef>
+    <model>Models/vge_gravcore_power_coil.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravshipScannerCluster</defName>
+    <thingDef>VGE_GravshipScannerCluster</thingDef>
+    <model>Models/vge_scanner_cluster.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GunnerSubpersonaCore</defName>
+    <thingDef>VGE_GunnerSubpersonaCore</thingDef>
+    <model>Models/vge_gunner_subpersona_core.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_CapacitorHarmonizer</defName>
+    <thingDef>VGE_CapacitorHarmonizer</thingDef>
+    <model>Models/vge_capacitor_harmonizer.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_Gravlift</defName>
+    <thingDef>VGE_Gravlift</thingDef>
+    <model>Models/vge_gravlift.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Biotech -->
+    <defName>R3D_VGE_OperatorSubpersonaCore</defName>
+    <thingDef>VGE_OperatorSubpersonaCore</thingDef>
+    <model>Models/vge_operator_subpersona_core.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Biotech -->
+    <defName>R3D_VGE_GravshipBasicRecharger</defName>
+    <thingDef>VGE_GravshipBasicRecharger</thingDef>
+    <model>Models/vge_basic_recharger.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Biotech -->
+    <defName>R3D_VGE_GravshipStandardRecharger</defName>
+    <thingDef>VGE_GravshipStandardRecharger</thingDef>
+    <model>Models/vge_standard_recharger.obj</model>
+    <builtFor>(3, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Biotech -->
+    <defName>R3D_VGE_CompactGeneBank</defName>
+    <thingDef>VGE_CompactGeneBank</thingDef>
+    <model>Models/vge_compact_gene_bank.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>   <!-- Ideology -->
+    <defName>R3D_VGE_CompactBiosculpterPod</defName>
+    <thingDef>VGE_CompactBiosculpterPod</thingDef>
+    <model>Models/vge_compact_biosculpter_pod.obj</model>
+    <builtFor>(1, 3)</builtFor>
+    <surfaceHeight>0.30</surfaceHeight>   <!-- the couch under the lid: the occupant lies there, as IsoRim's vanilla pod -->
+    <glassModel>Models/vge_compact_biosculpter_pod_glass.obj</glassModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_PilotBridge</defName>
+    <thingDef>VGE_PilotBridge</thingDef>
+    <model>Models/vge_pilot_bridge.obj</model>
+    <builtFor>(5, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+</Defs>

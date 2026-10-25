@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B4 (2026-10-24): VGE re-skins 13 vanilla (Odyssey) parts (its patches change
+       their texPath / drawSize), so the pack gives them models in VGE's look (tools/make_vge_b4.py, vge_b4.mtl) in place of
+       IsoRim's own entries, which Patches/VGE_Models_B4.xml removes (the model files belong to this pack, so the entries
+       must be the pack's own). Each keeps the settings of IsoRim's entry (builtFor, wallFit, bob part, door lintel).
+       The pack only loads with VGE Chapter 1; the two Chapter 2 re-skins (shield generator, signal jammer) are defined
+       only with Chapter 2 (MayRequire) and IsoRim's entries for them are removed only then. Without the pack IsoRim keeps
+       its own vanilla models. States (Source/ModelStates.cs): "cooldown" for the grav engine (Building_GravEngine.
+       cooldownCompleteTick, as VGE's Graphic_GravEngineSingle) and the signal jammer (VGE2 CompSignalJammer.cooldownTicksLeft
+       > 0, as its _Cooldown art); the engine's cooldown orb is added by the patch when IsoRim has Api 27 (bobByState). -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_SmallThruster</defName>
+    <thingDef>SmallThruster</thingDef>
+    <model>Models/vge_small_astrofuel_thruster.obj</model>
+    <builtFor>(1, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_LargeThruster</defName>
+    <thingDef>LargeThruster</thingDef>
+    <model>Models/vge_lateral_thruster.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <wallFit>1.65</wallFit>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravEngine</defName>
+    <thingDef>GravEngine</thingDef>
+    <model>Models/vge_grav_engine.obj</model>
+    <builtFor>(3, 3)</builtFor>
+    <bobModel>Models/vge_grav_engine_orb.obj</bobModel>
+    <byState>
+      <li><state>cooldown</state><model>Models/vge_grav_engine_cooldown.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_PilotConsole</defName>
+    <thingDef>PilotConsole</thingDef>
+    <model>Models/vge_pilot_console.obj</model>
+    <builtFor>(3, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravFieldExtender</defName>
+    <thingDef>GravFieldExtender</thingDef>
+    <model>Models/vge_grav_field_extender.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_VacBarrier</defName>
+    <thingDef>VacBarrier</thingDef>
+    <model>Models/vge_vac_barrier.obj</model>
+    <builtFor>(1, 1)</builtFor>
+    <doorTopModel>Models/vge_vac_barrier_top.obj</doorTopModel>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_ChemfuelTank</defName>
+    <thingDef>ChemfuelTank</thingDef>
+    <model>Models/vge_astrofuel_tank.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_LargeChemfuelTank</defName>
+    <thingDef>LargeChemfuelTank</thingDef>
+    <model>Models/vge_large_astrofuel_tank.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_OxygenPump</defName>
+    <thingDef>OxygenPump</thingDef>
+    <model>Models/vge_oxygen_pump.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_GravcorePowerCell</defName>
+    <thingDef>GravcorePowerCell</thingDef>
+    <model>Models/vge_gravcore_power_cell.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_FuelOptimizer</defName>
+    <thingDef>FuelOptimizer</thingDef>
+    <model>Models/vge_astrofuel_optimizer.obj</model>
+    <builtFor>(2, 2)</builtFor>
+  </IsoRim.ModelDef>
+
+  <!-- Chapter 2 -->
+
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_GravshipShieldGenerator</defName>
+    <thingDef>GravshipShieldGenerator</thingDef>
+    <model>Models/vge_shield_generator.obj</model>
+    <builtFor>(3, 3)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef MayRequire="vanillaexpanded.gravship2">
+    <defName>R3D_VGE_SignalJammer</defName>
+    <thingDef>SignalJammer</thingDef>
+    <model>Models/vge_signal_jammer.obj</model>
+    <builtFor>(2, 2)</builtFor>
+    <byState>
+      <li><state>cooldown</state><model>Models/vge_signal_jammer_cooldown.obj</model></li>
+    </byState>
+  </IsoRim.ModelDef>
+
+</Defs>

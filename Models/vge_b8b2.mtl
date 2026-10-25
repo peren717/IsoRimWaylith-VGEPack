@@ -1,0 +1,150 @@
+# IsoRim Waylith - VGE Pack, model batch B8b2 (with B8a's and B8b's colours): station props. Colours sampled from VGE's textures.
+newmtl vgem_light
+Kd 0.71 0.71 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_mid
+Kd 0.55 0.56 0.48
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_dark
+Kd 0.31 0.32 0.26
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_pit
+Kd 0.17 0.17 0.14
+newmtl vgem_grille
+Kd 0.66 0.40 0.42
+newmtl glow_vgem_red
+Kd 0.80 0.31 0.31
+newmtl vgem_purple
+Kd 0.42 0.38 0.52
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_tan
+Kd 0.82 0.71 0.55
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_brown
+Kd 0.50 0.42 0.31
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_silver
+Kd 0.78 0.78 0.78
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_grey
+Kd 0.58 0.58 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_steel_dark
+Kd 0.36 0.36 0.37
+map_Kd IsoRim/Swatches/Metal
+newmtl vgem_cable
+Kd 0.45 0.45 0.46
+newmtl glow_vgem_wc_red
+Kd 0.86 0.30 0.24
+newmtl glow_vgem_wc_blue
+Kd 0.16 0.66 0.94
+newmtl vges_grey
+Kd 0.58 0.58 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl vges_light
+Kd 0.74 0.74 0.74
+map_Kd IsoRim/Swatches/Metal
+newmtl vges_dark
+Kd 0.40 0.40 0.41
+map_Kd IsoRim/Swatches/Metal
+newmtl vges_black
+Kd 0.17 0.17 0.18
+newmtl vges_slate
+Kd 0.32 0.34 0.36
+map_Kd IsoRim/Swatches/Metal
+newmtl vges_tan
+Kd 0.60 0.57 0.50
+map_Kd IsoRim/Swatches/Metal
+newmtl vges_olive
+Kd 0.40 0.39 0.32
+newmtl glow_vges_amber
+Kd 0.84 0.62 0.24
+newmtl glow_vges_warm
+Kd 1.00 0.93 0.76
+newmtl glow_vges_blue
+Kd 0.82 0.92 1.00
+newmtl glow_vges_green
+Kd 0.43 0.76 0.43
+newmtl glow_vges_red
+Kd 0.88 0.30 0.30
+newmtl glow_vges_lamp_warm
+Kd 0.84 0.58 0.37
+newmtl glow_vges_lamp_blue
+Kd 0.53 0.75 0.88
+newmtl oc_grey
+Kd 0.56 0.56 0.55
+newmtl oc_grey_mid
+Kd 0.43 0.43 0.43
+newmtl oc_dark
+Kd 0.14 0.14 0.15
+newmtl vgeo_container_A
+Kd 0.62 0.62 0.60
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_container_B
+Kd 0.48 0.24 0.28
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_container_C
+Kd 0.26 0.29 0.35
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_container_D
+Kd 0.60 0.60 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_container_E
+Kd 0.78 0.45 0.24
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_container_F
+Kd 0.32 0.43 0.27
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_container_G
+Kd 0.58 0.66 0.66
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_container_H
+Kd 0.60 0.55 0.50
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_red
+Kd 0.48 0.20 0.20
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_red_dark
+Kd 0.36 0.15 0.15
+newmtl vgeo_warn
+Kd 0.82 0.32 0.30
+newmtl vgeo_beige
+Kd 0.66 0.62 0.52
+newmtl vgeo_navy
+Kd 0.26 0.29 0.35
+newmtl vgeo_green
+Kd 0.33 0.55 0.32
+newmtl vgeo_rust
+Kd 0.50 0.34 0.24
+newmtl vgeo_purple
+Kd 0.50 0.44 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_tan
+Kd 0.55 0.45 0.28
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_glass
+Kd 0.22 0.22 0.23
+newmtl vgeo_water
+Kd 0.40 0.62 0.82
+newmtl vgeo_tarp
+Kd 0.27 0.31 0.32
+newmtl vgeo_cases
+Kd 0.40 0.58 0.62
+newmtl vgeo_crates
+Kd 0.70 0.52 0.24
+map_Kd IsoRim/Swatches/Wood
+newmtl vgeo_box_gravlite
+Kd 0.40 0.47 0.50
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_box_component
+Kd 0.52 0.32 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_box_electronics
+Kd 0.52 0.33 0.42
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_box_steel
+Kd 0.33 0.43 0.44
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeo_junk
+Kd 0.62 0.60 0.56
+map_Kd IsoRim/Swatches/Metal

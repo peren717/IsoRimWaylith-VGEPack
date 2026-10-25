@@ -1,0 +1,66 @@
+# IsoRim Waylith - VGE Pack, batch B2a: fixed colours from Vanilla Gravship Expanded's textures (lifted ~1.1x for
+# the 3D shading). glow* = unlit while the building's light is on (IsoRim); ember* = heat glow, always lit.
+newmtl vgec_grey
+Kd 0.58 0.58 0.59
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_light
+Kd 0.88 0.88 0.89
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_dark
+Kd 0.36 0.36 0.37
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_black
+Kd 0.20 0.20 0.21
+newmtl vgec_white
+Kd 0.96 0.96 0.96
+newmtl vgec_brown_top
+Kd 0.43 0.38 0.34
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_teal_top
+Kd 0.17 0.24 0.27
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_tray
+Kd 0.25 0.22 0.20
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_smithy_top
+Kd 0.29 0.24 0.25
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_red_top
+Kd 0.58 0.36 0.36
+newmtl vgec_red
+Kd 0.55 0.18 0.19
+newmtl vgec_spool_red
+Kd 0.90 0.46 0.40
+newmtl vgec_spool_green
+Kd 0.40 0.62 0.38
+newmtl vgec_spool_grey
+Kd 0.62 0.62 0.62
+newmtl vgec_copper
+Kd 0.55 0.40 0.29
+map_Kd IsoRim/Swatches/Metal
+newmtl vgec_bronze
+Kd 0.59 0.52 0.46
+newmtl vgec_flask
+Kd 0.46 0.62 0.54
+newmtl vgec_liquid
+Kd 0.30 0.32 0.10
+newmtl vgec_wood
+Kd 0.84 0.70 0.44
+newmtl vgec_burner
+Kd 0.46 0.36 0.35
+newmtl vgec_paper
+Kd 0.92 0.92 0.92
+newmtl vgec_green
+Kd 0.48 0.64 0.30
+newmtl vgec_teal
+Kd 0.40 0.60 0.60
+newmtl vgec_screen
+Kd 0.16 0.16 0.17
+newmtl vgec_gold
+Kd 0.80 0.64 0.30
+newmtl vgec_tan
+Kd 0.74 0.64 0.46
+newmtl ember_vgec_forge
+Kd 1.00 0.56 0.15
+newmtl glow_vgec_lamp
+Kd 0.98 0.98 0.94

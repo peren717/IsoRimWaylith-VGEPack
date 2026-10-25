@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B8c (2026-10-24): rare insect structures. Low-poly models built from VGE's
+       own textures (tools/make_vge_b8c.py, vge_b8c.mtl), under the 1.60 storey (they stand inside roofed stations).
+       Random-look things list one model per VGE texture in name order (IsoRim picks the variant as the game picks the
+       texture). Not here: the giant wormspitter (a turret: the ship-gun modeller), its releaser (a short-lived marker),
+       the infested vent (a floor emplacement, flat); compressed ores and twisted wreckage stay IsoRim rock blocks.
+       Chapter 2 things are skipped quietly. -->
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_EggSac</defName>
+    <thingDef>VGE_EggSac</thingDef>
+    <models>
+      <li>Models/vge_egg_sac_a.obj</li>
+      <li>Models/vge_egg_sac_b.obj</li>
+      <li>Models/vge_egg_sac_c.obj</li>
+    </models>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_ExowormCocoon</defName>
+    <thingDef>VGE_ExowormCocoon</thingDef>
+    <models>
+      <li>Models/vge_exoworm_cocoon_a.obj</li>
+      <li>Models/vge_exoworm_cocoon_b.obj</li>
+      <li>Models/vge_exoworm_cocoon_c.obj</li>
+    </models>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_ExoHive_Building</defName>
+    <thingDef>VGE_ExoHive_Building</thingDef>
+    <model>Models/vge_exo_hive.obj</model>
+    <builtFor>(1, 1)</builtFor>
+  </IsoRim.ModelDef>
+
+  <IsoRim.ModelDef>
+    <defName>R3D_VGE_InfestedGravlockTether</defName>
+    <thingDef>VGE_InfestedGravlockTether</thingDef>
+    <model>Models/vge_infested_gravlock_tether.obj</model>
+    <builtFor>(5, 5)</builtFor>
+  </IsoRim.ModelDef>
+
+</Defs>

@@ -53,6 +53,14 @@ namespace IsoRimVGEPack
             {
                 Log.Error(Pack.Tag + "Model states failed (B1a state models stay in their default state): " + e);
             }
+            try
+            {
+                MechOrbs.Run();
+            }
+            catch (Exception e)
+            {
+                Log.Error(Pack.Tag + "Mechanoid engine orbs failed (VGE's flat orbs may show over the 3D models): " + e);
+            }
             Type layer = AccessTools.TypeByName("VanillaGravshipExpanded2.SectionLayer_GravshipArmorHull");
             ThingDef armour = DefDatabase<ThingDef>.GetNamedSilentFail("VGE_GravshipArmor");
             if (layer != null && armour != null)

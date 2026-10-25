@@ -1,0 +1,153 @@
+# IsoRim Waylith - VGE Pack, batch B6b (with B4's and B6a's colours): fixed colours from Vanilla Gravship Expanded's textures (lifted ~1.1x for
+# the 3D shading). glow* = unlit while the building's light is on (IsoRim).
+newmtl vgee_grey
+Kd 0.66 0.66 0.67
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_light
+Kd 0.86 0.86 0.87
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_silver
+Kd 0.84 0.84 0.85
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_dark
+Kd 0.36 0.36 0.38
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_black
+Kd 0.14 0.14 0.15
+newmtl vgee_frame
+Kd 0.62 0.62 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_frame_dark
+Kd 0.28 0.28 0.30
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_tan
+Kd 0.78 0.66 0.44
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_purple
+Kd 0.50 0.44 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_purple_dark
+Kd 0.34 0.30 0.40
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_gold
+Kd 0.84 0.64 0.26
+map_Kd IsoRim/Swatches/Metal
+newmtl vgee_screen
+Kd 0.13 0.13 0.14
+newmtl vgee_readout
+Kd 0.80 0.62 0.30
+newmtl vgee_wheel
+Kd 0.74 0.40 0.40
+newmtl vgee_pipe_red
+Kd 0.62 0.36 0.32
+newmtl vgee_pink
+Kd 0.86 0.56 0.52
+newmtl glow_vgee_blue
+Kd 0.10 0.72 0.96
+newmtl glow_vgee_band
+Kd 0.25 0.78 0.98
+newmtl vgee_pool_cool
+Kd 0.56 0.36 0.32
+newmtl glow_vgee_red
+Kd 1.00 0.36 0.24
+newmtl glow_vgee_field
+Kd 0.84 0.90 0.94
+newmtl vge_frame
+Kd 0.62 0.62 0.63
+map_Kd IsoRim/Swatches/Metal
+newmtl vge_frame_dark
+Kd 0.31 0.31 0.32
+map_Kd IsoRim/Swatches/Metal
+newmtl vgef_olive
+Kd 0.56 0.58 0.52
+map_Kd IsoRim/Swatches/Metal
+newmtl vgef_red
+Kd 0.52 0.14 0.15
+newmtl vgef_redlight
+Kd 0.92 0.22 0.22
+newmtl glow_vgef_red
+Kd 1.00 0.25 0.22
+newmtl vgef_rust
+Kd 0.46 0.34 0.34
+map_Kd IsoRim/Swatches/Metal
+newmtl vgef_green
+Kd 0.40 0.48 0.26
+newmtl glow_vgef_green
+Kd 0.40 0.86 0.36
+newmtl vgef_teal
+Kd 0.42 0.58 0.58
+newmtl vgef_dome
+Kd 0.40 0.47 0.54
+newmtl vgef_white
+Kd 0.90 0.90 0.91
+map_Kd IsoRim/Swatches/Metal
+newmtl vgef_orange
+Kd 0.90 0.48 0.20
+newmtl vgef_glass
+Kd 0.30 0.38 0.42
+newmtl vgef_recess
+Kd 0.30 0.22 0.15
+newmtl vgef_fan
+Kd 0.66 0.58 0.42
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeg_mine
+Kd 0.53 0.53 0.53
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeg_brass
+Kd 0.74 0.64 0.32
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeg_pit
+Kd 0.22 0.22 0.22
+newmtl vgeg_rim
+Kd 0.46 0.47 0.51
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeg_copper
+Kd 0.62 0.38 0.25
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeg_copper_light
+Kd 0.90 0.74 0.58
+newmtl vgeg_pipe
+Kd 0.39 0.40 0.37
+map_Kd IsoRim/Swatches/Metal
+newmtl glow_vgeg_grille
+Kd 0.96 0.62 0.40
+newmtl glow_vgeg_lamp
+Kd 1.00 0.44 0.36
+newmtl vgeg_olive_dark
+Kd 0.34 0.34 0.31
+map_Kd IsoRim/Swatches/Metal
+newmtl glow_vgeg_green
+Kd 0.42 1.00 0.36
+newmtl vgeg_hull
+Kd 0.52 0.40 0.38
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeg_hull_dark
+Kd 0.36 0.28 0.27
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeg_he
+Kd 0.66 0.59 0.28
+newmtl vgeg_emp
+Kd 0.44 0.55 0.59
+newmtl vgeg_inc
+Kd 0.41 0.36 0.46
+newmtl vgeg_ag
+Kd 0.44 0.54 0.48
+newmtl vgeg_ag_nose
+Kd 0.64 0.55 0.30
+newmtl vgeg_emblem
+Kd 0.80 0.70 0.68
+newmtl vgeg_pod_grey
+Kd 0.58 0.58 0.58
+map_Kd IsoRim/Swatches/Metal
+newmtl oc_grey
+Kd 0.56 0.56 0.55
+newmtl oc_grey_mid
+Kd 0.43 0.43 0.43
+newmtl oc_dark
+Kd 0.14 0.14 0.15
+newmtl glow_vgeg_orange
+Kd 1.00 0.62 0.24
+newmtl vgeg_grille_off
+Kd 0.96 0.62 0.40
+newmtl vgeg_lamp_off
+Kd 1.00 0.44 0.36

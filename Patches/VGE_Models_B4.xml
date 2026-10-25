@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- IsoRim Waylith - VGE Pack, model batch B4: IsoRim's own entries for the 13 vanilla parts VGE re-skins are removed;
+       the pack's entries (Defs/VGE_Models_B4.xml) give them VGE's look. The two Chapter 2 ones only with Chapter 2. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_SmallThruster"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_LargeThruster"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_GravEngine"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_PilotConsole"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_GravFieldExtender"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VacBarrier"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_ChemfuelTank"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_LargeChemfuelTank"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_OxygenPump"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_GravcorePowerCell"]</xpath>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/IsoRim.ModelDef[defName="R3D_FuelOptimizer"]</xpath>
+  </Operation>
+  <!-- the grav engine's cooldown orb (thin dark seams, VGE _Orb_Cooldown) needs IsoRim Api 27 (bobByState) -->
+  <Operation Class="IsoRimVGEPack.PatchOperation_IfIsoRimApi">
+    <minVersion>27</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_VGE_GravEngine"]</xpath>
+      <value>
+        <bobByState>
+          <li><state>cooldown</state><model>Models/vge_grav_engine_orb_cooldown.obj</model></li>
+        </bobByState>
+      </value>
+    </apply>
+  </Operation>
+  <!-- Chapter 2 -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Gravship Expanded - Chapter 2</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/IsoRim.ModelDef[defName="R3D_GravshipShieldGenerator"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/IsoRim.ModelDef[defName="R3D_SignalJammer"]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>
