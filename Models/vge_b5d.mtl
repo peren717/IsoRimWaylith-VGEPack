@@ -1,0 +1,10 @@
+# IsoRim Waylith - VGE Pack, ship guns detail (pt1): the extra shades (the rest are vge_b5.mtl's)
+newmtl vgeb5d_gun_light
+Kd 0.76 0.77 0.80
+map_Kd IsoRim/Swatches/Metal
+newmtl vgeb5d_vent
+Kd 0.16 0.16 0.17
+newmtl vgeb5d_red_dark
+Kd 0.40 0.19 0.20
+newmtl vgeb5d_purple_dark
+Kd 0.36 0.28 0.44
