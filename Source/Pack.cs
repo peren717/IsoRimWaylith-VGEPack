@@ -19,6 +19,8 @@ namespace IsoRimVGEPack
     //  - (IsoRim Api 20) The mass lance (VGE_MassLance, the astropede's): a direct weapon (it needs a line of sight) whose
     //    slug flies overhead so it passes over walls and cover; IsoRim draws it straight, not on the shell arc
     //    (IsoRim.Api.AddProjectileArc). Its floors are the IsoRimZ part's (PackZ: declared direct).
+    //  - (IsoRim Api 37) Enemy ship arrivals (VGE's landing structures) fly in as a 3D roofed shell instead of VGE's flat
+    //    picture (ShipArrival: IsoRim.Api.BuildShell on VGE's temporary map, drawn at VGE's pose).
     // VGE is reached by name: a missing type or method leaves that part as VGE draws it (logged once).
     [StaticConstructorOnStartup]
     public static class Pack
@@ -40,6 +42,17 @@ namespace IsoRimVGEPack
                 if (IsoRim.Api.Version >= 30)
                 {
                     Setup30.Run();
+                }
+                if (IsoRim.Api.Version >= 37)
+                {
+                    try
+                    {
+                        ShipArrival.Run(new Harmony("peren.isorimwaylith.vgepack.shiparrival"));
+                    }
+                    catch (Exception e)
+                    {
+                        Log.Error(Tag + "Ship arrival setup failed (enemy ship arrivals stay VGE's flat picture in 3D): " + e);
+                    }
                 }
             }
             catch (Exception e)
