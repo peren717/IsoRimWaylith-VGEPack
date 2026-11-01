@@ -21,6 +21,7 @@ namespace IsoRimVGEPack
     //    (IsoRim.Api.AddProjectileArc). Its floors are the IsoRimZ part's (PackZ: declared direct).
     //  - (IsoRim Api 37) Enemy ship arrivals (VGE's landing structures) fly in as a 3D roofed shell instead of VGE's flat
     //    picture (ShipArrival: IsoRim.Api.BuildShell on VGE's temporary map, drawn at VGE's pose).
+    //  - (IsoRim Api 46) The astrofire (burning astrofuel) burns as IsoRim's 3D particle fire, in purple (AstroFire).
     // VGE is reached by name: a missing type or method leaves that part as VGE draws it (logged once).
     [StaticConstructorOnStartup]
     public static class Pack
@@ -42,6 +43,17 @@ namespace IsoRimVGEPack
                 if (IsoRim.Api.Version >= 30)
                 {
                     Setup30.Run();
+                }
+                if (IsoRim.Api.Version >= 46)
+                {
+                    try
+                    {
+                        AstroFire.Run();
+                    }
+                    catch (Exception e)
+                    {
+                        Log.Error(Tag + "Astrofire setup failed (the astrofire stays VGE's flat sprite in 3D): " + e);
+                    }
                 }
                 if (IsoRim.Api.Version >= 37)
                 {
