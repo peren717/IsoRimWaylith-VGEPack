@@ -10,18 +10,19 @@ namespace IsoRimVGEPackZ
     // cells it reaches with a flat flood fill from the engine to the limit (GravshipUtility_GetConnectedSubstructure_Patch.
     // GetConnectedSubstructure). On a map with floors that flood stays on the ground, so subscaffold on upper decks counted
     // against the limit. Here the subscaffold on upper floors of the ship (ProjectZ Api 5 ShipCells, every floor, no limit) is
-    // added too: subscaffold is free on every floor, as on the ground.
+    // added too: subscaffold is free on every floor, as on the ground. What counts as subscaffold is what VGE's flood counts:
+    // a foundation equal to VGEDefOf.VGE_GravshipSubscaffold, read from VGE's field each time.
     internal static class FreeSubscaffold
     {
-        private static TerrainDef scaffold;
+        private static FieldInfo scaffoldField;
         private static readonly HashSet<IntVec3> tmp = new HashSet<IntVec3>();
 
         internal static void Apply()
         {
-            scaffold = DefDatabase<TerrainDef>.GetNamedSilentFail("VGE_GravshipSubscaffold");
-            if (scaffold == null)
+            scaffoldField = PackZ.VgeTerrainField("VanillaGravshipExpanded.VGEDefOf", "VGE_GravshipSubscaffold");
+            if (scaffoldField == null)
             {
-                return;
+                return;   // (noted) left as VGE does it: upper-deck subscaffold counts against the limit
             }
             MethodInfo count = PackZ.Find("VanillaGravshipExpanded.GravshipUtility_GetConnectedSubstructure_Patch", "GetConnectedSubstructure");
             PackZ.Patch("subscaffold free on upper decks", count, postfix: nameof(CountPostfix), owner: typeof(FreeSubscaffold));
@@ -40,6 +41,11 @@ namespace IsoRimVGEPackZ
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static int Upper(Building_GravEngine engine, bool requireInsideFootprint)
         {
+            TerrainDef scaffold = scaffoldField.GetValue(null) as TerrainDef;
+            if (scaffold == null)
+            {
+                return 0;
+            }
             Map map = engine.Map;
             ProjectZ.Api.ShipCells(engine, tmp, requireInsideFootprint);
             int n = 0;

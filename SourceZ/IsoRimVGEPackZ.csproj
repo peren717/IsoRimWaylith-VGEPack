@@ -21,6 +21,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="obj\**;bin\**" />
+    <Compile Include="..\Shared\DirectShot.cs" Link="DirectShot.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp"><HintPath>$(RimDir)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>

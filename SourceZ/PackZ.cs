@@ -28,17 +28,17 @@ namespace IsoRimVGEPackZ
     //  - Deck foundations (Api 4): VGE subarmor and subscaffold are built on upper floors like ship decks and count as decks;
     //    VGE artillery damages decks into damaged decks, which count as decks and are repaired by rebuilding the deck.
     //  - Subscaffold (Api 5): free of the substructure limit on upper decks too, as VGE makes it on the ground.
-    //  - The mass lance (Api 1, RegisterLobbedShot): the astropede's VGE_MassLance needs a line of sight; its slug only flies
-    //    overhead to pass over walls and cover. Declared direct: it stays on its floor, its misses on the target's floor, and
+    //  - The mass lance (Api 1, RegisterLobbedShot): the astropede's mass lance needs a line of sight; its slug only flies
+    //    overhead to pass over walls and cover (decided by those two properties of VGE's weapons: Shared/DirectShot.cs). Declared direct: it stays on its floor, its misses on the target's floor, and
     //    it does not come down on a deck over its target (a lobbed shell would). VGE's artillery stays lobbed.
     // VGE is reached by name: a missing type or method leaves that part as VGE does it (logged once).
     [StaticConstructorOnStartup]
     public static class PackZ
     {
-        // The mass lance is a direct shot (see above); every other verb: no say.
+        // VGE's direct shots with an overhead projectile (the mass lance, see above): direct; every other verb: no say.
         private static bool? LanceRule(Verb verb, IntVec3 from, IntVec3 to)
         {
-            return verb?.EquipmentSource != null && verb.EquipmentSource.def.defName == "VGE_MassLance" ? false : (bool?)null;
+            return IsoRimVGEPackShared.DirectShot.Is(verb) ? false : (bool?)null;
         }
 
         internal const string Tag = "[IsoRim VGE Pack, IsoRimZ] ";
@@ -73,6 +73,27 @@ namespace IsoRimVGEPackZ
                 Log.Error(Tag + "Setup failed: " + e);
             }
         }
+
+        // A VGE DefOf field holding a TerrainDef (null, noted, if missing; null without a note for a Chapter 2 field while
+        // Chapter 2 is not loaded). Read it with GetValue when the def is needed, so VGE's current value is used.
+        internal static FieldInfo VgeTerrainField(string typeName, string field)
+        {
+            if (typeName.StartsWith("VanillaGravshipExpanded2.") && !ModsConfig.IsActive("vanillaexpanded.gravship2"))
+            {
+                return null;
+            }
+            Type t = AccessTools.TypeByName(typeName);
+            FieldInfo f = t != null ? AccessTools.Field(t, field) : null;
+            if (f == null || !f.IsStatic || !typeof(TerrainDef).IsAssignableFrom(f.FieldType))
+            {
+                missed.Add(typeName.Substring(typeName.LastIndexOf('.') + 1) + "." + field);
+                return null;
+            }
+            return f;
+        }
+
+        // The TerrainDef in a VGE DefOf field now (null if missing, see above).
+        internal static TerrainDef VgeTerrain(string typeName, string field) => VgeTerrainField(typeName, field)?.GetValue(null) as TerrainDef;
 
         // A VGE method by "Type:Method" (null, noted, if missing).
         internal static MethodInfo Find(string typeName, string method)

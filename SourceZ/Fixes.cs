@@ -273,19 +273,26 @@ namespace IsoRimVGEPackZ
     {
         internal static void Apply()
         {
-            foreach (string name in new[] { "VGE_GravshipSubarmor", "VGE_GravshipSubscaffold", "VGEPack_DamagedShipDeck" })
+            // VGE's own defs from VGE's DefOf fields (a missing field: that part left as VGE does it, noted), read now
+            // (registration is once at startup); Chapter 2's subarmor only with Chapter 2 loaded
+            TerrainDef[] decks =
             {
-                TerrainDef t = DefDatabase<TerrainDef>.GetNamedSilentFail(name);
+                PackZ.VgeTerrain("VanillaGravshipExpanded2.InternalDefOf", "VGE_GravshipSubarmor"),
+                PackZ.VgeTerrain("VanillaGravshipExpanded.VGEDefOf", "VGE_GravshipSubscaffold"),
+                PackDefOf.VGEPack_DamagedShipDeck,
+            };
+            foreach (TerrainDef t in decks)
+            {
                 if (t != null)
                 {
                     ProjectZ.Api.RegisterDeckTerrain(t);
-                    PackZ.applied.Add("deck foundation " + name);
+                    PackZ.applied.Add("deck foundation " + t.defName);
                 }
             }
             // the damaged deck stands on what VGE's damaged substructure stands on (Chapter 2 adds the affordance its crew
             // furniture needs to it; the ship deck itself gets Substructure's from ProjectZ)
-            TerrainDef ours = DefDatabase<TerrainDef>.GetNamedSilentFail("VGEPack_DamagedShipDeck");
-            TerrainDef theirs = DefDatabase<TerrainDef>.GetNamedSilentFail("VGE_DamagedSubstructure");
+            TerrainDef ours = PackDefOf.VGEPack_DamagedShipDeck;
+            TerrainDef theirs = PackZ.VgeTerrain("VanillaGravshipExpanded.VGEDefOf", "VGE_DamagedSubstructure");
             if (ours != null && theirs?.affordances != null)
             {
                 ours.affordances = ours.affordances ?? new List<TerrainAffordanceDef>();
@@ -318,7 +325,7 @@ namespace IsoRimVGEPackZ
 
         internal static void Apply()
         {
-            damaged = DefDatabase<TerrainDef>.GetNamedSilentFail("VGEPack_DamagedShipDeck");
+            damaged = PackDefOf.VGEPack_DamagedShipDeck;
             deck = DefDatabase<TerrainDef>.GetNamedSilentFail("PZ_ShipDeck");
             if (damaged == null || deck == null)
             {

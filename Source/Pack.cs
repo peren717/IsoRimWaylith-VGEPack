@@ -16,7 +16,7 @@ namespace IsoRimVGEPack
     //  - Crew bunk bed (BunkBeds.dll): its flat upper bunk left out under the model, sleepers on their decks (BunkBedsGlue).
     //  - (IsoRim Api 30) Vac barrier fields: the 3D field across the doorway takes VGE's recolourable barrier colour
     //    (Building_VacBarrier_Recolorable.barrierColor): IsoRim.Api.AddGlassColor.
-    //  - (IsoRim Api 20) The mass lance (VGE_MassLance, the astropede's): a direct weapon (it needs a line of sight) whose
+    //  - (IsoRim Api 20) The mass lance (the astropede's): a direct weapon (it needs a line of sight) whose
     //    slug flies overhead so it passes over walls and cover; IsoRim draws it straight, not on the shell arc
     //    (IsoRim.Api.AddProjectileArc). Its floors are the IsoRimZ part's (PackZ: declared direct).
     //  - (IsoRim Api 37) Enemy ship arrivals (VGE's landing structures) fly in as a 3D roofed shell instead of VGE's flat
@@ -74,12 +74,11 @@ namespace IsoRimVGEPack
         }
     }
 
-    // The mass lance's slug (VGE_MassLance: a weapon that needs a line of sight, its projectile flies overhead to pass over
-    // walls and cover) is a direct shot: drawn straight from the gun, not on the shell arc. Api 20 (AddProjectileArc).
+    // The mass lance's slug (a VGE weapon that needs a line of sight, its projectile flies overhead to pass over walls and
+    // cover: Shared/DirectShot.cs) is a direct shot: drawn straight from the gun, not on the shell arc. Api 20
+    // (AddProjectileArc).
     internal static class DirectShots
     {
-        internal const string MassLance = "VGE_MassLance";
-
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         internal static void Run()
         {
@@ -88,7 +87,7 @@ namespace IsoRimVGEPack
 
         private static bool? Arc(Projectile p)
         {
-            return p != null && p.EquipmentDef != null && p.EquipmentDef.defName == MassLance ? false : (bool?)null;
+            return IsoRimVGEPackShared.DirectShot.Is(p) ? false : (bool?)null;
         }
     }
 
