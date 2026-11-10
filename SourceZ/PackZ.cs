@@ -66,6 +66,7 @@ namespace IsoRimVGEPackZ
                 {
                     Log.Message(Tag + "IsoRimZ older than Api 4: VGE ship data on decks, fog after landings and deck foundations are left as they are.");
                 }
+                missed.AddRange(IsoRimVGEPackShared.Vge.Missing);   // (VGE's chapter types, see Shared/Vge.cs)
                 Log.Message(Tag + "applied: " + string.Join(", ", applied) + (missed.Count > 0 ? "; not found (left as VGE does it): " + string.Join(", ", missed) : ""));
             }
             catch (Exception e)
@@ -78,7 +79,7 @@ namespace IsoRimVGEPackZ
         // Chapter 2 is not loaded). Read it with GetValue when the def is needed, so VGE's current value is used.
         internal static FieldInfo VgeTerrainField(string typeName, string field)
         {
-            if (typeName.StartsWith("VanillaGravshipExpanded2.") && !ModsConfig.IsActive("vanillaexpanded.gravship2"))
+            if (IsoRimVGEPackShared.Vge.MissingChapter2(typeName))
             {
                 return null;
             }
@@ -98,7 +99,7 @@ namespace IsoRimVGEPackZ
         // A VGE method by "Type:Method" (null, noted, if missing).
         internal static MethodInfo Find(string typeName, string method)
         {
-            if (typeName.StartsWith("VanillaGravshipExpanded2.") && !ModsConfig.IsActive("vanillaexpanded.gravship2"))
+            if (IsoRimVGEPackShared.Vge.MissingChapter2(typeName))
             {
                 return null;   // (a Chapter 2 part, Chapter 2 not loaded: nothing to fix)
             }

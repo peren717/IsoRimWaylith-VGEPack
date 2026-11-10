@@ -1,8 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <!-- The pack's IsoRimZ part, loaded only with IsoRimZ active (LoadFolders.xml: 1.7/IsoRimZ): VGE on floored maps (landing
        spots, gravship cells on decks, fog, artillery, salvagers, deck foundations). ProjectZ: public ProjectZ.Api only (Api 2
-       and 4); override with -p:ProjectZDll=<path> to build against a worktree. VGE is reached by name at run time (no
-       reference), so a VGE update cannot stop the pack loading. -->
+       and 4; Api 11 behind a version check). VGE is reached by name at run time (no reference), so a VGE update cannot stop
+       the pack loading.
+       Build paths (overridable): the repo root's Directory.Build.props. -->
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
@@ -16,17 +17,16 @@
     <DebugType>none</DebugType>
     <GenerateDependencyFile>false</GenerateDependencyFile>
     <Optimize>true</Optimize>
-    <RimDir Condition="'$(RimDir)' == ''">..\..\..</RimDir>
-    <ProjectZDll Condition="'$(ProjectZDll)' == ''">..\..\IsoRimProjectZ\1.7\Assemblies\IsoRimProjectZ.dll</ProjectZDll>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="obj\**;bin\**" />
     <Compile Include="..\Shared\DirectShot.cs" Link="DirectShot.cs" />
+    <Compile Include="..\Shared\Vge.cs" Link="Vge.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp"><HintPath>$(RimDir)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="UnityStubs"><HintPath>$(RimDir)\UnityStubs.dll</HintPath><Private>false</Private></Reference>
-    <Reference Include="0Harmony"><HintPath>$(RimDir)\..\..\workshop\content\294100\2009463077\1.7\Assemblies\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(HarmonyDll)</HintPath><Private>false</Private></Reference>
     <Reference Include="IsoRimProjectZ"><HintPath>$(ProjectZDll)</HintPath><Private>false</Private></Reference>
   </ItemGroup>
 </Project>

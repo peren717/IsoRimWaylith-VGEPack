@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
@@ -326,13 +327,20 @@ namespace IsoRimVGEPackZ
         internal static void Apply()
         {
             damaged = PackDefOf.VGEPack_DamagedShipDeck;
-            deck = DefDatabase<TerrainDef>.GetNamedSilentFail("PZ_ShipDeck");
+            deck = ShipDeck();
             if (damaged == null || deck == null)
             {
                 return;
             }
             PackZ.Patch("damaged deck repaired by a new deck", PackZ.Find("VanillaGravshipExpanded.GenConstruct_CanPlaceBlueprintAt_Patch", "ShouldSkip"), postfix: nameof(ShouldSkip_Postfix), owner: typeof(DeckRepair));
         }
+
+        // ProjectZ's ship deck (null without Odyssey): Api 11's ShipDeckTerrain. Fallback for ProjectZ older than Api 11: the
+        // def by its name.
+        private static TerrainDef ShipDeck() => ProjectZ.Api.Version >= 11 ? ShipDeckApi11() : DefDatabase<TerrainDef>.GetNamedSilentFail("PZ_ShipDeck");
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static TerrainDef ShipDeckApi11() => ProjectZ.Api.ShipDeckTerrain;
 
         public static void ShouldSkip_Postfix(IntVec3 cell, Map map, TerrainDef terrainDef, ref bool __result)
         {

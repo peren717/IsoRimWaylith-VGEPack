@@ -40,6 +40,10 @@ namespace IsoRimVGEPack
                 Setup26.Run();
                 EnemyOrbs.Run();   // (B7b) the enemy grav engines' flat orbs while their models stand in
                 DirectShots.Run(); // (Api 20) the mass lance drawn as the direct shot it is
+                if (IsoRimVGEPackShared.Vge.Missing.Count > 0)
+                {
+                    Log.Warning(Tag + "not found: " + string.Join(", ", IsoRimVGEPackShared.Vge.Missing));   // (VGE's chapter types, see Shared/Vge.cs)
+                }
                 if (IsoRim.Api.Version >= 30)
                 {
                     Setup30.Run();

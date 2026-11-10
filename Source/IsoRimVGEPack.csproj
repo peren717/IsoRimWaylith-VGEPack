@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <!-- The pack's IsoRim part (loaded always; works without IsoRimZ): VGE armour hull corners in 3D and VGE layers in the gravship scene (IsoRim Api 26).
-       IsoRim.dll is IsoRim Waylith's (public Api only, Api 26+); override with -p:IsoRimDll=<path> to build against a worktree.
-       VGE is reached by name at run time (no reference), so a VGE update cannot stop the pack loading. -->
+       IsoRim.dll is IsoRim Waylith's (public Api only, Api 26+).
+       VGE is reached by name at run time (no reference), so a VGE update cannot stop the pack loading.
+       Build paths (overridable): the repo root's Directory.Build.props. -->
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
@@ -15,17 +16,16 @@
     <DebugType>none</DebugType>
     <GenerateDependencyFile>false</GenerateDependencyFile>
     <Optimize>true</Optimize>
-    <RimDir Condition="'$(RimDir)' == ''">..\..\..</RimDir>
-    <IsoRimDll Condition="'$(IsoRimDll)' == ''">..\..\IsoRim17\1.7\Assemblies\IsoRim.dll</IsoRimDll>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="obj\**;bin\**" />
     <Compile Include="..\Shared\DirectShot.cs" Link="DirectShot.cs" />
+    <Compile Include="..\Shared\Vge.cs" Link="Vge.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp"><HintPath>$(RimDir)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="UnityStubs"><HintPath>$(RimDir)\UnityStubs.dll</HintPath><Private>false</Private></Reference>
-    <Reference Include="0Harmony"><HintPath>$(RimDir)\..\..\workshop\content\294100\2009463077\1.7\Assemblies\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(HarmonyDll)</HintPath><Private>false</Private></Reference>
     <Reference Include="Waylith"><HintPath>$(RimDir)\Waylith.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="IsoRim"><HintPath>$(IsoRimDll)</HintPath><Private>false</Private></Reference>
   </ItemGroup>

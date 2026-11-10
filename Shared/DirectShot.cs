@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using HarmonyLib;
+using RimWorld;
 using Verse;
 
 namespace IsoRimVGEPackShared
@@ -11,29 +14,34 @@ namespace IsoRimVGEPackShared
     // Read from the defs each time it is asked, so a patch to VGE's verbs or projectiles is followed.
     internal static class DirectShot
     {
-        private static readonly string[] Vge = { "vanillaexpanded.gravship", "vanillaexpanded.gravship2" };
+        private static AccessTools.FieldRef<Projectile, Thing> equipmentOf;
+        private static bool equipmentTried;
 
         // A verb about to shoot (ProjectZ's lobbed-shot rule).
-        internal static bool Is(Verb verb)
-        {
-            if (!(verb is Verb_LaunchProjectile launch) || verb.verbProps == null || !verb.verbProps.requireLineOfSight)
-            {
-                return false;
-            }
-            ThingDef weapon = verb.EquipmentSource?.def;
-            if (!FromVge(weapon))
-            {
-                return false;
-            }
-            ThingDef projectile = launch.Projectile;
-            return projectile?.projectile != null && projectile.projectile.flyOverhead;
-        }
+        internal static bool Is(Verb verb) => verb is Verb_LaunchProjectile launch && Is(verb, launch.Projectile);
 
-        // A projectile in flight (IsoRim's arc rule): the verb of its weapon that fires it.
+        // A projectile in flight (IsoRim's arc rule, asked when it is first drawn: plain reads only). A verb of the equipment
+        // that fired it which fires this projectile now decides (so a projectile switched at run time counts too); also, as
+        // before, a verb of its weapon that fires it by default.
         internal static bool Is(Projectile p)
         {
-            ThingDef weapon = p?.EquipmentDef;
-            if (weapon?.Verbs == null || p.def.projectile == null || !p.def.projectile.flyOverhead || !FromVge(weapon))
+            if (p?.def.projectile == null || !p.def.projectile.flyOverhead)
+            {
+                return false;
+            }
+            List<Verb> verbs = FiringVerbs(p);
+            if (verbs != null)
+            {
+                for (int i = 0; i < verbs.Count; i++)
+                {
+                    if (verbs[i] is Verb_LaunchProjectile launch && launch.Projectile == p.def && Is(launch, p.def))
+                    {
+                        return true;
+                    }
+                }
+            }
+            ThingDef weapon = p.EquipmentDef;
+            if (weapon?.Verbs == null || !FromVge(weapon))
             {
                 return false;
             }
@@ -47,10 +55,41 @@ namespace IsoRimVGEPackShared
             return false;
         }
 
-        private static bool FromVge(ThingDef weapon)
+        // A verb of a VGE weapon that needs a line of sight, firing a projectile that flies overhead.
+        private static bool Is(Verb verb, ThingDef projectile)
         {
-            string id = weapon?.modContentPack?.PackageIdPlayerFacing;
-            return id != null && (string.Equals(id, Vge[0], StringComparison.OrdinalIgnoreCase) || string.Equals(id, Vge[1], StringComparison.OrdinalIgnoreCase));
+            if (!(verb is Verb_LaunchProjectile) || verb.verbProps == null || !verb.verbProps.requireLineOfSight || !FromVge(verb.EquipmentSource?.def))
+            {
+                return false;
+            }
+            return projectile?.projectile != null && projectile.projectile.flyOverhead;
         }
+
+        // The verbs of the equipment that fired p, as the game recorded it in p (Projectile.equipment: the weapon, or the turret
+        // a pawn mans, whose gun fires): plain reads. Null without equipment (or if the game's field is gone).
+        private static List<Verb> FiringVerbs(Projectile p)
+        {
+            if (!equipmentTried)
+            {
+                equipmentTried = true;
+                try
+                {
+                    equipmentOf = AccessTools.FieldRefAccess<Projectile, Thing>("equipment");
+                }
+                catch (Exception e)
+                {
+                    equipmentOf = null;   // (then only the weapon's default projectiles decide, as before)
+                    Log.Warning("[IsoRim VGE Pack] Projectile.equipment not found: only the weapon's default projectiles decide direct shots (" + e.GetType().Name + ").");
+                }
+            }
+            Thing equipment = equipmentOf?.Invoke(p);
+            if (equipment is Building_TurretGun turret)
+            {
+                equipment = turret.gun;
+            }
+            return (equipment as ThingWithComps)?.GetComp<CompEquippable>()?.AllVerbs;
+        }
+
+        private static bool FromVge(ThingDef weapon) => Vge.Owns(weapon?.modContentPack);
     }
 }
