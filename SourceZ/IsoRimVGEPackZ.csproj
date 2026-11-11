@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <!-- The pack's IsoRimZ part, loaded only with IsoRimZ active (LoadFolders.xml: 1.7/IsoRimZ): VGE on floored maps (landing
        spots, gravship cells on decks, fog, artillery, salvagers, deck foundations). ProjectZ: public ProjectZ.Api only (Api 2
-       and 4; Api 11 behind a version check). VGE is reached by name at run time (no reference), so a VGE update cannot stop
+       and 4; Api 11 and 12 behind version checks). VGE is reached by name at run time (no reference), so a VGE update cannot stop
        the pack loading.
        Build paths (overridable): the repo root's Directory.Build.props. -->
   <PropertyGroup>

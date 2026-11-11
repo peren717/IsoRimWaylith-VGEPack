@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
@@ -98,9 +100,13 @@ namespace IsoRimVGEPack
     // Everything that names Api 30 members lives here, so an older IsoRim never loads them.
     internal static class Setup30
     {
-        private const float FieldOpacity = 0.35f;
         private static Type barrierType;
         private static FieldInfo barrierColour;
+        // the field's opacity per barrier def below IsoRim Api 73: the pack's own ModelDef's glassOpacity (one place:
+        // Patches/IsoRimGate_B3.xml); NaN: none. From Api 73 IsoRim gives the bound ModelDef's opacity itself (FromModel).
+        private static readonly bool boundOpacity = IsoRim.Api.Version >= 73;
+        private static readonly Dictionary<ThingDef, float> opacity = new Dictionary<ThingDef, float>();
+        private static ModContentPack own;
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
         internal static void Run()
@@ -115,15 +121,49 @@ namespace IsoRimVGEPack
             IsoRim.Api.AddGlassColor(new Func<Thing, Color?>(FieldColour));
         }
 
-        // VGE's barrier colour for its recolourable vac barriers (the field's tint), at the field's opacity; others: null.
+        // VGE's barrier colour for its recolourable vac barriers (the field's tint), at the opacity of the glass of the
+        // ModelDef IsoRim has bound to it (IsoRim Api 73: a negative alpha, FromModel); below Api 73 at the pack's own
+        // ModelDef's (Opacity), and null for a barrier whose model sets none (IsoRim's own look for its glass). Others: null.
         private static Color? FieldColour(Thing t)
         {
             if (t == null || !barrierType.IsInstanceOfType(t))
             {
                 return null;
             }
+            if (boundOpacity)
+            {
+                Color f = (Color)barrierColour.GetValue(t);
+                return new Color(f.r, f.g, f.b, FromModel());
+            }
+            float a = Opacity(t.def);
+            if (float.IsNaN(a))
+            {
+                return null;
+            }
             Color c = (Color)barrierColour.GetValue(t);
-            return new Color(c.r, c.g, c.b, FieldOpacity);
+            return new Color(c.r, c.g, c.b, a);
+        }
+
+        // Api 73's GlassOpacityFromModel is a const, compiled into this method: no IsoRim member is named at run time, so the
+        // boundOpacity gate (Version >= 73) is what guards it (an older IsoRim reads a negative alpha as no opacity at all).
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+        private static float FromModel() => IsoRim.Api.GlassOpacityFromModel;
+
+        // (Below IsoRim Api 73, which has no answer from the bound ModelDef) The glassOpacity of this pack's own ModelDef for
+        // the def (IsoRim's public ModelDef field; cached per def), NaN when the pack has none for it or it sets none: the
+        // pack's own entries are matched by their thingDef (each barrier has exactly one, without style or category).
+        internal static float Opacity(ThingDef def)
+        {
+            if (opacity.TryGetValue(def, out float a))
+            {
+                return a;
+            }
+            own = own ?? LoadedModManager.RunningMods.FirstOrDefault(m => m.assemblies.loadedAssemblies.Contains(typeof(Setup30).Assembly));
+            IsoRim.ModelDef md = DefDatabase<IsoRim.ModelDef>.AllDefsListForReading.FirstOrDefault(m => m.modContentPack == own && m.thingDef == def.defName
+                && m.style.NullOrEmpty() && m.thingCategory.NullOrEmpty());
+            a = md != null && md.glassOpacity >= 0f ? md.glassOpacity : float.NaN;
+            opacity[def] = a;
+            return a;
         }
     }
 

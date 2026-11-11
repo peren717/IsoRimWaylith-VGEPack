@@ -22,9 +22,10 @@ namespace IsoRimVGEPackZ
     //    fog rule again, so the upper floors the colony reaches stay revealed.
     //  - Artillery (Floors): incoming VGE artillery that misses lands on the target's floor; salvager rockets on the
     //    dropship target's floor; the salvager dropship lands on its centre's floor.
-    //  - Ranges (Api 2): VGE's grav field extender placement and the terminal/turret link ranges measure 3D between floors.
+    //  - Ranges (Api 2): VGE's grav field extender placement and the terminal/turret link ranges measure 3D between floors;
+    //    (Api 12) VGE's point defence measures things on other floors by ProjectZ's interceptor distance (as its shields).
     //  - Turrets (Api 4): VGE gravship turrets turn toward ProjectZ.Api.AimPoint (the right direction to a target on another
-    //    floor), at VGE's own speed.
+    //    floor), at VGE's own speed; the point defence's gun top toward the thing it shot at on another floor.
     //  - Deck foundations (Api 4): VGE subarmor and subscaffold are built on upper floors like ship decks and count as decks;
     //    VGE artillery damages decks into damaged decks, which count as decks and are repaired by rebuilding the deck.
     //  - Subscaffold (Api 5): free of the substructure limit on upper decks too, as VGE makes it on the ground.

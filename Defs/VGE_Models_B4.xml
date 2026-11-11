@@ -4,7 +4,8 @@
   <!-- IsoRim Waylith - VGE Pack, model batch B4 (2026-10-24): VGE re-skins 13 vanilla (Odyssey) parts (its patches change
        their texPath / drawSize), so the pack gives them models in VGE's look (tools/make_vge_b4.py, vge_b4.mtl) in place of
        IsoRim's own entries, which Patches/VGE_Models_B4.xml removes (the model files belong to this pack, so the entries
-       must be the pack's own). Each keeps the settings of IsoRim's entry (builtFor, wallFit, bob part, door lintel).
+       must be the pack's own). Each keeps the settings of IsoRim's entry (builtFor, wallFit, bob part, door lintel, the
+       vac barrier's field as glass part: its see-through look in VGE's barrier colour is Patches/IsoRimGate_B3.xml's).
        The pack only loads with VGE Chapter 1; the two Chapter 2 re-skins (shield generator, signal jammer) are defined
        only with Chapter 2 (MayRequire) and IsoRim's entries for them are removed only then. Without the pack IsoRim keeps
        its own vanilla models. States (Source/ModelStates.cs): "cooldown" for the grav engine (Building_GravEngine.
@@ -58,6 +59,7 @@
     <model>Models/vge_vac_barrier.obj</model>
     <builtFor>(1, 1)</builtFor>
     <doorTopModel>Models/vge_vac_barrier_top.obj</doorTopModel>
+    <glassModel>Models/vge_vac_barrier_field.obj</glassModel>
   </IsoRim.ModelDef>
 
   <IsoRim.ModelDef>
