@@ -1,0 +1,18 @@
+# IsoRim VGE combat vacsuit + helmet (Claude, tools/make_vge_combat_vacsuit.py, 2026-11-11). stuff_*: multiplied by the item's colour
+# (untinted: white undyed), like the mod's untinted sprites. Kd sampled from the VGE sprites.
+# Also uses isorim.mtl stuff_plain (white shell). (The helmet's filter cores are stuff_vgec_port: no stuff_plain_deep.)
+newmtl stuff_vgec_suit
+Kd 0.270 0.270 0.270
+newmtl stuff_vgec_hole
+Kd 0.190 0.190 0.190
+newmtl stuff_vgec_line
+Kd 0.090 0.090 0.090
+newmtl stuff_vgec_port
+Kd 0.360 0.360 0.360
+newmtl stuff_vgec_chin
+Kd 0.580 0.580 0.580
+# the small details (chest keyhole valve, back octagon valve) as a texture on the white they sit on: Kd = that white
+# (stuff_plain), texels = wanted / (Kd x 1.08) (make_vacsuit.texels)
+newmtl stuff_vgec_decal
+Kd 1.000 1.000 1.000
+map_Kd IsoRim/People/VgeCombatVacsuitDecals

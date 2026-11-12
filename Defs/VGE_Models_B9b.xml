@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- IsoRim Waylith - VGE Pack, model batch B9b (2026-10-24): VGE apparel on IsoRim's 3D colonists, after IsoRim's own
-       conventions (tools/make_vge_b9b.py, vge_b9b.mtl): the suits as body garments with a model per build, made on
-       IsoRim's own vacsuit of that build (drawn as the coat: what is under them is hidden); the helmets on the head; the
-       packs on the back and the targeter at the hip (IsoRim.WornGearDef). The prestige suit's and helmet's white takes
-       the item's colour (VGE's mask); its gold parts are fixed; the combat suit's and helmet's white and grey take the dye too (dyefix), the packs' and targeter's main
-       colour (tintMaterials) once dyed. On the ground IsoRim's
-       GroundGear lays the worn pieces down by itself. Things whose mod is not loaded are skipped quietly. -->
+  <!-- IsoRim Waylith - VGE Pack, model batch B9b: VGE apparel on IsoRim's 3D colonists, after IsoRim's own conventions:
+       the suits as body garments with a model per build (drawn as the coat: what is under them is hidden), the helmets on
+       the head, the packs on the back and the targeter at the hip (IsoRim.WornGearDef). On the ground IsoRim's GroundGear
+       lays the worn pieces down by itself. Things whose mod is not loaded are skipped quietly.
+       - Suits and helmets (remade 2026-11-11 to IsoRim's vacsuit standard: tools/make_vge_prestige_vacsuit.py and
+         tools/make_vge_combat_vacsuit.py on tools/make_vacsuit.py; own materials vge_prestige_vacsuit.mtl /
+         vge_combat_vacsuit.mtl, decal textures Textures/IsoRim/People/VgePrestigeDecals, VgeCombatVacsuitDecals): as
+         VGE's mask, the prestige suit's white, its helmet shell and the helmet's breathing filters take the item's colour,
+         its gold cuirass, crest and valve plates stay gold; the combat suit and helmet take the dye all over.
+       - Packs and targeter (tools/make_vge_b9b.py, vge_b9b.mtl; untextured, VGE's look): their main colour
+         (tintMaterials) takes the dye. -->
 
   <IsoRim.ApparelModelDef>
     <defName>R3DApparel_VGE_Vacsuit_Prestige</defName>

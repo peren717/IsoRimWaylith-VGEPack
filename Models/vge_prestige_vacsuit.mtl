@@ -1,0 +1,23 @@
+# IsoRim VGE prestige vacsuit + helmet (Claude, tools/make_vge_prestige_vacsuit.py, 2026-11-11). stuff_*: multiplied by the
+# item's colour (untinted: white undyed), as VGE's mask red; vgepv_* fixed, as VGE's mask black.
+# Also uses isorim.mtl stuff_plain (white: pads, pauldrons, helmet shell).
+# ---- the template's materials (tools/make_vacsuit.py) this garment uses
+newmtl stuff_vac_suit
+Kd 0.280 0.280 0.280
+newmtl stuff_vac_hole
+Kd 0.180 0.180 0.180
+newmtl stuff_vac_line
+Kd 0.090 0.090 0.090
+# ---- VGE prestige: the fixed gold (VGE's mask black)
+newmtl vgepv_gold
+Kd 0.710 0.600 0.243
+# the valves on the gold as a texture: Kd = the gold they sit on, texels = wanted / (Kd x 1.08) (make_vacsuit.texels), so
+# with textures off (or an IsoRim before Api 75) the patch is plain gold and the valves go
+newmtl vgepv_gold_decal
+Kd 0.710 0.600 0.243
+map_Kd IsoRim/People/VgePrestigeDecals
+# the helmet's breathing filters: the golds dyed with the item (VGE's mask red there)
+newmtl stuff_vgepv_gold
+Kd 0.710 0.600 0.243
+newmtl stuff_vgepv_gold_deep
+Kd 0.318 0.263 0.137

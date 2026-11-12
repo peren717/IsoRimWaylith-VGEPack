@@ -25,3 +25,11 @@ map_Kd IsoRim/Swatches/Metal
 newmtl vgea_grey
 Kd 0.52 0.53 0.54
 map_Kd IsoRim/Swatches/Metal
+# the worn disposable pack (person_pack_vge_oxygen): the same colours, untextured (the user, 2026-11-12: worn VGE items keep
+# their plain look and VGE's art; the ground items keep the swatch). vgea_worn_yellow is its WornGearDef tint material.
+newmtl vgea_worn_cap
+Kd 0.24 0.24 0.25
+newmtl vgea_worn_yellow
+Kd 0.80 0.64 0.32
+newmtl vgea_worn_grey
+Kd 0.52 0.53 0.54
