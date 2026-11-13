@@ -2,3 +2,6 @@ Source/obj/
 Source/bin/
 SourceZ/obj/
 SourceZ/bin/
+# RimWorld 1.7 asset pack (built by the in-game uploader)
+Assets.zip
+Assets.zip.*
